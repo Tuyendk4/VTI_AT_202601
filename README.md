@@ -31,4 +31,54 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 winget install JanDeDobbeleer.OhMyPosh --source winget
 ```
 
-7. Install Oh
+## Git tutorial
+
+1. Clone remote repository to local machine (Note: do only one time)
+
+```bash
+git clone https://github.com/Tuyendk4/VTI_AT_202601.git. //You are still local repository
+```
+
+2. Create new branch on local machine (1 branch = 1 task of you in the project)
+
+```bash
+git checkout -b <branch_name>  // create and move to <branch_name> - move to working dir
+```
+
+means:
+
+```bash
+git branch <branch_name>  //create new branch
+git checkout <branch_name> //move to <branch_name>
+```
+
+3. Add/edit/update/delete files
+4. Add all changed files to git
+
+```bash
+git add -A  //Add all changed files to git - move to staging (indexing)
+```
+
+5. Add a short message to explain what your task is to the branch
+
+```bash
+git commit -m "<your task>" //move to local repository
+```
+
+6. Push your branch on local machine to remote repository
+
+```bash
+git push origin <branch_name> //You are still local repository
+```
+
+7. Team leader review and merge the branch to other branch (ex: main)
+8. Team member pull new changes from main branch of remote repository to main branch of local machine
+
+```bash
+git checkout main
+git pull origin main
+```
+
+Back to Step 2 to continue your work
+
+
