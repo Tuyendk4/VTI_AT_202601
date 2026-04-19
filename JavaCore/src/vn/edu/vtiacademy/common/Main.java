@@ -1,3 +1,5 @@
+package vn.edu.vtiacademy.common;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -6,6 +8,9 @@ public class Main {
     for (int i = 1; i <= 5; i++) {
       System.out.println("i = " + i);
     }
-  }
 
+    for (String arg : args) {
+      System.out.println(arg);
+    }
+  }
 }
