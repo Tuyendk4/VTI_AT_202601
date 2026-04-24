@@ -2,7 +2,7 @@ package vn.edu.vtiacademy.control_commands;
 
 import java.util.Scanner;
 
-public class FunctionMehtod {
+public class FunctionMethod {
 
   public static void main(String[] args) {
     System.out.println("Enter a number: ");
