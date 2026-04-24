@@ -1,5 +1,7 @@
 package vn.edu.vtiacademy.common;
 
+import vn.edu.vtiacademy.class_demo.Vehicle;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -12,5 +14,8 @@ public class Main {
     for (String arg : args) {
       System.out.println(arg);
     }
+
+//    Vehicle minivan = new Vehicle();
+//    minivan.
   }
 }
