@@ -44,6 +44,14 @@ public class Number {
     return firstNumber + secondNumber;
   }
 
+  public double sum(double firstNumber, double secondNumber) {
+    return firstNumber + secondNumber;
+  }
+
+  public int sum(String firstNumber, String secondNumber) {
+    return Integer.parseInt(firstNumber) + Integer.parseInt(secondNumber);
+  }
+
   public int subtraction() {
     return firstNumber - secondNumber;
   }
