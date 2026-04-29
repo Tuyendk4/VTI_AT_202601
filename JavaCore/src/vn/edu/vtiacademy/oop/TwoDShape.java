@@ -1,6 +1,6 @@
 package vn.edu.vtiacademy.oop;
 
-public class TwoDShape {
+public abstract class TwoDShape {
 
   private int weight;
   private int height;
@@ -29,4 +29,11 @@ public class TwoDShape {
   public void showDim() {
     System.out.println("Weight: " + weight + " " + "Height: " + height);
   }
+
+  public void showInfo() {
+    System.out.println("Weight: " + weight + " " + "Height: " + height);
+
+  }
+
+  public abstract double area();
 }

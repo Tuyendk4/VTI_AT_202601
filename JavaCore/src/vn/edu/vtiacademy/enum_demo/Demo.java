@@ -6,13 +6,13 @@ import vn.edu.vtiacademy.oop.TwoDShape;
 public class Demo {
 
   public static void main(String[] args) {
-    TwoDShape shape = new TwoDShape(5, 10);
-    System.out.println("Weight: " + shape.getWeight());
-    System.out.println("Height: " + shape.getHeight());
-    shape.setWeight(20);
-    shape.setHeight(15);
-    System.out.println("Weight: " + shape.getWeight());
-    System.out.println("Height: " + shape.getHeight());
+//    TwoDShape shape = new TwoDShape(5, 10);
+//    System.out.println("Weight: " + shape.getWeight());
+//    System.out.println("Height: " + shape.getHeight());
+//    shape.setWeight(20);
+//    shape.setHeight(15);
+//    System.out.println("Weight: " + shape.getWeight());
+//    System.out.println("Height: " + shape.getHeight());
 
     Triangle triangle = new Triangle(10, 20);
     triangle.showDim();
