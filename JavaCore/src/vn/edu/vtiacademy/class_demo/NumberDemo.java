@@ -14,5 +14,9 @@ public class NumberDemo {
     number = new Number(firstNumber, secondNumber);
     System.out.println("Sum: " + number.sum());
     System.out.println("Subtraction: " + number.subtraction());
+
+    System.out.println("Sum of two double numbers: " + number.sum(1.5, 4.6));
+
+    System.out.println("Sum of two string numbers: " + number.sum("10", "20"));
   }
 }

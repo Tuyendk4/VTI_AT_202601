@@ -3,14 +3,15 @@ package vn.edu.vtiacademy.oop;
 public class Demo {
 
   public static void main(String[] args) {
-    TwoDShape shape = new TwoDShape(5, 10);
-    System.out.println("Weight: " + shape.getWeight());
-    System.out.println("Height: " + shape.getHeight());
-    shape.setWeight(20);
-    shape.setHeight(15);
-    System.out.println("Weight: " + shape.getWeight());
-    System.out.println("Height: " + shape.getHeight());
-
+//    TwoDShape shape = new TwoDShape(5, 10);
+//    System.out.println("Weight: " + shape.getWeight());
+//    System.out.println("Height: " + shape.getHeight());
+//    shape.setWeight(20);
+//    shape.setHeight(15);
+//    System.out.println("Weight: " + shape.getWeight());
+//    System.out.println("Height: " + shape.getHeight());
+//    shape.showInfo();
+    System.out.println("================================");
     Triangle triangle = new Triangle(10, 20);
     triangle.showDim();
     System.out.println("Style: " + triangle.getStyle());
@@ -20,6 +21,16 @@ public class Demo {
     triangle.showDim();
     System.out.println("Style: " + triangle.getStyle());
     System.out.println("Area: " + triangle.area());
+    triangle.showInfo();
+    System.out.println("================================");
+    Square square = new Square(10);
+    square.showDim();
+    System.out.println("Area: " + square.area());
+    square.showInfo();
+    square.setColor("Green");
+    square.showInfo();
+    Square.setColor("Yellow");
+    square.showInfo();
   }
 
 }
