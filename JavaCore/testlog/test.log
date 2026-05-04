@@ -1,0 +1,2 @@
+INFO  | 2026-05-04 21:48:07 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:addItem:68) - Added item successfully
+INFO  | 2026-05-04 21:48:07 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:getValue:78) - Value of key 'Germany' is 'Berlin'
