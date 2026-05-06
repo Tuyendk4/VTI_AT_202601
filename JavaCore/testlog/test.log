@@ -1,2 +1,4 @@
-INFO  | 2026-05-04 21:48:07 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:addItem:68) - Added item successfully
-INFO  | 2026-05-04 21:48:07 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:getValue:78) - Value of key 'Germany' is 'Berlin'
+DEBUG | 2026-05-06 19:26:28 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:addItem:66) - Adding item with key: France and value: Paris
+INFO  | 2026-05-06 19:26:28 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:addItem:68) - Added item successfully
+DEBUG | 2026-05-06 19:26:28 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:getValue:72) - Getting value of key: Germany
+INFO  | 2026-05-06 19:26:28 | [main] collections.array_list.HashMapDemo (HashMapDemo.java:getValue:78) - Value of key 'Germany' is 'Berlin'

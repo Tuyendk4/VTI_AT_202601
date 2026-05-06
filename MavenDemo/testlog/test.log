@@ -1,0 +1,2 @@
+INFO  | 2026-05-06 21:39:25 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:16) - Starting to execute test method: MP001_testSum
+ERROR | 2026-05-06 21:39:25 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:23) - Ended to execute test method: MP001_testSum
