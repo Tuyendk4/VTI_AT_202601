@@ -3,20 +3,46 @@ package vn.edu.vtiacademy.test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.lang.reflect.Method;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import vn.edu.vtiacademy.junit_demo.MathProvider;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MathProviderTest {
   private static final Logger LOGGER = LoggerFactory.getLogger(MathProviderTest.class);
+  private static MathProvider provider;
 
-  @Test
-  public void MP001_testSum() {
+  @BeforeAll
+  public static void setup() {
+    LOGGER.info("===Starting Test suite");
+    provider = new MathProvider(); // local variable
+  }
+
+  private static Stream<Integer> dataMP001() {
+    return Stream.of(10, 20, 30);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataMP001")
+  @DisplayName("MP001: Test sum method")
+  @Order(1)
+  public void MP001_testSum(int params) {
     LOGGER.info("Starting to execute test method: {}", Thread.currentThread().getStackTrace()[1].getMethodName());
-    MathProvider provider = new MathProvider();
-    int result = provider.sum(10, 20);
-    assertEquals(20, result); // best practice
+    int result = provider.sum(params, params);
+    assertEquals(params * 2, result); // best practice
 
     // bad practice
 //    if(result == 20) {
@@ -27,25 +53,32 @@ public class MathProviderTest {
     LOGGER.error("Ended to execute test method: {}", Thread.currentThread().getStackTrace()[1].getMethodName());
   }
 
-  @Test
-  public void MP002_testSub() {
-    MathProvider provider = new MathProvider();
-    int result = provider.sub(20, 10);
-    assertEquals(10, result);
+  @ParameterizedTest
+  @ValueSource(ints = {10, 20, 30})
+  @DisplayName("MP002: Test sub method")
+  @Order(3)
+  @Disabled
+  public void MP002_testSub(int params) {
+//    MathProvider provider = new MathProvider();
+    int result = provider.sub(params, params);
+    assertEquals(0, result);
   }
 
-  @Test
-  public void MP003_testMul() {
-    MathProvider provider = new MathProvider();
-    int result = provider.mul(5, 6);
-    assertEquals(30, result);
+  @ParameterizedTest
+  @CsvSource({"10,20,2000", "34,56,1904"})
+  @Order(2)
+  public void MP003_testMul(int firstNumber, int secondNumber, int expectedResult) {
+//    MathProvider provider = new MathProvider();
+    int result = provider.mul(firstNumber, secondNumber);
+    assertEquals(expectedResult, result);
   }
 
-  @Test
-  public void MP004_testDiv() {
-    vn.edu.vtiacademy.junit_demo.MathProvider provider = new vn.edu.vtiacademy.junit_demo.MathProvider();
-    double result = provider.div(10, 2);
-    assertEquals(5.0, result);
+  @ParameterizedTest
+  @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+  public void MP004_testDiv(int firstNumber, int secondNumber, double expectedResult) {
+//    MathProvider provider = new MathProvider();
+    double result = provider.div(firstNumber, secondNumber);
+    assertEquals(expectedResult, result);
   }
 
 }

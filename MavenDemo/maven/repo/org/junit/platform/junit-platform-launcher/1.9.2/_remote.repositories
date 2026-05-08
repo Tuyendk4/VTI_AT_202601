@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 22:16:25 GMT+07:00 2026
+junit-platform-launcher-1.9.2-sources.jar>central=
+junit-platform-launcher-1.9.2.jar>central=
+junit-platform-launcher-1.9.2.pom>central=

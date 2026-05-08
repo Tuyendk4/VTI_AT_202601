@@ -1,0 +1,14 @@
+BeforeTest
+    Test01
+    Test02
+    ...
+    TestN
+AfterTest
+
+
+Testsuite: 3 test scripts
+@BeforeAll - precondition of test suite
+@BeforeEach - precondition of test script
+@Test - is a test script
+@AfterEach - post condition of test script
+@AfterAll - post condition of test suite

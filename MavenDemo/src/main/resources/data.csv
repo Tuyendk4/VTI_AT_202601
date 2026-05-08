@@ -1,0 +1,4 @@
+firstNumber,secondNumber,expectedResult
+10,2,5
+20,5,4
+12,5,2.4
