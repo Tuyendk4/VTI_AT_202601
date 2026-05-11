@@ -48,7 +48,7 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <version>${junit-jupiter.version}</version>
-      <scope>test</scope>
+<!--      <scope>test</scope>-->
     </dependency>
 
     <!-- Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5 -->
@@ -56,7 +56,7 @@
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-junit5</artifactId>
       <version>${allure-junit5.version}</version>
-      <scope>test</scope>
+<!--      <scope>test</scope>-->
     </dependency>
 
     <dependency>
