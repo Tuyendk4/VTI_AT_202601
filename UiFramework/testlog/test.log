@@ -1,166 +1,22 @@
-DEBUG | 2026-05-15 21:52:32 | [main] internal.logging.InternalLoggerFactory (InternalLoggerFactory.java:useSlf4JLoggerFactory:63) - Using SLF4J as the default logging framework
-DEBUG | 2026-05-15 21:52:32 | [main] netty.util.ResourceLeakDetector (ResourceLeakDetector.java:<clinit>:129) - -Dio.netty.leakDetection.level: simple
-DEBUG | 2026-05-15 21:52:32 | [main] netty.util.ResourceLeakDetector (ResourceLeakDetector.java:<clinit>:130) - -Dio.netty.leakDetection.targetRecords: 4
-DEBUG | 2026-05-15 21:52:32 | [main] netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory (ResourceLeakDetectorFactory.java:newResourceLeakDetector:196) - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@c540f5a
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:explicitNoUnsafeCause0:495) - -Dio.netty.noUnsafe: false
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:javaVersion0:998) - Java version: 25
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:136) - sun.misc.Unsafe.theUnsafe: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:160) - sun.misc.Unsafe.copyMemory: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:192) - sun.misc.Unsafe.storeFence: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:235) - java.nio.Buffer.address: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:319) - direct buffer constructor: unavailable: java.nio.DirectByteBuffer.<init>(long,int)
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:384) - java.nio.Bits.unaligned: available, true
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:451) - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @7a5d012c
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent0 (PlatformDependent0.java:<clinit>:481) - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:unsafeUnavailabilityCause0:1120) - sun.misc.Unsafe: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:estimateMaxDirectMemory:1231) - maxDirectMemory: 4294967296 bytes (maybe)
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:tmpdir0:1250) - -Dio.netty.tmpdir: /var/folders/gm/9w1n371x6fl_zn14_sttf6c80000gn/T (java.io.tmpdir)
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:bitMode0:1329) - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:isOsx0:1088) - Platform: MacOS
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:<clinit>:178) - -Dio.netty.maxDirectMemory: -1 bytes
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:<clinit>:185) - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.CleanerJava9 (CleanerJava9.java:<clinit>:71) - java.nio.ByteBuffer.cleaner(): available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent (PlatformDependent.java:<clinit>:205) - -Dio.netty.noPreferDirect: false
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.PlatformDependent$Mpsc (PlatformDependent.java:<clinit>:971) - org.jctools-core.MpscChunkedArrayQueue: available
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.InternalThreadLocalMap (InternalThreadLocalMap.java:<clinit>:86) - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-DEBUG | 2026-05-15 21:52:32 | [main] util.internal.InternalThreadLocalMap (InternalThreadLocalMap.java:<clinit>:89) - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-DEBUG | 2026-05-15 21:52:32 | [main] handler.ssl.JdkSslContext (JdkSslContext.java:<clinit>:83) - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
-DEBUG | 2026-05-15 21:52:32 | [main] handler.ssl.JdkSslContext (JdkSslContext.java:<clinit>:84) - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-DEBUG | 2026-05-15 21:52:32 | [main] netty.channel.MultithreadEventLoopGroup (MultithreadEventLoopGroup.java:<clinit>:44) - -Dio.netty.eventLoopThreads: 24
-DEBUG | 2026-05-15 21:52:32 | [main] channel.nio.NioEventLoop (NioEventLoop.java:<clinit>:109) - -Dio.netty.noKeySetOptimization: false
-DEBUG | 2026-05-15 21:52:32 | [main] channel.nio.NioEventLoop (NioEventLoop.java:<clinit>:110) - -Dio.netty.selectorAutoRebuildThreshold: 512
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:157) - -Dio.netty.allocator.numHeapArenas: 24
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:158) - -Dio.netty.allocator.numDirectArenas: 24
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:160) - -Dio.netty.allocator.pageSize: 8192
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:165) - -Dio.netty.allocator.maxOrder: 9
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:169) - -Dio.netty.allocator.chunkSize: 4194304
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:170) - -Dio.netty.allocator.smallCacheSize: 256
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:171) - -Dio.netty.allocator.normalCacheSize: 64
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:172) - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:173) - -Dio.netty.allocator.cacheTrimInterval: 8192
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:174) - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:175) - -Dio.netty.allocator.useCacheForAllThreads: false
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.PooledByteBufAllocator (PooledByteBufAllocator.java:<clinit>:176) - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.ByteBufUtil (ByteBufUtil.java:<clinit>:87) - -Dio.netty.allocator.type: pooled
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.ByteBufUtil (ByteBufUtil.java:<clinit>:96) - -Dio.netty.threadLocalDirectBufferSize: 0
-DEBUG | 2026-05-15 21:52:32 | [main] netty.buffer.ByteBufUtil (ByteBufUtil.java:<clinit>:99) - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.channel.DefaultChannelId (DefaultChannelId.java:<clinit>:79) - -Dio.netty.processId: 36911 (auto-detected)
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.util.NetUtil (NetUtil.java:<clinit>:136) - -Djava.net.preferIPv4Stack: false
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.util.NetUtil (NetUtil.java:<clinit>:137) - -Djava.net.preferIPv6Addresses: false
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.util.NetUtilInitializations (NetUtilInitializations.java:determineLoopback:129) - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.util.NetUtil$SoMaxConnAction (NetUtil.java:run:191) - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
-DEBUG | 2026-05-15 21:52:32 | [Forwarding newSession on session null to remote] netty.channel.DefaultChannelId (DefaultChannelId.java:<clinit>:101) - -Dio.netty.machineId: ac:de:48:ff:fe:00:11:22 (auto-detected)
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.buffer.AbstractByteBuf (AbstractByteBuf.java:<clinit>:63) - -Dio.netty.buffer.checkAccessible: true
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.buffer.AbstractByteBuf (AbstractByteBuf.java:<clinit>:64) - -Dio.netty.buffer.checkBounds: true
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory (ResourceLeakDetectorFactory.java:newResourceLeakDetector:196) - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@dbe9ce0
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.channel.NettyConnectListener (NettyConnectListener.java:writeRequest:73) - Using new Channel '[id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]' for 'POST' to '/session'
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.util.Recycler (Recycler.java:<clinit>:85) - -Dio.netty.recycler.maxCapacityPerThread: 4096
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.util.Recycler (Recycler.java:<clinit>:86) - -Dio.netty.recycler.ratio: 8
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.util.Recycler (Recycler.java:<clinit>:87) - -Dio.netty.recycler.chunkSize: 32
-DEBUG | 2026-05-15 21:52:32 | [AsyncHttpClient-1-2] netty.util.Recycler (Recycler.java:<clinit>:88) - -Dio.netty.recycler.blocking: false
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-2] codec.compression.Brotli (Brotli.java:<clinit>:38) - brotli4j not in the classpath; Brotli support will be unavailable.
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-2] netty.handler.HttpHandler (HttpHandler.java:handleHttpResponse:70) - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session HTTP/1.1
-User-Agent: selenium/4.4.0 (java mac)
-Content-Length: 439
-Content-Type: application/json; charset=utf-8
-host: localhost:58794
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-content-length: 924
-
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-2] netty.channel.ChannelManager (ChannelManager.java:tryToOfferChannelToPool:270) - Adding key: http://localhost:58794 for channel [id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-3] netty.channel.NettyConnectListener (NettyConnectListener.java:writeRequest:73) - Using new Channel '[id: 0xa80f3a81, L:/127.0.0.1:63298 - R:localhost/127.0.0.1:63275]' for 'GET' to '/json/version'
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-3] netty.handler.HttpHandler (HttpHandler.java:handleHttpResponse:70) - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /json/version HTTP/1.1
-User-Agent: selenium/4.4.0 (java mac)
-host: localhost:63275
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Security-Policy: frame-ancestors 'none'
-Content-Type: application/json; charset=UTF-8
-content-length: 422
-
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-3] netty.channel.ChannelManager (ChannelManager.java:tryToOfferChannelToPool:270) - Adding key: http://localhost:63275 for channel [id: 0xa80f3a81, L:/127.0.0.1:63298 - R:localhost/127.0.0.1:63275]
-DEBUG | 2026-05-15 21:52:34 | [main] util.internal.ThreadLocalRandom (ThreadLocalRandom.java:newSeed:214) - -Dio.netty.initialSeedUniquifier: 0xd0af759b900c8257
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-4] netty.channel.NettyConnectListener (NettyConnectListener.java:writeRequest:73) - Using new Channel '[id: 0x19029a36, L:/127.0.0.1:63299 - R:localhost/127.0.0.1:63275]' for 'GET' to '/devtools/browser/215f1eea-dd34-4c35-8694-1be28fbd1558'
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-4] netty.handler.WebSocketHandler (WebSocketHandler.java:handleRead:105) - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /devtools/browser/215f1eea-dd34-4c35-8694-1be28fbd1558 HTTP/1.1
-upgrade: websocket
-connection: upgrade
-sec-websocket-key: 05wxUKnWrz1nFRauamjTQQ==
-sec-websocket-version: 13
-origin: http://localhost:63275
-host: localhost:63275
-accept: */*
-user-agent: AHC/2.1
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 101 WebSocket Protocol Handshake
-Upgrade: WebSocket
-Connection: Upgrade
-Sec-WebSocket-Accept: vKstjL8+nv+biSm5L2m29/IXJgY=
-
-DEBUG | 2026-05-15 21:52:34 | [Forwarding get on session 308eb7da2684342504e779d4b4f68b68 to remote] netty.request.NettyRequestSender (NettyRequestSender.java:pollPooledChannel:593) - Using pooled Channel '[id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]' for 'POST' to 'http://localhost:58794/session/308eb7da2684342504e779d4b4f68b68/url'
-DEBUG | 2026-05-15 21:52:34 | [Forwarding get on session 308eb7da2684342504e779d4b4f68b68 to remote] netty.request.NettyRequestSender (NettyRequestSender.java:sendRequestWithOpenChannel:251) - Using open Channel [id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794] for POST '/session/308eb7da2684342504e779d4b4f68b68/url'
-DEBUG | 2026-05-15 21:52:34 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:35 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:36 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:37 | [AsyncHttpClient-1-2] netty.handler.HttpHandler (HttpHandler.java:handleHttpResponse:70) - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/308eb7da2684342504e779d4b4f68b68/url HTTP/1.1
-User-Agent: selenium/4.4.0 (java mac)
-Content-Length: 46
-Content-Type: application/json; charset=utf-8
-host: localhost:58794
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-content-length: 14
-
-DEBUG | 2026-05-15 21:52:37 | [AsyncHttpClient-1-2] netty.channel.ChannelManager (ChannelManager.java:tryToOfferChannelToPool:270) - Adding key: http://localhost:58794 for channel [id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]
-DEBUG | 2026-05-15 21:52:37 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:58794 : 1
-DEBUG | 2026-05-15 21:52:37 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:39 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:58794 : 1
-DEBUG | 2026-05-15 21:52:39 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:40 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:58794 : 1
-DEBUG | 2026-05-15 21:52:40 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:41 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:58794 : 1
-DEBUG | 2026-05-15 21:52:41 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:42 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:58794 : 1
-DEBUG | 2026-05-15 21:52:42 | [AsyncHttpClient-1-1] netty.channel.DefaultChannelPool$IdleChannelDetector (DefaultChannelPool.java:run:348) - Entry count for : http://localhost:63275 : 1
-DEBUG | 2026-05-15 21:52:42 | [Forwarding findElement on session 308eb7da2684342504e779d4b4f68b68 to remote] netty.request.NettyRequestSender (NettyRequestSender.java:pollPooledChannel:593) - Using pooled Channel '[id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]' for 'POST' to 'http://localhost:58794/session/308eb7da2684342504e779d4b4f68b68/element'
-DEBUG | 2026-05-15 21:52:42 | [Forwarding findElement on session 308eb7da2684342504e779d4b4f68b68 to remote] netty.request.NettyRequestSender (NettyRequestSender.java:sendRequestWithOpenChannel:251) - Using open Channel [id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794] for POST '/session/308eb7da2684342504e779d4b4f68b68/element'
-DEBUG | 2026-05-15 21:52:42 | [AsyncHttpClient-1-2] netty.handler.HttpHandler (HttpHandler.java:handleHttpResponse:70) - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/308eb7da2684342504e779d4b4f68b68/element HTTP/1.1
-User-Agent: selenium/4.4.0 (java mac)
-Content-Length: 119
-Content-Type: application/json; charset=utf-8
-host: localhost:58794
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 404 Not Found
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-content-length: 1827
-
-DEBUG | 2026-05-15 21:52:42 | [AsyncHttpClient-1-2] netty.channel.ChannelManager (ChannelManager.java:tryToOfferChannelToPool:270) - Adding key: http://localhost:58794 for channel [id: 0xdaf3da5d, L:/127.0.0.1:63266 - R:localhost/127.0.0.1:58794]
+INFO  | 2026-05-18 21:43:23 | [main] common.keywords.WebUI (WebUI.java:openBrowser:21) - Opening browser: CHROME
+INFO  | 2026-05-18 21:43:23 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.167 (resolved driver for Chrome 148)
+INFO  | 2026-05-18 21:43:23 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac-x64/148.0.7778.167/chromedriver
+INFO  | 2026-05-18 21:43:25 | [main] common.keywords.WebUI (WebUI.java:openBrowser:38) - Browser CHROME opened successfully
+INFO  | 2026-05-18 21:43:25 | [main] common.keywords.WebUI (WebUI.java:openBrowser:46) - Navigating to URL: https://demoqa.com/text-box
+INFO  | 2026-05-18 21:43:28 | [main] common.keywords.WebUI (WebUI.java:openBrowser:48) - Navigated to URL: https://demoqa.com/text-box
+INFO  | 2026-05-18 21:43:28 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:113) - Delaying for 5 seconds
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:115) - Delay completed
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:163) - Finding web element located by '//input[@id='userName']'
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:166) - Found 1 web element located by '//input[@id='userName']'
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:inputText:178) - Inputting text: Automation Tester
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:inputText:180) - Text input completed
+INFO  | 2026-05-18 21:43:33 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:113) - Delaying for 5 seconds
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:115) - Delay completed
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:findWebElement:163) - Finding web element located by '//input[@id='userName']'
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:findWebElement:166) - Found 1 web element located by '//input[@id='userName']'
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:clearText:189) - Clearing text in element located by '//input[@id='userName']'
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:clearText:191) - Text cleared
+INFO  | 2026-05-18 21:43:38 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:113) - Delaying for 5 seconds
+INFO  | 2026-05-18 21:43:43 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:115) - Delay completed
+INFO  | 2026-05-18 21:43:43 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:57) - Closing browser
+INFO  | 2026-05-18 21:43:43 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:59) - Browser closed successfully

@@ -1,0 +1,234 @@
+{
+  "info": {
+    "_postman_id": "86c0cab7-5df7-49ff-9d59-d503ce66f995",
+    "name": "Selenium Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25606802",
+    "_collection_link": "https://warped-shadow-9821.postman.co/workspace/BreadStack-CRM-API-Testing~cf9da83d-19a0-4b31-8e34-d0fcc28ff5aa/collection/25606802-86c0cab7-5df7-49ff-9d59-d503ce66f995?action=share&creator=25606802&source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Selenium",
+      "item": [
+        {
+          "name": "Create new session - Open Chrome Browser",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();",
+                  "let session_id = response.value.sessionId;",
+                  "pm.variables.set(\"SESSION_ID\", session_id);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"capabilities\": {\n        \"firstMatch\": [{}],\n        \"alwaysMatch\": {\n            \"browserName\": \"chrome\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9515/session",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9515",
+              "path": [
+                "session"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Navigate To - Navigate to Woocommerce url",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"url\": \"https://dantri.com.vn\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9515/session/:sessionId/url",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9515",
+              "path": [
+                "session",
+                ":sessionId",
+                "url"
+              ],
+              "variable": [
+                {
+                  "key": "sessionId",
+                  "value": "{{SESSION_ID}}",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Element - Find User Name Text box",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();",
+                  "let element_id = response.value['element-6066-11e4-a52e-4f735466cecf'];",
+                  "console.log(\"element_id: \" + element_id);",
+                  "pm.variables.set(\"ELEMENT_ID\", element_id);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"using\": \"xpath\",\n    \"value\": \"//li[contains(@class,'has-child')]/a/span[contains(text(),'Kinh doanh')]\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:9515/session/:sessionId/element",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9515",
+              "path": [
+                "session",
+                ":sessionId",
+                "element"
+              ],
+              "variable": [
+                {
+                  "key": "sessionId",
+                  "value": "{{SESSION_ID}}",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Element Click - Click Approve Button",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9515/session/:sessionId/element/:elementId/click",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9515",
+              "path": [
+                "session",
+                ":sessionId",
+                "element",
+                ":elementId",
+                "click"
+              ],
+              "variable": [
+                {
+                  "key": "sessionId",
+                  "value": "{{SESSION_ID}}",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "elementId",
+                  "value": "{{ELEMENT_ID}}",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete session",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9515/session/:sessionId",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9515",
+              "path": [
+                "session",
+                ":sessionId"
+              ],
+              "variable": [
+                {
+                  "key": "sessionId",
+                  "value": "{{SESSION_ID}}",
+                  "description": "(Required) "
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
