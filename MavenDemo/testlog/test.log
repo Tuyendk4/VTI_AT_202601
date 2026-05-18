@@ -1,7 +1,22 @@
-INFO  | 2026-05-11 20:06:30 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:setup:28) - ===Starting Test suite
-INFO  | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:41) - Starting to execute test method: MP001_testSum
-ERROR | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:51) - Ended to execute test method: MP001_testSum
-INFO  | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:41) - Starting to execute test method: MP001_testSum
-ERROR | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:51) - Ended to execute test method: MP001_testSum
-INFO  | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:41) - Starting to execute test method: MP001_testSum
-ERROR | 2026-05-11 20:06:31 | [main] vtiacademy.test.MathProviderTest (MathProviderTest.java:MP001_testSum:51) - Ended to execute test method: MP001_testSum
+INFO  | 2026-05-15 20:00:45 | [main] common.database.DBKeywords (DBKeywords.java:createConnection:21) - Connecting to jdbc:mysql://127.0.0.1:3306/sql_invoicing...
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:createConnection:24) - Connection successful
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeUpdate:71) - Executing query: INSERT INTO `clients` VALUES (6,'John Doe','0863 Farmco Road','Portland','OR','971-888-9129')
+ERROR | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeUpdate:76) - Failed to execute query. Root cause: Duplicate entry '6' for key 'clients.PRIMARY'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeQuery:59) - Executing query: SELECT * FROM clients WHERE client_id = 6
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeQuery:62) - Query executed successfully
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:113) - Retrieving string cell value at row 1 and column name 'name'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:116) - Got string cell value at row 1 and column name 'name'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:113) - Retrieving string cell value at row 1 and column name 'address'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:116) - Got string cell value at row 1 and column name 'address'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:113) - Retrieving string cell value at row 1 and column name 'city'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:116) - Got string cell value at row 1 and column name 'city'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:113) - Retrieving string cell value at row 1 and column name 'state'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:116) - Got string cell value at row 1 and column name 'state'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:113) - Retrieving string cell value at row 1 and column name 'phone'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getStringCellValue:116) - Got string cell value at row 1 and column name 'phone'
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeQuery:59) - Executing query: SELECT name FROM clients
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:executeQuery:62) - Query executed successfully
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getCellValues:82) - Retrieving cell values from column: name
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:getCellValues:88) - Got all cell values of column name 'name' in result set
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:closeConnection:44) - Closing the connection...
+INFO  | 2026-05-15 20:00:46 | [main] common.database.DBKeywords (DBKeywords.java:closeConnection:47) - Connection closed successfully
