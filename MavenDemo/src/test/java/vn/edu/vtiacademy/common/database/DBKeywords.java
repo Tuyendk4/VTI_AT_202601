@@ -66,6 +66,17 @@ public class DBKeywords {
     return resultSet;
   }
 
+  public void executeUpdate(Connection connection, String sqlQuery) {
+    try {
+      LOGGER.info("Executing query: {}", sqlQuery);
+      Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+      statement.executeUpdate(sqlQuery);
+      LOGGER.info("Query executed successfully");
+    } catch (SQLException e) {
+      LOGGER.error("Failed to execute query. Root cause: {}", e.getMessage());
+    }
+  }
+
   public List<String> getCellValues(ResultSet resultSet, String columnName) {
     List<String> values = new ArrayList<>();
     LOGGER.info("Retrieving cell values from column: {}", columnName);
