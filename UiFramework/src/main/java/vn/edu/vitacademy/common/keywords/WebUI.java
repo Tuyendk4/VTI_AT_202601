@@ -2,6 +2,7 @@ package vn.edu.vitacademy.common.keywords;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -175,9 +176,9 @@ public class WebUI {
   public void inputText(String locator, String text) {
     WebElement we = findWebElement(locator);
     try {
-      LOGGER.info("Inputting text: {}", text);
+      LOGGER.info("Inputting text '{}' into web element located by '{}'", text, locator);
       we.sendKeys(text);
-      LOGGER.info("Text input completed");
+      LOGGER.info("Inputted text '{}' into web element located by '{}' successfully", text, locator);
     } catch (Exception e) {
       LOGGER.error("Failed to input text. Root cause: {}", e.getMessage());
     }
@@ -192,5 +193,282 @@ public class WebUI {
     } catch (Exception e) {
       LOGGER.error("Failed to clear text. Root cause: {}", e.getMessage());
     }
+  }
+
+  public void copy(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Copying text from web element located by '{}'", locator);
+      String osName = System.getProperty("os.name");
+      if(osName.toLowerCase().contains("mac")) {
+        we.sendKeys(Keys.chord(Keys.COMMAND, "c"));
+      } else {
+        we.sendKeys(Keys.chord(Keys.CONTROL, "c"));
+      }
+      LOGGER.info("Copied text from web element located by '{}' successfully", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to copy text from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void selectAllText(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Selecting all text in web element located by '{}'", locator);
+      String osName = System.getProperty("os.name");
+      if(osName.toLowerCase().contains("mac")) {
+        we.sendKeys(Keys.chord(Keys.COMMAND, "a"));
+      } else {
+        we.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+      }
+      LOGGER.info("Selected all text in web element located by '{}' successfully", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to select all text in web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void paste(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Pasting text in web element located by '{}'", locator);
+      String osName = System.getProperty("os.name");
+      we.click();
+      if(osName.toLowerCase().contains("mac")) {
+        we.sendKeys(Keys.chord(Keys.COMMAND, "v"));
+      } else {
+        we.sendKeys(Keys.chord(Keys.CONTROL, "v"));
+      }
+      LOGGER.info("Pasted text in web element located by '{}' successfully", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to paste text in web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void clickOn(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Clicking on web element located by '{}'", locator);
+      we.click();
+      LOGGER.info("Clicked on web element located by '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to click on web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void maximizeWindow() {
+    try {
+      LOGGER.info("Maximizing window");
+      driver.manage().window().maximize();
+      LOGGER.info("Window maximized");
+    } catch (Exception e) {
+      LOGGER.error("Failed to maximize window. Root cause: {}", e.getMessage());
+    }
+  }
+
+  public void submit(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Submitting web element located by '{}'", locator);
+      we.submit();
+      LOGGER.info("Submitted web element located by '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to submit web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public String getText(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting text from web element located by '{}'", locator);
+      String text = we.getText();
+      LOGGER.info("Retrieved text '{}' from web element located by '{}'", text, locator);
+      return text;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get text from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return null;
+  }
+
+  public String getTagName(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting tag name from web element located by '{}'", locator);
+      String tagName = we.getTagName();
+      LOGGER.info("Retrieved tag name '{}' from web element located by '{}'", tagName, locator);
+      return tagName;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get tag name from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return null;
+  }
+
+  public String getCssValue(String locator, String css) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting CSS value from web element located by '{}'", locator);
+      String cssValue = we.getCssValue(css);
+      LOGGER.info("Retrieved CSS value '{}' from web element located by '{}'", cssValue, locator);
+      return cssValue;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get CSS value from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return null;
+  }
+
+  public String getAttributeValue(String locator, String attributeName) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting attribute value from web element located by '{}' for attribute '{}'", locator, attributeName);
+      String attributeValue = we.getAttribute(attributeName);
+      LOGGER.info("Retrieved attribute value '{}' from web element located by '{}' for attribute '{}'", attributeValue, locator, attributeName);
+      return attributeValue;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get attribute value from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return null;
+  }
+
+  public int getElementHeigh(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting height of web element located by '{}'", locator);
+      int height = we.getSize().getHeight();
+      LOGGER.info("Retrieved height '{}' from web element located by '{}'", height, locator);
+      return height;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get height from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return -1;
+  }
+
+  public int getElementWidth(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting width of web element located by '{}'", locator);
+      int width = we.getSize().getWidth();
+      LOGGER.info("Retrieved width '{}' from web element located by '{}'", width, locator);
+      return width;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get width from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return -1;
+  }
+
+  public int getHorizontalPosition(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting horizontal position of web element located by '{}'", locator);
+      int position = we.getLocation().getX();
+      LOGGER.info("Retrieved horizontal position '{}' from web element located by '{}'", position, locator);
+      return position;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get horizontal position from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return -1;
+  }
+
+  public int getVerticalPosition(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Getting vertical position of web element located by '{}'", locator);
+      int position = we.getLocation().getY();
+      LOGGER.info("Retrieved vertical position '{}' from web element located by '{}'", position, locator);
+      return position;
+    } catch (Exception e) {
+      LOGGER.error("Failed to get vertical position from web element located by '{}'. Root cause: {}", locator, e.getMessage());
+      return -1;
+    }
+  }
+
+  public boolean verifyPageTitle(String expectedTitle) {
+    try {
+      LOGGER.info("Verifying page title");
+      String actualTitle = driver.getTitle();
+      if(actualTitle.equals(expectedTitle)) {
+        LOGGER.info("Actual page title '{}' and expected title '{}' are the same", actualTitle, expectedTitle);
+        return true;
+      }
+      LOGGER.error("Actual page title '{}' and expected title '{}' are not the same", actualTitle, expectedTitle);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify page title. Root cause: {}", e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyUrl(String expectedUrl) {
+    try {
+      LOGGER.info("Verifying url");
+      String actualUrl = driver.getCurrentUrl();
+      if(actualUrl.equals(expectedUrl)) {
+        LOGGER.info("Actual url '{}' and expected url '{}' are the same", actualUrl, expectedUrl);
+        return true;
+      }
+      LOGGER.error("Actual url '{}' and expected url '{}' are not the same", actualUrl, expectedUrl);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify url. Root cause: {}", e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyElementText(String locator, String expectedText) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Verifying text of web element located by '{}'", locator);
+      String actualText = we.getText();
+      if(actualText.equals(expectedText)) {
+        LOGGER.info("Actual text '{}' and expected text '{}' are the same", actualText, expectedText);
+        return true;
+      }
+      LOGGER.error("Actual text '{}' and expected text '{}' are not the same", actualText, expectedText);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify text of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyElementContainsText(String locator, String expectedText) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Verifying text of web element located by '{}'", locator);
+      String actualText = we.getText();
+      if(actualText.contains(expectedText)) {
+        LOGGER.info("Actual text '{}' contains expected text '{}'", actualText, expectedText);
+        return true;
+      }
+      LOGGER.error("Actual text '{}' does not contain expected text '{}'", actualText, expectedText);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify to contain text of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyElementVisible(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Verifying visibility of web element located by '{}'", locator);
+      if(we.isDisplayed()) {
+        LOGGER.info("Web element located by '{}' is visible", locator);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is not visible", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify visibility of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyElementNotVisible(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Verifying invisibility of web element located by '{}'", locator);
+      if(!we.isDisplayed()) {
+        LOGGER.info("Web element located by '{}' is not visible", locator);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is visible", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify invisibility of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
   }
 }

@@ -16,6 +16,7 @@
     <log4j-core.version>2.25.4</log4j-core.version>
     <slf4j-api.version>2.0.17</slf4j-api.version>
     <webdrivermanager.version>6.3.4</webdrivermanager.version>
+    <testng.version>7.10.2</testng.version>
   </properties>
 
   <dependencies>
@@ -52,6 +53,13 @@
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>${webdrivermanager.version}</version>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
     </dependency>
   </dependencies>
 
