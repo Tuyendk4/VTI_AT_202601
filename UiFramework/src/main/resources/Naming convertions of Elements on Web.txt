@@ -35,3 +35,5 @@
 | Complex  | Toolbar                    | tlb    | tlbActions      |
 | Complex  | TreeView                   | tre    | treOrganization |
 +----------+----------------------------+--------+-----------------+
+Xpath: https://www.w3schools.com/xml/xpath_intro.asp
+Xpath axes: https://www.w3schools.com/xml/xpath_axes.asp
