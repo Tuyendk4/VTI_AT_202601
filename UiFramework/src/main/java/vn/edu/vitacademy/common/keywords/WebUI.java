@@ -1,6 +1,8 @@
 package vn.edu.vitacademy.common.keywords;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -470,5 +474,44 @@ public class WebUI {
       LOGGER.error("Failed to verify invisibility of web element located by '{}'. Root cause: {}", locator, e.getMessage());
     }
     return false;
+  }
+
+  public WebElement waitForElementVisible(String locator, int timeoutSeconds) {
+    try {
+      LOGGER.info("Waiting up to {}s for web element located by '{}' to be visible", timeoutSeconds, locator);
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+      WebElement we = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+      LOGGER.info("Web element located by '{}' is visible", locator);
+      return we;
+    } catch (Exception e) {
+      LOGGER.error("Web element located by '{}' was not visible within {}s. Root cause: {}", locator, timeoutSeconds, e.getMessage());
+    }
+    return null;
+  }
+
+  public boolean verifyElementNotPresent(String locator) {
+    try {
+      LOGGER.info("Verifying that no web element matches locator '{}'", locator);
+      List<WebElement> matches = driver.findElements(By.xpath(locator));
+      if(matches.isEmpty()) {
+        LOGGER.info("No web element matches locator '{}' (as expected)", locator);
+        return true;
+      }
+      LOGGER.error("Expected no element but found {} for locator '{}'", matches.size(), locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify absence of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public int countElements(String locator) {
+    try {
+      int count = driver.findElements(By.xpath(locator)).size();
+      LOGGER.info("Found {} element(s) matching locator '{}'", count, locator);
+      return count;
+    } catch (Exception e) {
+      LOGGER.error("Failed to count elements located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return -1;
   }
 }
