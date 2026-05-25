@@ -1,63 +1,23 @@
-INFO  | 2026-05-22 20:43:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+INFO  | 2026-05-25 22:00:18 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
   /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
 
-INFO  | 2026-05-22 20:43:02 | [main] common.keywords.WebUI (WebUI.java:openBrowser:23) - Opening browser: CHROME
-INFO  | 2026-05-22 20:43:02 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
-INFO  | 2026-05-22 20:43:02 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
-INFO  | 2026-05-22 20:43:05 | [main] common.keywords.WebUI (WebUI.java:openBrowser:40) - Browser CHROME opened successfully
-INFO  | 2026-05-22 20:43:05 | [main] common.keywords.WebUI (WebUI.java:openBrowser:48) - Navigating to URL: https://demoqa.com/text-box
-INFO  | 2026-05-22 20:43:07 | [main] common.keywords.WebUI (WebUI.java:openBrowser:50) - Navigated to URL: https://demoqa.com/text-box
-INFO  | 2026-05-22 20:43:07 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:290) - Maximizing window
-INFO  | 2026-05-22 20:43:08 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:292) - Window maximized
-INFO  | 2026-05-22 20:43:08 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:115) - Delaying for 5 seconds
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:117) - Delay completed
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getText:312) - Getting text from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getText:314) - Retrieved text 'Full Name' from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:verifyElementContainsText:462) - Verifying text of web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:verifyElementContainsText:465) - Actual text 'Full Name' contains expected text 'Full'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by 'id:userName-label'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by 'id:userName-label'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getTagName:325) - Getting tag name from web element located by 'id:userName-label'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getTagName:327) - Retrieved tag name 'label' from web element located by 'id:userName-label'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by 'css:label[id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by 'css:label[id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getCssValue:338) - Getting CSS value from web element located by 'css:label[id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getCssValue:340) - Retrieved CSS value 'rgba(33, 37, 41, 1)' from web element located by 'css:label[id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by 'xpath://label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by 'xpath://label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getAttributeValue:351) - Getting attribute value from web element located by 'xpath://label[@id='userName-label']' for attribute 'id'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getAttributeValue:353) - Retrieved attribute value 'userName-label' from web element located by 'xpath://label[@id='userName-label']' for attribute 'id'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getElementHeigh:364) - Getting height of web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getElementHeigh:366) - Retrieved height '24' from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getElementWidth:377) - Getting width of web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getElementWidth:379) - Retrieved width '72' from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getHorizontalPosition:390) - Getting horizontal position of web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getHorizontalPosition:392) - Retrieved horizontal position '342' from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getVerticalPosition:403) - Getting vertical position of web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getVerticalPosition:405) - Retrieved vertical position '223' from web element located by '//label[@id='userName-label']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:inputText:209) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:inputText:211) - Inputted text 'Automation Tester' into web element located by '//input[@id='userName']' successfully
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getText:312) - Getting text from web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getText:314) - Retrieved text '' from web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:194) - Finding web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:197) - Found 1 web element located by '//input[@id='userName']'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getAttributeValue:351) - Getting attribute value from web element located by '//input[@id='userName']' for attribute 'value'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:getAttributeValue:353) - Retrieved attribute value 'Automation Tester' from web element located by '//input[@id='userName']' for attribute 'value'
-INFO  | 2026-05-22 20:43:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:59) - Closing browser
-INFO  | 2026-05-22 20:43:14 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:61) - Browser closed successfully
+INFO  | 2026-05-25 22:00:18 | [main] common.keywords.WebUI (WebUI.java:openBrowser:24) - Opening browser: CHROME
+INFO  | 2026-05-25 22:00:18 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+INFO  | 2026-05-25 22:00:18 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
+INFO  | 2026-05-25 22:00:20 | [main] common.keywords.WebUI (WebUI.java:openBrowser:41) - Browser CHROME opened successfully
+INFO  | 2026-05-25 22:00:20 | [main] common.keywords.WebUI (WebUI.java:openBrowser:49) - Navigating to URL: https://demoqa.com/text-box
+INFO  | 2026-05-25 22:00:22 | [main] common.keywords.WebUI (WebUI.java:openBrowser:51) - Navigated to URL: https://demoqa.com/text-box
+INFO  | 2026-05-25 22:00:22 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:353) - Maximizing window
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:355) - Window maximized
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:198) - Finding web element located by '//input[@id='userName']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:202) - Found 1 web element located by '//input[@id='userName']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:204) - Total time 0.022
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:inputText:262) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:inputText:264) - Inputted text 'Automation Tester' into web element located by '//input[@id='userName']' successfully
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:198) - Finding web element located by 'css:button[id='submit']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:202) - Found 1 web element located by 'css:button[id='submit']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:204) - Total time 0.02
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:submit:364) - Submitting web element located by 'css:button[id='submit']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:submit:366) - Submitted web element located by 'css:button[id='submit']'
+INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:60) - Closing browser
+INFO  | 2026-05-25 22:00:24 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:62) - Browser closed successfully

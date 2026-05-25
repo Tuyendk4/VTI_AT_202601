@@ -191,6 +191,30 @@ public class WebUI {
     }
   }
   public WebElement findWebElement(String locator) {
+    long startTime = System.currentTimeMillis();
+    long endTime = 0;
+    double totalTime = 0;
+    try {
+      LOGGER.info("Finding web element located by '{}'", locator);
+      WebElement we = driver.findElement(findBy(locator));
+      endTime = System.currentTimeMillis();
+      if(we != null) {
+        LOGGER.info("Found 1 web element located by '{}'", locator);
+        totalTime = (endTime - startTime) / 1000.0;
+        LOGGER.info("Total time {}", totalTime);
+        return we;
+      }
+    } catch (Exception e) {
+      endTime = System.currentTimeMillis();
+      LOGGER.error("Failed to find web element locate by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    totalTime = (endTime - startTime) / 1000.0;
+    LOGGER.info("Total time {}", totalTime);
+    return null;
+  }
+
+  public WebElement findWebElement(String locator, String param) {
+    locator = StringUtils.replace(locator, "${param}", param);
     try {
       LOGGER.info("Finding web element located by '{}'", locator);
       WebElement we = driver.findElement(findBy(locator));
@@ -311,6 +335,16 @@ public class WebUI {
       LOGGER.info("Clicked on web element located by '{}'", locator);
     } catch (Exception e) {
       LOGGER.error("Failed to click on web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void clickOn(WebElement we) {
+    try {
+      LOGGER.info("Clicking on web element '{}'", we);
+      we.click();
+      LOGGER.info("Clicked on web element '{}'", we);
+    } catch (Exception e) {
+      LOGGER.error("Failed to click on web element '{}'. Root cause: {}", we, e.getMessage());
     }
   }
 
@@ -481,6 +515,21 @@ public class WebUI {
       LOGGER.error("Actual text '{}' and expected text '{}' are not the same", actualText, expectedText);
     } catch (Exception e) {
       LOGGER.error("Failed to verify text of web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean verifyElementText(WebElement we, String expectedText) {
+    try {
+      LOGGER.info("Verifying text of web element '{}'", we);
+      String actualText = we.getText();
+      if(actualText.equals(expectedText)) {
+        LOGGER.info("Actual text '{}' and expected text '{}' are the same", actualText, expectedText);
+        return true;
+      }
+      LOGGER.error("Actual text '{}' and expected text '{}' are not the same", actualText, expectedText);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify text of web element '{}'. Root cause: {}", we, e.getMessage());
     }
     return false;
   }
