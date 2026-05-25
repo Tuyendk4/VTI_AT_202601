@@ -13,7 +13,7 @@ public class WebKeywordsDemo {
   private static final String TXT_FULL_NAME = "//input[@id='userName']";
 
   private static final String TXT_EMAIL = "//input[@id='userEmail']";
-  private static final String BTN_SUBMIT = "//button[@id='submit']";
+  private static final String BTN_SUBMIT = "css:button[id='submit']";
 
   @Test
   public void Test01_web_browser_and_navigation_keywords() {
@@ -79,5 +79,16 @@ public class WebKeywordsDemo {
     webUI.getAttributeValue(TXT_FULL_NAME, "value");
     webUI.closeBrowser();
   }
+
+  @Test
+  public void Test04_click_sendKeys_submit_keywords() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, DEMO_URL);
+    webUI.maximizeWindow();
+    webUI.inputText(TXT_FULL_NAME, "Automation Tester");
+    webUI.submit(BTN_SUBMIT);
+    webUI.closeBrowser();
+  }
+
 
 }
