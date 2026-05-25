@@ -3,6 +3,7 @@ package vn.edu.vitacademy.common.keywords;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import java.util.List;
+import java.util.logging.Level;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,20 @@ public class WebUI {
 
   private WebDriver driver;
   private static final Logger LOGGER = LoggerFactory.getLogger(WebUI.class);
+
+  // Strong refs prevent JUL from GC'ing the loggers and losing our level config.
+  private static final java.util.logging.Logger CDP_FINDER_LOGGER =
+      java.util.logging.Logger.getLogger("org.openqa.selenium.devtools.CdpVersionFinder");
+  private static final java.util.logging.Logger CHROMIUM_LOGGER =
+      java.util.logging.Logger.getLogger("org.openqa.selenium.chromium.ChromiumDriver");
+  private static final java.util.logging.Logger SELENIUM_ROOT_LOGGER =
+      java.util.logging.Logger.getLogger("org.openqa.selenium");
+
+  static {
+    CDP_FINDER_LOGGER.setLevel(Level.OFF);
+    CHROMIUM_LOGGER.setLevel(Level.OFF);
+    SELENIUM_ROOT_LOGGER.setLevel(Level.SEVERE);
+  }
 
   public void openBrowser(String browserName, String... url) {
     try {
