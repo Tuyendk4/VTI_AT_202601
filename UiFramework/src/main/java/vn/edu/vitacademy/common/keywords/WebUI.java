@@ -1,6 +1,8 @@
 package vn.edu.vitacademy.common.keywords;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -159,16 +161,97 @@ public class WebUI {
     }
   }
 
+  //Explicit locator
+  //id:submit, name:firstName, css:input[id="firstName"], xpath://input[@id="firstName"]
+  //Implicit locator
+  // //input[@id="firstName"]
+
+  private By findBy(String locator) {
+    String prefix = StringUtils.substringBefore(locator, ":");
+    String locatorValue = StringUtils.substringAfter(locator, ":");
+    switch (prefix.toLowerCase()) {
+      case "id":
+        return By.id(locatorValue);
+      case "name":
+        return By.name(locatorValue);
+      case "css":
+        return By.cssSelector(locatorValue);
+      case "xpath":
+        return By.xpath(locatorValue);
+      case "class":
+        return By.className(locatorValue);
+      case "link_text":
+        return By.linkText(locatorValue);
+      case "partial_link_text":
+        return By.partialLinkText(locatorValue);
+      case "tag":
+        return By.tagName(locatorValue);
+      default:
+        return By.xpath(locator);
+    }
+  }
   public WebElement findWebElement(String locator) {
+    long startTime = System.currentTimeMillis();
+    long endTime = 0;
+    double totalTime = 0;
     try {
       LOGGER.info("Finding web element located by '{}'", locator);
-      WebElement we = driver.findElement(By.xpath(locator));
+      WebElement we = driver.findElement(findBy(locator));
+      endTime = System.currentTimeMillis();
+      if(we != null) {
+        LOGGER.info("Found 1 web element located by '{}'", locator);
+        totalTime = (endTime - startTime) / 1000.0;
+        LOGGER.info("Total time {}", totalTime);
+        return we;
+      }
+    } catch (Exception e) {
+      endTime = System.currentTimeMillis();
+      LOGGER.error("Failed to find web element locate by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    totalTime = (endTime - startTime) / 1000.0;
+    LOGGER.info("Total time {}", totalTime);
+    return null;
+  }
+
+  public WebElement findWebElement(String locator, String param) {
+    locator = StringUtils.replace(locator, "${param}", param);
+    try {
+      LOGGER.info("Finding web element located by '{}'", locator);
+      WebElement we = driver.findElement(findBy(locator));
       if(we != null) {
         LOGGER.info("Found 1 web element located by '{}'", locator);
         return we;
       }
     } catch (Exception e) {
       LOGGER.error("Failed to find web element locate by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+    return null;
+  }
+
+  public WebElement findWebElement(By by) {
+    try {
+      LOGGER.info("Finding web element located by '{}'", by);
+      WebElement we = driver.findElement(by);
+      if(we != null) {
+        LOGGER.info("Found 1 web element located by '{}'", by);
+        return we;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to find web element locate by '{}'. Root cause: {}", by, e.getMessage());
+    }
+    return null;
+  }
+
+  public List<WebElement> findWebElements(String locator) {
+    try {
+      LOGGER.info("Finding web elements located by '{}'", locator);
+      List<WebElement> wes = driver.findElements(findBy(locator));
+      if(wes != null) {
+        LOGGER.info("Found {} web elements located by '{}'", wes.size(), locator);
+        return wes;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to find web elements located by '{}'. Root cause: {}", locator, e.getMessage());
     }
     return null;
   }
@@ -252,6 +335,16 @@ public class WebUI {
       LOGGER.info("Clicked on web element located by '{}'", locator);
     } catch (Exception e) {
       LOGGER.error("Failed to click on web element located by '{}'. Root cause: {}", locator, e.getMessage());
+    }
+  }
+
+  public void clickOn(WebElement we) {
+    try {
+      LOGGER.info("Clicking on web element '{}'", we);
+      we.click();
+      LOGGER.info("Clicked on web element '{}'", we);
+    } catch (Exception e) {
+      LOGGER.error("Failed to click on web element '{}'. Root cause: {}", we, e.getMessage());
     }
   }
 
@@ -426,6 +519,21 @@ public class WebUI {
     return false;
   }
 
+  public boolean verifyElementText(WebElement we, String expectedText) {
+    try {
+      LOGGER.info("Verifying text of web element '{}'", we);
+      String actualText = we.getText();
+      if(actualText.equals(expectedText)) {
+        LOGGER.info("Actual text '{}' and expected text '{}' are the same", actualText, expectedText);
+        return true;
+      }
+      LOGGER.error("Actual text '{}' and expected text '{}' are not the same", actualText, expectedText);
+    } catch (Exception e) {
+      LOGGER.error("Failed to verify text of web element '{}'. Root cause: {}", we, e.getMessage());
+    }
+    return false;
+  }
+
   public boolean verifyElementContainsText(String locator, String expectedText) {
     WebElement we = findWebElement(locator);
     try {
@@ -469,6 +577,26 @@ public class WebUI {
     } catch (Exception e) {
       LOGGER.error("Failed to verify invisibility of web element located by '{}'. Root cause: {}", locator, e.getMessage());
     }
+    return false;
+  }
+
+  public boolean verifyElementPresent(String locator) {
+    WebElement we = findWebElement(locator);
+    if(we != null) {
+      LOGGER.info("Web element located by '{}' is present", locator);
+      return true;
+    }
+    LOGGER.error("Web element located by '{}' is not present", locator);
+    return false;
+  }
+
+  public boolean verifyElementNotPresent(String locator) {
+    WebElement we = findWebElement(locator);
+    if(we == null) {
+      LOGGER.info("Web element located by '{}' is not present", locator);
+      return true;
+    }
+    LOGGER.error("Web element located by '{}' is present", locator);
     return false;
   }
 }

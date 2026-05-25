@@ -13,7 +13,7 @@ public class WebKeywordsDemo {
   private static final String TXT_FULL_NAME = "//input[@id='userName']";
 
   private static final String TXT_EMAIL = "//input[@id='userEmail']";
-  private static final String BTN_SUBMIT = "//button[@id='submit']";
+  private static final String BTN_SUBMIT = "css:button[id='submit']";
 
   @Test
   public void Test01_web_browser_and_navigation_keywords() {
@@ -67,9 +67,9 @@ public class WebKeywordsDemo {
     webUI.delayInSeconds(5);
     webUI.getText(LBL_FULL_NAME);
     assertTrue(webUI.verifyElementContainsText(LBL_FULL_NAME, "Full"));
-    webUI.getTagName(LBL_FULL_NAME);
-    webUI.getCssValue(LBL_FULL_NAME, "color");
-    webUI.getAttributeValue(LBL_FULL_NAME, "id");
+    webUI.getTagName("id:userName-label");
+    webUI.getCssValue("css:label[id='userName-label']", "color");
+    webUI.getAttributeValue("xpath://label[@id='userName-label']", "id");
     webUI.getElementHeigh(LBL_FULL_NAME);
     webUI.getElementWidth(LBL_FULL_NAME);
     webUI.getHorizontalPosition(LBL_FULL_NAME);
@@ -79,5 +79,16 @@ public class WebKeywordsDemo {
     webUI.getAttributeValue(TXT_FULL_NAME, "value");
     webUI.closeBrowser();
   }
+
+  @Test
+  public void Test04_click_sendKeys_submit_keywords() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, DEMO_URL);
+    webUI.maximizeWindow();
+    webUI.inputText(TXT_FULL_NAME, "Automation Tester");
+    webUI.submit(BTN_SUBMIT);
+    webUI.closeBrowser();
+  }
+
 
 }
