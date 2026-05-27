@@ -9,11 +9,15 @@ public class WebKeywordsDemo {
 
   private static final String BROWSER_NAME = "Chrome";
   private static final String DEMO_URL = "https://demoqa.com/text-box";
+
+  private static final String DEMO_DROPDOWN_URL = "https://demoqa.com/select-menu";
   private static final String LBL_FULL_NAME = "//label[@id='userName-label']";
   private static final String TXT_FULL_NAME = "//input[@id='userName']";
 
   private static final String TXT_EMAIL = "//input[@id='userEmail']";
   private static final String BTN_SUBMIT = "css:button[id='submit']";
+
+  private static final String DDL_COLORS = "//select[@id='oldSelectMenu']";
 
   @Test
   public void Test01_web_browser_and_navigation_keywords() {
@@ -90,5 +94,28 @@ public class WebKeywordsDemo {
     webUI.closeBrowser();
   }
 
+  @Test
+  public void Test05_select_option_in_dropdown() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, DEMO_DROPDOWN_URL);
+    webUI.maximizeWindow();
+    webUI.selectOptionByIndex(DDL_COLORS, 3); // Yellow
+    webUI.delayInSeconds(5);
+    webUI.selectOptionByText(DDL_COLORS, "Black");  // Black
+    webUI.delayInSeconds(5);
+    webUI.selectOptionByValue(DDL_COLORS, "8"); // Indigo
+    webUI.delayInSeconds(5);
+    webUI.closeBrowser();
+  }
+
+  @Test
+  public void Test06_waits_in_selenium() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, DEMO_URL);
+    webUI.maximizeWindow();
+    webUI.inputText("//input[@id='userName01']", "Automation Tester");
+//    webUI.submit(BTN_SUBMIT);
+    webUI.closeBrowser();
+  }
 
 }
