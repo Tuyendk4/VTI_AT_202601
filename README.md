@@ -82,3 +82,8 @@ git pull origin main
 Back to Step 2 to continue your work
 
 
+## Bài tập ngày 27/05/2026
+
+1. Phát triển các keyword thực hiện deselect option dựa theo các câu lệnh sẵn có trong selenium và phát triển nhóm keyword verify cho việc kiểm tra select/deselect option trong dropdown.
+
+2. Truy cập vào website "https://demoqa.com/select-menu", tìm cách thực hiện bắt xpath của các option trong dropdown khi tương tác với text box Select Value.

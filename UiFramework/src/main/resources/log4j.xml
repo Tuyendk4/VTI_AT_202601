@@ -24,7 +24,7 @@
       <param name="ConversionPattern"
         value="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %M %C{2} (%F:%L) - %m%n"/>
     </layout>
-    <param name="Threshold" value="INFO"/>
+    <param name="Threshold" value="DEBUG"/>
     <param name="Target" value="System.out"/>
   </appender>
 
