@@ -1,23 +1,18 @@
-INFO  | 2026-05-25 22:00:18 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+INFO  | 2026-05-27 21:39:37 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
   /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
 
-INFO  | 2026-05-25 22:00:18 | [main] common.keywords.WebUI (WebUI.java:openBrowser:24) - Opening browser: CHROME
-INFO  | 2026-05-25 22:00:18 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
-INFO  | 2026-05-25 22:00:18 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
-INFO  | 2026-05-25 22:00:20 | [main] common.keywords.WebUI (WebUI.java:openBrowser:41) - Browser CHROME opened successfully
-INFO  | 2026-05-25 22:00:20 | [main] common.keywords.WebUI (WebUI.java:openBrowser:49) - Navigating to URL: https://demoqa.com/text-box
-INFO  | 2026-05-25 22:00:22 | [main] common.keywords.WebUI (WebUI.java:openBrowser:51) - Navigated to URL: https://demoqa.com/text-box
-INFO  | 2026-05-25 22:00:22 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:353) - Maximizing window
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:355) - Window maximized
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:198) - Finding web element located by '//input[@id='userName']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:202) - Found 1 web element located by '//input[@id='userName']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:204) - Total time 0.022
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:inputText:262) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:inputText:264) - Inputted text 'Automation Tester' into web element located by '//input[@id='userName']' successfully
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:198) - Finding web element located by 'css:button[id='submit']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:202) - Found 1 web element located by 'css:button[id='submit']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:204) - Total time 0.02
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:submit:364) - Submitting web element located by 'css:button[id='submit']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:submit:366) - Submitted web element located by 'css:button[id='submit']'
-INFO  | 2026-05-25 22:00:23 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:60) - Closing browser
-INFO  | 2026-05-25 22:00:24 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:62) - Browser closed successfully
+INFO  | 2026-05-27 21:39:37 | [main] common.keywords.WebUI (WebUI.java:openBrowser:31) - Opening browser: CHROME
+INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
+INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:48) - Browser CHROME opened successfully
+INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:56) - Navigating to URL: https://demoqa.com/text-box
+INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:58) - Navigated to URL: https://demoqa.com/text-box
+INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:369) - Maximizing window
+INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:371) - Window maximized
+INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:205) - Finding web element located by '//input[@id='userName01']'
+ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Failed to find web element locate by '//input[@id='userName01']'. Root cause: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='userName01'] (tried for 30 second(s) with 500 milliseconds interval)
+INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Total time 30.334
+INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:278) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName01']'
+ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:282) - Failed to input text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "we" is null
+INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:67) - Closing browser
+INFO  | 2026-05-27 21:40:15 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:69) - Browser closed successfully

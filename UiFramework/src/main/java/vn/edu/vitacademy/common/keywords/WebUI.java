@@ -1,16 +1,23 @@
 package vn.edu.vitacademy.common.keywords;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -191,12 +198,21 @@ public class WebUI {
     }
   }
   public WebElement findWebElement(String locator) {
-    long startTime = System.currentTimeMillis();
+    long startTime = 0;
     long endTime = 0;
     double totalTime = 0;
     try {
       LOGGER.info("Finding web element located by '{}'", locator);
-      WebElement we = driver.findElement(findBy(locator));
+//      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+      startTime = System.currentTimeMillis();
+//      WebElement we = driver.findElement(findBy(locator));
+//      Wait<WebDriver> wait = new FluentWait<>(driver)
+//        .withTimeout(Duration.ofSeconds(30))
+//        .pollingEvery(Duration.ofMillis(500))
+//        .ignoring(NoSuchElementException.class);
+//      WebElement we = wait.until(driver -> driver.findElement(findBy(locator)));
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+      WebElement we = wait.until(ExpectedConditions.presenceOfElementLocated(findBy(locator)));
       endTime = System.currentTimeMillis();
       if(we != null) {
         LOGGER.info("Found 1 web element located by '{}'", locator);
@@ -598,5 +614,41 @@ public class WebUI {
     }
     LOGGER.error("Web element located by '{}' is present", locator);
     return false;
+  }
+
+  public void selectOptionByIndex(String locator, int index) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Selecting option by index {} for web element located by '{}'", index, locator);
+      Select select = new Select(we);
+      select.selectByIndex(index);
+      LOGGER.info("Option with index {} selected successfully for web element located by '{}'", index, locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to select option by index {} for web element located by '{}'. Root cause: {}", index, locator, e.getMessage());
+    }
+  }
+
+  public void selectOptionByText(String locator, String text) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Selecting option by text {} for web element located by '{}'", text, locator);
+      Select select = new Select(we);
+      select.selectByVisibleText(text);
+      LOGGER.info("Option with text {} selected successfully for web element located by '{}'", text, locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to select option by text {} for web element located by '{}'. Root cause: {}", text, locator, e.getMessage());
+    }
+  }
+
+  public void selectOptionByValue(String locator, String value) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Selecting option by value {} for web element located by '{}'", value, locator);
+      Select select = new Select(we);
+      select.selectByValue(value);
+      LOGGER.info("Option with value {} selected successfully for web element located by '{}'", value, locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to select option by value {} for web element located by '{}'. Root cause: {}", value, locator, e.getMessage());
+    }
   }
 }
