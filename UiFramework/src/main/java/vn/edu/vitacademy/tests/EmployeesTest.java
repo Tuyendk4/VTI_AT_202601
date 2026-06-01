@@ -14,6 +14,7 @@ public class EmployeesTest {
   private static final String BTN_EDIT = "//td[normalize-space()='${param}']/following-sibling::td//span[starts-with(@id,'edit-record')]";
 
   private static final String EMPLOYEE_TABLE_BTN_EDITS = "//span[starts-with(@id,'edit-record')]";
+  private static final String DLG_REGISTRATION_FORM = "//div[@class='modal-content']";
   private static final String REGISTRATION_FORM_TXT_FIRST_NAME = "//input[@id='firstName']";
   private static final String REGISTRATION_FORM_TXT_LAST_NAME = "//input[@id='lastName']";
   private static final String REGISTRATION_FORM_TXT_EMAIL = "//input[@id='userEmail']";
@@ -45,13 +46,15 @@ public class EmployeesTest {
   public void editEmail(String email, String newFirstName, String newLastName, String newEmail,
       String newAge, String newSalary, String newDepartment) {
     clickEditButtonOfEmail(email);
-    inputFirstNameOnRegistrationForm(newFirstName);
-    inputLastNameOnRegistrationForm(newLastName);
-    inputAgeOnRegistrationForm(newAge);
-    inputEmailOnRegistrationForm(newEmail);
-    inputSalaryOnRegistrationForm(newSalary);
-    inputDepartmentOnRegistrationForm(newDepartment);
-    clickSubmitButtonOnRegistrationForm();
+    if(isRegistrationFormVisible()) {
+      inputFirstNameOnRegistrationForm(newFirstName);
+      inputLastNameOnRegistrationForm(newLastName);
+      inputAgeOnRegistrationForm(newAge);
+      inputEmailOnRegistrationForm(newEmail);
+      inputSalaryOnRegistrationForm(newSalary);
+      inputDepartmentOnRegistrationForm(newDepartment);
+      clickSubmitButtonOnRegistrationForm();
+    }
   }
 
   public void clickEditButtonOfEmail(String email) {
@@ -70,9 +73,13 @@ public class EmployeesTest {
     }
   }
 
+  public boolean isRegistrationFormVisible() {
+    return webUI.waitForElementVisible(DLG_REGISTRATION_FORM, 30);
+  }
+
   public void inputFirstNameOnRegistrationForm(String firstName) {
-    webUI.clearText(REGISTRATION_FORM_TXT_FIRST_NAME);
-    webUI.inputText(REGISTRATION_FORM_TXT_FIRST_NAME, firstName);
+    webUI.clearText(REGISTRATION_FORM_TXT_FIRST_NAME, 20);
+    webUI.inputText(REGISTRATION_FORM_TXT_FIRST_NAME, firstName, 10);
   }
 
   public void inputLastNameOnRegistrationForm(String lastName) {

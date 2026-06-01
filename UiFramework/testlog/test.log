@@ -1,18 +1,33 @@
-INFO  | 2026-05-27 21:39:37 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+INFO  | 2026-06-01 21:51:03 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
   /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
 
-INFO  | 2026-05-27 21:39:37 | [main] common.keywords.WebUI (WebUI.java:openBrowser:31) - Opening browser: CHROME
-INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
-INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
-INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:48) - Browser CHROME opened successfully
-INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:56) - Navigating to URL: https://demoqa.com/text-box
-INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:58) - Navigated to URL: https://demoqa.com/text-box
-INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:369) - Maximizing window
-INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:371) - Window maximized
-INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:205) - Finding web element located by '//input[@id='userName01']'
-ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Failed to find web element locate by '//input[@id='userName01']'. Root cause: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='userName01'] (tried for 30 second(s) with 500 milliseconds interval)
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Total time 30.334
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:278) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName01']'
-ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:282) - Failed to input text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "we" is null
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:67) - Closing browser
-INFO  | 2026-05-27 21:40:15 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:69) - Browser closed successfully
+INFO  | 2026-06-01 21:51:03 | [main] common.keywords.WebUI (WebUI.java:openBrowser:35) - Opening browser: CHROME
+INFO  | 2026-06-01 21:51:04 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+INFO  | 2026-06-01 21:51:04 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
+INFO  | 2026-06-01 21:51:07 | [main] common.keywords.WebUI (WebUI.java:openBrowser:52) - Browser CHROME opened successfully
+INFO  | 2026-06-01 21:51:07 | [main] common.keywords.WebUI (WebUI.java:openBrowser:60) - Navigating to URL: https://demoqa.com/select-menu
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:openBrowser:62) - Navigated to URL: https://demoqa.com/select-menu
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:findWebElement:211) - Finding web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div' within 30 second(s)
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:findWebElement:224) - Found 1 web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div'
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:clickOn:365) - Clicking on web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div'
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:clickOn:367) - Clicked on web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div'
+INFO  | 2026-06-01 21:51:10 | [main] common.keywords.WebUI (WebUI.java:findWebElements:272) - Finding web elements located by '//*[starts-with(@id,'react-select-') and contains(@id,'-option-')]' within 30 second(s)
+INFO  | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:findWebElements:277) - Found 6 web elements located by '//*[starts-with(@id,'react-select-') and contains(@id,'-option-')]'
+INFO  | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:579) - Verifying text of web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+ERROR | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:586) - Actual text 'Group 1, option 1' and expected text 'Group 2, option 2' are not the same
+INFO  | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:579) - Verifying text of web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+ERROR | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:586) - Actual text 'Group 1, option 2' and expected text 'Group 2, option 2' are not the same
+INFO  | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:579) - Verifying text of web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+ERROR | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:586) - Actual text 'Group 2, option 1' and expected text 'Group 2, option 2' are not the same
+INFO  | 2026-06-01 21:51:11 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:579) - Verifying text of web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+INFO  | 2026-06-01 21:51:12 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:582) - Actual text 'Group 2, option 2' and expected text 'Group 2, option 2' are the same
+INFO  | 2026-06-01 21:51:12 | [main] common.keywords.WebUI (WebUI.java:clickOn:376) - Clicking on web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+INFO  | 2026-06-01 21:51:12 | [main] common.keywords.WebUI (WebUI.java:clickOn:378) - Clicked on web element '[[ChromeDriver: chrome on MAC (39e8e14e7788ab0633d1633b70612c9d)] -> xpath: //*[starts-with(@id,'react-select-') and contains(@id,'-option-')]]'
+INFO  | 2026-06-01 21:51:12 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:127) - Delaying for 5 seconds
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:129) - Delay completed
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:findWebElement:211) - Finding web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div/preceding-sibling::div[text()='Select Option' or contains(text(), 'option')]' within 30 second(s)
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:findWebElement:224) - Found 1 web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div/preceding-sibling::div[text()='Select Option' or contains(text(), 'option')]'
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:561) - Verifying text of web element located by '//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div/preceding-sibling::div[text()='Select Option' or contains(text(), 'option')]'
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:564) - Actual text 'Group 2, option 2' and expected text 'Group 2, option 2' are the same
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:71) - Closing browser
+INFO  | 2026-06-01 21:51:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:73) - Browser closed successfully
