@@ -1,18 +1,60 @@
-INFO  | 2026-05-27 21:39:37 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+INFO  | 2026-05-31 11:08:24 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
   /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
 
-INFO  | 2026-05-27 21:39:37 | [main] common.keywords.WebUI (WebUI.java:openBrowser:31) - Opening browser: CHROME
-INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
-INFO  | 2026-05-27 21:39:38 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
-INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:48) - Browser CHROME opened successfully
-INFO  | 2026-05-27 21:39:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:56) - Navigating to URL: https://demoqa.com/text-box
-INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:58) - Navigated to URL: https://demoqa.com/text-box
-INFO  | 2026-05-27 21:39:43 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:369) - Maximizing window
-INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:371) - Window maximized
-INFO  | 2026-05-27 21:39:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:205) - Finding web element located by '//input[@id='userName01']'
-ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Failed to find web element locate by '//input[@id='userName01']'. Root cause: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='userName01'] (tried for 30 second(s) with 500 milliseconds interval)
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Total time 30.334
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:278) - Inputting text 'Automation Tester' into web element located by '//input[@id='userName01']'
-ERROR | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:inputText:282) - Failed to input text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "we" is null
-INFO  | 2026-05-27 21:40:14 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:67) - Closing browser
-INFO  | 2026-05-27 21:40:15 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:69) - Browser closed successfully
+INFO  | 2026-05-31 11:08:24 | [main] common.keywords.WebUI (WebUI.java:openBrowser:37) - Opening browser: CHROME
+INFO  | 2026-05-31 11:08:24 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+INFO  | 2026-05-31 11:08:24 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
+INFO  | 2026-05-31 11:08:26 | [main] common.keywords.WebUI (WebUI.java:openBrowser:54) - Browser CHROME opened successfully
+INFO  | 2026-05-31 11:08:26 | [main] common.keywords.WebUI (WebUI.java:openBrowser:62) - Navigating to URL: https://demoqa.com/browser-windows
+INFO  | 2026-05-31 11:08:27 | [main] common.keywords.WebUI (WebUI.java:openBrowser:64) - Navigated to URL: https://demoqa.com/browser-windows
+INFO  | 2026-05-31 11:08:27 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:378) - Maximizing window
+INFO  | 2026-05-31 11:08:29 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:380) - Window maximized
+INFO  | 2026-05-31 11:08:29 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='tabButton']' within 30 second(s)
+INFO  | 2026-05-31 11:08:30 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='tabButton']'
+INFO  | 2026-05-31 11:08:30 | [main] common.keywords.WebUI (WebUI.java:clickOn:358) - Clicking on web element located by '//button[@id='tabButton']'
+INFO  | 2026-05-31 11:08:30 | [main] common.keywords.WebUI (WebUI.java:clickOn:360) - Clicked on web element located by '//button[@id='tabButton']'
+INFO  | 2026-05-31 11:08:30 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//h1[@id='sampleHeading']' within 30 second(s)
+ERROR | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:findWebElement:232) - Failed to find web element locate by '//h1[@id='sampleHeading']'. Root cause: Expected condition failed: waiting for presence of element located by: By.xpath: //h1[@id='sampleHeading'] (tried for 30 second(s) with 500 milliseconds interval)
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:getText:400) - Getting text from web element located by '//h1[@id='sampleHeading']'
+ERROR | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:getText:405) - Failed to get text from web element located by '//h1[@id='sampleHeading']'. Root cause: Cannot invoke "org.openqa.selenium.WebElement.getText()" because "we" is null
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:753) - Switching to window with index 1
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:756) - Successfully switched to window with index 1
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//h1[@id='sampleHeading']' within 30 second(s)
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:getText:400) - Getting text from web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:getText:402) - Retrieved text 'This is a sample page' from web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:closeWindowByIndex:813) - Closing window by index '1'
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:closeWindowByIndex:817) - Successfully closed window by index '1'
+INFO  | 2026-05-31 11:09:00 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:129) - Delaying for 5 seconds
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:131) - Delay completed
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:753) - Switching to window with index 0
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:756) - Successfully switched to window with index 0
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='windowButton']' within 30 second(s)
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='windowButton']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:clickOn:358) - Clicking on web element located by '//button[@id='windowButton']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:clickOn:360) - Clicked on web element located by '//button[@id='windowButton']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByURL:785) - Switching to window which has url 'https://demoqa.com/sample'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByURL:791) - Successfully switched to window with url 'https://demoqa.com/sample'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//h1[@id='sampleHeading']' within 30 second(s)
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:getText:400) - Getting text from web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:getText:402) - Retrieved text 'This is a sample page' from web element located by '//h1[@id='sampleHeading']'
+INFO  | 2026-05-31 11:09:05 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByURL:785) - Switching to window which has url 'https://demoqa.com/browser-windows'
+INFO  | 2026-05-31 11:09:06 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByURL:791) - Successfully switched to window with url 'https://demoqa.com/browser-windows'
+INFO  | 2026-05-31 11:09:06 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:129) - Delaying for 5 seconds
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:131) - Delay completed
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='messageWindowButton']' within 30 second(s)
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='messageWindowButton']'
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:clickOn:358) - Clicking on web element located by '//button[@id='messageWindowButton']'
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:clickOn:360) - Clicked on web element located by '//button[@id='messageWindowButton']'
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:753) - Switching to window with index 2
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:switchToWindowByIndex:756) - Successfully switched to window with index 2
+INFO  | 2026-05-31 11:09:11 | [main] common.keywords.WebUI (WebUI.java:getUrl:95) - Getting page url
+ERROR | 2026-05-31 11:12:11 | [main] common.keywords.WebUI (WebUI.java:getUrl:100) - Failed to get page url. Root cause: java.util.concurrent.TimeoutException
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '192.168.102.21', ip: '192.168.102.21', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d966e04623b61aabdf9032190dfc8bb8, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /var/folders/gm/9w1n371x6fl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52374}, goog:processID: 18681, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52374/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d966e04623b61aabdf9032190dfc8bb8
+INFO  | 2026-05-31 11:12:11 | [main] common.keywords.WebUI (WebUI.java:getTitle:83) - Getting page title
