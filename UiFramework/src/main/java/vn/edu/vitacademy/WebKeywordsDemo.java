@@ -1,7 +1,10 @@
 package vn.edu.vitacademy;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import vn.edu.vitacademy.common.keywords.WebUI;
 
@@ -11,6 +14,9 @@ public class WebKeywordsDemo {
   private static final String DEMO_URL = "https://demoqa.com/text-box";
 
   private static final String DEMO_DROPDOWN_URL = "https://demoqa.com/select-menu";
+  private static final String TXT_OPTIONS = "//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div";
+  private static final String TXT_OPTIONS_VALUE = "//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div/preceding-sibling::div[text()='Select Option' or contains(text(), 'option')]";
+  private static final String DDL_OPTIONS = "//*[starts-with(@id,'react-select-') and contains(@id,'-option-')]";
   private static final String LBL_FULL_NAME = "//label[@id='userName-label']";
   private static final String TXT_FULL_NAME = "//input[@id='userName']";
 
@@ -23,8 +29,11 @@ public class WebKeywordsDemo {
   private static final String BTN_NEW_TAB = "//button[@id='tabButton']";
   private static final String BTN_NEW_WINDOW = "//button[@id='windowButton']";
   private static final String BTN_NEW_MESSAGE = "//button[@id='messageWindowButton']";
+  private static final String ALERT_DEMO_URL = "https://demoqa.com/alerts";
+  private static final String BTN_ALERT = "//button[@id='alertButton']";
+  private static final String BTN_TIME_ALERT = "//button[@id='timerAlertButton']";
 
-
+  private WebUI webUI;
 
   @Test
   public void Test01_web_browser_and_navigation_keywords() {
@@ -149,5 +158,49 @@ public class WebKeywordsDemo {
     webUI.getTitle();
     webUI.getText("//body");
     webUI.closeBrowser();
+  }
+
+  @Test
+  public void Test08_handle_alert_in_selenium() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, ALERT_DEMO_URL);
+    webUI.maximizeWindow();
+    webUI.delayInSeconds(5);
+    webUI.clickOn(BTN_ALERT);
+    assertEquals(webUI.getAlertText(), "You clicked a button");
+    webUI.acceptAlert();
+    webUI.delayInSeconds(5);
+    webUI.clickOn(BTN_TIME_ALERT);
+    if(webUI.waitForAlert(10)) {
+      assertEquals(webUI.getAlertText(), "This alert appeared after 5 seconds");
+      webUI.acceptAlert();
+    }
+    webUI.delayInSeconds(5);
+    webUI.closeBrowser();
+  }
+
+  @Test
+  public void Test09_handle_dropdown_with_auto_complete_mode_in_selenium() {
+    webUI = new WebUI();
+    webUI.openBrowser("Chrome", DEMO_DROPDOWN_URL);
+    selectOption("Group 2, option 2");
+    webUI.delayInSeconds(5);
+    assertTrue(shouldShowOptionInOptionsTextBox("Group 2, option 2"));
+    webUI.closeBrowser();
+  }
+
+  private void selectOption(String option) {
+    webUI.clickOn(TXT_OPTIONS);
+    List<WebElement> options = webUI.findWebElements(DDL_OPTIONS);
+    for(WebElement optionElement : options) {
+      if(webUI.verifyElementText(optionElement, option)) {
+        webUI.clickOn(optionElement);
+        break;
+      }
+    }
+  }
+
+  private boolean shouldShowOptionInOptionsTextBox(String expectedOption) {
+    return webUI.verifyElementText(TXT_OPTIONS_VALUE, expectedOption);
   }
 }
