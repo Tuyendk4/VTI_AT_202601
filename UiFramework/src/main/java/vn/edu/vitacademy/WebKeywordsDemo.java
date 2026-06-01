@@ -19,6 +19,13 @@ public class WebKeywordsDemo {
 
   private static final String DDL_COLORS = "//select[@id='oldSelectMenu']";
 
+  private static final String WINDOW_DEMO_URL = "https://demoqa.com/browser-windows";
+  private static final String BTN_NEW_TAB = "//button[@id='tabButton']";
+  private static final String BTN_NEW_WINDOW = "//button[@id='windowButton']";
+  private static final String BTN_NEW_MESSAGE = "//button[@id='messageWindowButton']";
+
+
+
   @Test
   public void Test01_web_browser_and_navigation_keywords() {
     WebUI webUI = new WebUI();
@@ -118,4 +125,29 @@ public class WebKeywordsDemo {
     webUI.closeBrowser();
   }
 
+  @Test
+  public void Test07_handle_windows_in_selenium() {
+    WebUI webUI = new WebUI();
+    webUI.openBrowser(BROWSER_NAME, WINDOW_DEMO_URL);
+    webUI.maximizeWindow();
+//    webUI.delayInSeconds(5);
+    webUI.clickOn(BTN_NEW_TAB);
+    webUI.getText("//h1[@id='sampleHeading']");
+    webUI.switchToWindowByIndex(1);
+    webUI.getText("//h1[@id='sampleHeading']");
+    webUI.closeWindowByIndex(1);
+    webUI.delayInSeconds(5);
+    webUI.switchToWindowByIndex(0);
+    webUI.clickOn(BTN_NEW_WINDOW);
+    webUI.switchToWindowByURL("https://demoqa.com/sample");
+    webUI.getText("//h1[@id='sampleHeading']");
+    webUI.switchToWindowByURL(WINDOW_DEMO_URL);
+    webUI.delayInSeconds(5);
+    webUI.clickOn(BTN_NEW_MESSAGE);
+    webUI.switchToWindowByIndex(2);
+    webUI.getUrl();
+    webUI.getTitle();
+    webUI.getText("//body");
+    webUI.closeBrowser();
+  }
 }

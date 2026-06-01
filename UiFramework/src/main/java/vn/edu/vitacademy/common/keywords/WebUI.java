@@ -1,8 +1,12 @@
 package vn.edu.vitacademy.common.keywords;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.not;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,6 +29,8 @@ public class WebUI {
 
   private WebDriver driver;
   private static final Logger LOGGER = LoggerFactory.getLogger(WebUI.class);
+
+  private static final int DEFAULT_TIMEOUT = 30;
 
   public void openBrowser(String browserName, String... url) {
     try {
@@ -197,35 +203,36 @@ public class WebUI {
         return By.xpath(locator);
     }
   }
-  public WebElement findWebElement(String locator) {
-    long startTime = 0;
-    long endTime = 0;
-    double totalTime = 0;
+  public WebElement findWebElement(String locator, int... timeout) {
+//    long startTime = 0;
+//    long endTime = 0;
+//    double totalTime = 0;
+    int waitTime = timeout.length > 0 ? timeout[0] : DEFAULT_TIMEOUT;
     try {
-      LOGGER.info("Finding web element located by '{}'", locator);
+      LOGGER.info("Finding web element located by '{}' within {} second(s)", locator, waitTime);
 //      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-      startTime = System.currentTimeMillis();
+//      startTime = System.currentTimeMillis();
 //      WebElement we = driver.findElement(findBy(locator));
 //      Wait<WebDriver> wait = new FluentWait<>(driver)
 //        .withTimeout(Duration.ofSeconds(30))
 //        .pollingEvery(Duration.ofMillis(500))
 //        .ignoring(NoSuchElementException.class);
 //      WebElement we = wait.until(driver -> driver.findElement(findBy(locator)));
-      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(waitTime));
       WebElement we = wait.until(ExpectedConditions.presenceOfElementLocated(findBy(locator)));
-      endTime = System.currentTimeMillis();
+//      endTime = System.currentTimeMillis();
       if(we != null) {
         LOGGER.info("Found 1 web element located by '{}'", locator);
-        totalTime = (endTime - startTime) / 1000.0;
-        LOGGER.info("Total time {}", totalTime);
+//        totalTime = (endTime - startTime) / 1000.0;
+//        LOGGER.info("Total time {}", totalTime);
         return we;
       }
     } catch (Exception e) {
-      endTime = System.currentTimeMillis();
+//      endTime = System.currentTimeMillis();
       LOGGER.error("Failed to find web element locate by '{}'. Root cause: {}", locator, e.getMessage());
     }
-    totalTime = (endTime - startTime) / 1000.0;
-    LOGGER.info("Total time {}", totalTime);
+//    totalTime = (endTime - startTime) / 1000.0;
+//    LOGGER.info("Total time {}", totalTime);
     return null;
   }
 
@@ -258,10 +265,12 @@ public class WebUI {
     return null;
   }
 
-  public List<WebElement> findWebElements(String locator) {
+  public List<WebElement> findWebElements(String locator, int... timeout) {
+    int waitTime = timeout.length > 0 ? timeout[0] : DEFAULT_TIMEOUT;
     try {
-      LOGGER.info("Finding web elements located by '{}'", locator);
-      List<WebElement> wes = driver.findElements(findBy(locator));
+      LOGGER.info("Finding web elements located by '{}' within {} second(s)", locator, waitTime);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(waitTime));
+      List<WebElement> wes = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(findBy(locator)));
       if(wes != null) {
         LOGGER.info("Found {} web elements located by '{}'", wes.size(), locator);
         return wes;
@@ -272,8 +281,8 @@ public class WebUI {
     return null;
   }
 
-  public void inputText(String locator, String text) {
-    WebElement we = findWebElement(locator);
+  public void inputText(String locator, String text, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Inputting text '{}' into web element located by '{}'", text, locator);
       we.sendKeys(text);
@@ -283,8 +292,8 @@ public class WebUI {
     }
   }
 
-  public void clearText(String locator) {
-    WebElement we = findWebElement(locator);
+  public void clearText(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Clearing text in element located by '{}'", locator);
       we.clear();
@@ -294,8 +303,8 @@ public class WebUI {
     }
   }
 
-  public void copy(String locator) {
-    WebElement we = findWebElement(locator);
+  public void copy(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Copying text from web element located by '{}'", locator);
       String osName = System.getProperty("os.name");
@@ -310,8 +319,8 @@ public class WebUI {
     }
   }
 
-  public void selectAllText(String locator) {
-    WebElement we = findWebElement(locator);
+  public void selectAllText(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Selecting all text in web element located by '{}'", locator);
       String osName = System.getProperty("os.name");
@@ -326,8 +335,8 @@ public class WebUI {
     }
   }
 
-  public void paste(String locator) {
-    WebElement we = findWebElement(locator);
+  public void paste(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Pasting text in web element located by '{}'", locator);
       String osName = System.getProperty("os.name");
@@ -343,8 +352,8 @@ public class WebUI {
     }
   }
 
-  public void clickOn(String locator) {
-    WebElement we = findWebElement(locator);
+  public void clickOn(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Clicking on web element located by '{}'", locator);
       we.click();
@@ -374,8 +383,8 @@ public class WebUI {
     }
   }
 
-  public void submit(String locator) {
-    WebElement we = findWebElement(locator);
+  public void submit(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Submitting web element located by '{}'", locator);
       we.submit();
@@ -385,8 +394,8 @@ public class WebUI {
     }
   }
 
-  public String getText(String locator) {
-    WebElement we = findWebElement(locator);
+  public String getText(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Getting text from web element located by '{}'", locator);
       String text = we.getText();
@@ -398,8 +407,8 @@ public class WebUI {
     return null;
   }
 
-  public String getTagName(String locator) {
-    WebElement we = findWebElement(locator);
+  public String getTagName(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Getting tag name from web element located by '{}'", locator);
       String tagName = we.getTagName();
@@ -411,8 +420,8 @@ public class WebUI {
     return null;
   }
 
-  public String getCssValue(String locator, String css) {
-    WebElement we = findWebElement(locator);
+  public String getCssValue(String locator, String css, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Getting CSS value from web element located by '{}'", locator);
       String cssValue = we.getCssValue(css);
@@ -424,8 +433,8 @@ public class WebUI {
     return null;
   }
 
-  public String getAttributeValue(String locator, String attributeName) {
-    WebElement we = findWebElement(locator);
+  public String getAttributeValue(String locator, String attributeName, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Getting attribute value from web element located by '{}' for attribute '{}'", locator, attributeName);
       String attributeValue = we.getAttribute(attributeName);
@@ -437,8 +446,8 @@ public class WebUI {
     return null;
   }
 
-  public int getElementHeigh(String locator) {
-    WebElement we = findWebElement(locator);
+  public int getElementHeigh(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
     try {
       LOGGER.info("Getting height of web element located by '{}'", locator);
       int height = we.getSize().getHeight();
@@ -649,6 +658,165 @@ public class WebUI {
       LOGGER.info("Option with value {} selected successfully for web element located by '{}'", value, locator);
     } catch (Exception e) {
       LOGGER.error("Failed to select option by value {} for web element located by '{}'. Root cause: {}", value, locator, e.getMessage());
+    }
+  }
+
+  public boolean waitForElementPresent(String locator, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element located by '{}' to be present within {} second(s)", locator, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      WebElement we = wait.until(ExpectedConditions.presenceOfElementLocated(findBy(locator)));
+      if(we != null) {
+        LOGGER.info("Web element located by '{}' is present", locator);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is not present within {} second(s)", locator, timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element located by '{}' to be present. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean waitForElementNotPresent(String locator, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element located by '{}' to be not present within {} second(s)", locator, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      boolean isNotPresent = wait.until(not(ExpectedConditions.presenceOfElementLocated(findBy(locator))));
+      if(isNotPresent) {
+        LOGGER.info("Web element located by '{}' is not present within {} second(s)", locator, timeout);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is still present after {} second(s)", locator, timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element located by '{}' to be not present. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean waitForElementVisible(String locator, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element located by '{}' to be visible within {} second(s)", locator, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      WebElement we = wait.until(ExpectedConditions.visibilityOfElementLocated(findBy(locator)));
+      if(we != null) {
+        LOGGER.info("Web element located by '{}' is visible", locator);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is not visible within {} second(s)", locator, timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element located by '{}' to be visible. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean waitForElementInvisible(String locator, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element located by '{}' to be invisible within {} second(s)", locator, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      boolean isNotVisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy(locator)));
+      if(isNotVisible) {
+        LOGGER.info("Web element located by '{}' is invisible within {} second(s)", locator, timeout);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is still visible after {} second(s)", locator, timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element located by '{}' to be invisible. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean waitForElementClickable(String locator, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element located by '{}' to be clickable within {} second(s)", locator, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      WebElement we = wait.until(ExpectedConditions.elementToBeClickable(findBy(locator)));
+      if(we != null) {
+        LOGGER.info("Web element located by '{}' is clickable", locator);
+        return true;
+      }
+      LOGGER.error("Web element located by '{}' is not clickable within {} second(s)", locator, timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element located by '{}' to be clickable. Root cause: {}", locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public void switchToWindowByIndex(int index) {
+    if (index < 0) {
+      throw new IllegalArgumentException("Window index cannot be negative");
+    }
+    Set<String> windowHandles = driver.getWindowHandles();
+    if (index >= windowHandles.size()) {
+      throw new IndexOutOfBoundsException("Window index is out of bounds");
+    }
+    try {
+      LOGGER.info("Switching to window with index {}", index);
+      List<String> windowList = new ArrayList<>(windowHandles);
+      driver.switchTo().window(windowList.get(index));
+      LOGGER.info("Successfully switched to window with index {}", index);
+    } catch (Exception e) {
+      LOGGER.error("Failed to switch to window with index {}. Root cause: {}", index, e.getMessage());
+    }
+  }
+
+  public void switchToWindowByTitle(String title) {
+    try {
+      LOGGER.info("Switching to window which has title '{}'", title);
+      boolean found = false;
+      Set<String> windowHandles = driver.getWindowHandles();
+      for (String windowHandle : windowHandles) {
+        driver.switchTo().window(windowHandle);
+        if (driver.getTitle().equals(title)) {
+          LOGGER.info("Successfully switched to window with title '{}'", title);
+          found = true;
+          break;
+        }
+      }
+      if(!found) {
+        LOGGER.error("Failed to switch to window with title '{}'", title);
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to switch to window with title '{}'. Root cause: {}", title, e.getMessage());
+    }
+  }
+
+  public void switchToWindowByURL(String url) {
+    try {
+      LOGGER.info("Switching to window which has url '{}'", url);
+      boolean found = false;
+      Set<String> windowHandles = driver.getWindowHandles();
+      for (String windowHandle : windowHandles) {
+        driver.switchTo().window(windowHandle);
+        if (driver.getCurrentUrl().equals(url)) {
+          LOGGER.info("Successfully switched to window with url '{}'", url);
+          found = true;
+          break;
+        }
+      }
+      if(!found) {
+        LOGGER.error("Failed to switch to window with url '{}'", url);
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to switch to window with url '{}'. Root cause: {}", url, e.getMessage());
+    }
+  }
+
+  public void closeWindowByIndex(int index) {
+    if (index < 0) {
+      throw new IllegalArgumentException("Window index cannot be negative");
+    }
+    Set<String> windowHandles = driver.getWindowHandles();
+    if (index >= windowHandles.size()) {
+      throw new IndexOutOfBoundsException("Window index is out of bounds");
+    }
+    try {
+      LOGGER.info("Closing window by index '{}'", index);
+      List<String> windowList = new ArrayList<>(windowHandles);
+      driver.switchTo().window(windowList.get(index));
+      driver.close();
+      LOGGER.info("Successfully closed window by index '{}'", index);
+    } catch (Exception e) {
+      LOGGER.error("Failed to close window by index '{}'. Root cause: {}", index, e.getMessage());
     }
   }
 }
