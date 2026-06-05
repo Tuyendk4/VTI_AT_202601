@@ -3,9 +3,14 @@ package vn.edu.vitacademy;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import vn.edu.vitacademy.common.helper.DateTimeHelper;
+import vn.edu.vitacademy.common.helper.FileHelper;
 import vn.edu.vitacademy.common.keywords.WebUI;
 
 public class WebKeywordsDemo {
@@ -187,6 +192,7 @@ public class WebKeywordsDemo {
   public void Test09_handle_dropdown_with_auto_complete_mode_in_selenium() {
     webUI = new WebUI();
     webUI.openBrowser("Chrome", DEMO_DROPDOWN_URL);
+    webUI.maximizeWindow();
     selectOption("Group 2, option 2");
     webUI.delayInSeconds(5);
     assertTrue(shouldShowOptionInOptionsTextBox("Group 2, option 2"));
@@ -194,7 +200,7 @@ public class WebKeywordsDemo {
   }
 
   private void selectOption(String option) {
-    webUI.clickOn(TXT_OPTIONS);
+    webUI.enhancedClick(TXT_OPTIONS_VALUE);
     List<WebElement> options = webUI.findWebElements(DDL_OPTIONS);
     for(WebElement optionElement : options) {
       if(webUI.verifyElementText(optionElement, option)) {
@@ -252,4 +258,23 @@ public class WebKeywordsDemo {
     webUI.delayInSeconds(5);
     webUI.closeBrowser();
   }
+
+  private static final String DANTRI_URL = "https://dantri.com.vn/";
+
+
+  @Test
+  public void Test10_javascript_executor_class_in_selenium() throws IOException {
+    webUI = new WebUI();
+    webUI.openBrowser("Chrome", DANTRI_URL);
+    webUI.maximizeWindow();
+    webUI.scrollToElementAtCenterOfPage("//article[@data-content-name='home-category_highlights'][1]//h3/a");
+    webUI.delayInSeconds(5);
+//    FileUtils.copyFile(webUI.takeScreenshot(), new File("/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/fullscreen.png"));
+//    FileUtils.copyFile(webUI.takeScreenshot("//a[.='Điều gì khiến giá xăng dầu liên tục giảm mạnh?']"), new File("/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element.png"));
+    FileHelper.saveFile(webUI.takeScreenshotAndMarkElement("//article[@data-content-name='home-category_highlights'][1]//h3/a"), "/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked" + DateTimeHelper.formatCurrentDateAs("yyyyMMddHHmmss") + ".png");
+    webUI.click("//article[@data-content-name='home-category_highlights'][1]//h3/a");
+    webUI.delayInSeconds(10);
+    webUI.closeBrowser();
+  }
+
 }
