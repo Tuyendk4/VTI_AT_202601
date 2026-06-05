@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -958,7 +959,8 @@ public class WebUI {
       driver.switchTo().frame(we);
       LOGGER.info("Switched to iframe with locator '{}'", locator);
     } catch (Exception e) {
-      LOGGER.error("Failed to switch to iframe with locator '{}'. Root cause: {}", locator, e.getMessage());
+      LOGGER.error("Failed to switch to iframe with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
     }
   }
 
@@ -969,6 +971,174 @@ public class WebUI {
       LOGGER.info("Switched to default content");
     } catch (Exception e) {
       LOGGER.error("Failed to switch to default content. Root cause: {}", e.getMessage());
+    }
+  }
+
+  public void doubleClick(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Double clicking on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.doubleClick(we).build().perform();
+//      Action action = actions.build();
+//      action.perform();
+      LOGGER.info("Double click on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to double click on web element with locator '{}'. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public void mouseOver(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Mousing over on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.moveToElement(we).build().perform();
+      LOGGER.info("Mouse over on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to mouse over on web element with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
+    }
+  }
+
+  public void rightClick(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Right clicking on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.contextClick(we).build().perform();
+      LOGGER.info("Right click on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to right click on web element with locator '{}'. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public void clickAndHold(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Clicking and holding on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.clickAndHold(we).build().perform();
+      LOGGER.info("Clicked and holded on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to click and hold on web element with locator '{}'. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public void clickAndHoldAndMoveToOffset(String locator, int xOffset, int yOffset,
+      int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Clicking and holding on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.clickAndHold(we).pause(500).moveByOffset(xOffset, yOffset).pause(500).release().build().perform();
+      LOGGER.info(
+          "Clicked and holded on web element with locator '{}' and moved to offset ({}, {})",
+          locator, xOffset, yOffset);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to click and hold on web element with locator '{}' and moved to offset({}, {}). Root cause: {}",
+          locator, xOffset, yOffset, e.getMessage());
+    }
+  }
+
+  public void moveElementToOffset(String locator, int xOffset, int yOffset, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Moving mouse to web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.moveToElement(we, xOffset, yOffset).build().perform();
+      LOGGER.info("Moved mouse to web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to move mouse to web element with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
+    }
+  }
+
+  public void release(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Releasing on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.release(we).build().perform();
+      LOGGER.info("Released on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to release on web element with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
+    }
+  }
+
+  public void dragAndDrop(String sourceLocator, String targetLocator, int... timeout) {
+    WebElement sourceWe = findWebElement(sourceLocator, timeout);
+    WebElement targetWe = findWebElement(targetLocator, timeout);
+    try {
+      LOGGER.info("Dragging web element located by '{}'", sourceLocator);
+      Actions actions = new Actions(driver);
+      actions.dragAndDrop(sourceWe, targetWe).build().perform();
+      LOGGER.info("Dropped web element with locator '{}' onto '{}'", sourceLocator, targetLocator);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to drag and drop web element with locator '{}' onto '{}'. Root cause: {}",
+          sourceLocator, targetLocator, e.getMessage());
+    }
+  }
+
+  public void dragAndDrop(String sourceLocator, int xOffset, int yOffset, int... timeout) {
+    WebElement sourceWe = findWebElement(sourceLocator, timeout);
+    try {
+      LOGGER.info("Dragging web element located by '{}'", sourceLocator);
+      Actions actions = new Actions(driver);
+      actions.dragAndDropBy(sourceWe, xOffset, yOffset).build().perform();
+      LOGGER.info("Dropped web element with locator '{}' to offset ({}, {})", sourceLocator,
+          xOffset, yOffset);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to drag and drop web element with locator '{}' by offset ({}, {}). Root cause: {}",
+          sourceLocator, xOffset, yOffset, e.getMessage());
+    }
+  }
+
+  public void clickOffset(String locator, int xOffset, int yOffset, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Clicking on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.moveToElement(we, xOffset, yOffset).click().build().perform();
+      LOGGER.info("Clicked on web element with locator '{}' at offset ({}, {})", locator, xOffset,
+          yOffset);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to click on web element with locator '{}' at offset ({}, {}). Root cause: {}",
+          locator, xOffset, yOffset, e.getMessage());
+    }
+  }
+
+  public void click(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Clicking on web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.moveToElement(we).click().build().perform();
+      LOGGER.info("Clicked on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to click on web element with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
+    }
+  }
+
+  public void scrollToElement(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Scrolling to web element located by '{}'", locator);
+      Actions actions = new Actions(driver);
+      actions.scrollToElement(we).build().perform();
+      LOGGER.info("Scrolled to web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error("Failed to scroll to web element with locator '{}'. Root cause: {}", locator,
+          e.getMessage());
     }
   }
 }
