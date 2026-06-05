@@ -1,81 +1,33 @@
-INFO  | 2026-06-03 21:38:41 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
-  /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
+INFO  | 2026-06-05 21:47:43 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  /Users/kengzone/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
 
-INFO  | 2026-06-03 21:38:41 | [main] common.keywords.WebUI (WebUI.java:openBrowser:36) - Opening browser: CHROME
-INFO  | 2026-06-03 21:38:42 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:resolveDriverVersion:1268) - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
-INFO  | 2026-06-03 21:38:42 | [main] bonigarcia.wdm.WebDriverManager (WebDriverManager.java:exportDriver:1331) - Exporting webdriver.chrome.driver as /Users/tuyenluu/.cache/selenium/chromedriver/mac64/148.0.7778.178/chromedriver
-INFO  | 2026-06-03 21:38:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:53) - Browser CHROME opened successfully
-INFO  | 2026-06-03 21:38:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:61) - Navigating to URL: https://demoqa.com/buttons
-INFO  | 2026-06-03 21:38:46 | [main] common.keywords.WebUI (WebUI.java:openBrowser:63) - Navigated to URL: https://demoqa.com/buttons
-INFO  | 2026-06-03 21:38:46 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:387) - Maximizing window
-INFO  | 2026-06-03 21:38:46 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:389) - Window maximized
-INFO  | 2026-06-03 21:38:46 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='doubleClickBtn']' within 30 second(s)
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='doubleClickBtn']'
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:doubleClick:980) - Double clicking on web element located by '//button[@id='doubleClickBtn']'
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:doubleClick:985) - Double click on web element with locator '//button[@id='doubleClickBtn']'
-INFO  | 2026-06-03 21:38:51 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:38:56 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:38:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='rightClickBtn']' within 30 second(s)
-INFO  | 2026-06-03 21:38:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='rightClickBtn']'
-INFO  | 2026-06-03 21:38:56 | [main] common.keywords.WebUI (WebUI.java:rightClick:1008) - Right clicking on web element located by '//button[@id='rightClickBtn']'
-INFO  | 2026-06-03 21:38:57 | [main] common.keywords.WebUI (WebUI.java:rightClick:1011) - Right click on web element with locator '//button[@id='rightClickBtn']'
-INFO  | 2026-06-03 21:38:57 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[.='Click Me']' within 30 second(s)
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[.='Click Me']'
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:click:1122) - Clicking on web element located by '//button[.='Click Me']'
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:click:1125) - Clicked on web element with locator '//button[.='Click Me']'
-INFO  | 2026-06-03 21:39:02 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:07 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:118) - Navigating to URL: https://demoqa.com/tool-tips
-INFO  | 2026-06-03 21:39:07 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:120) - Navigated to URL: https://demoqa.com/tool-tips
-INFO  | 2026-06-03 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//button[@id='toolTipButton']' within 30 second(s)
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//button[@id='toolTipButton']'
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:mouseOver:995) - Mousing over on web element located by '//button[@id='toolTipButton']'
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:mouseOver:998) - Mouse over on web element with locator '//button[@id='toolTipButton']'
-INFO  | 2026-06-03 21:39:12 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:17 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:17 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:118) - Navigating to URL: https://demoqa.com/sortable
-INFO  | 2026-06-03 21:39:18 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:120) - Navigated to URL: https://demoqa.com/sortable
-INFO  | 2026-06-03 21:39:18 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:23 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//div[@class='list-group']/div[.='One']' within 30 second(s)
-INFO  | 2026-06-03 21:39:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//div[@class='list-group']/div[.='One']'
-INFO  | 2026-06-03 21:39:23 | [main] common.keywords.WebUI (WebUI.java:clickAndHoldAndMoveToOffset:1035) - Clicking and holding on web element located by '//div[@class='list-group']/div[.='One']'
-INFO  | 2026-06-03 21:39:24 | [main] common.keywords.WebUI (WebUI.java:clickAndHoldAndMoveToOffset:1038) - Clicked and holded on web element with locator '//div[@class='list-group']/div[.='One']' and moved to offset (0, 100)
-INFO  | 2026-06-03 21:39:24 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:29 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:29 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//div[@class='list-group']/div[.='One']' within 30 second(s)
-INFO  | 2026-06-03 21:39:29 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//div[@class='list-group']/div[.='One']'
-INFO  | 2026-06-03 21:39:29 | [main] common.keywords.WebUI (WebUI.java:clickAndHoldAndMoveToOffset:1035) - Clicking and holding on web element located by '//div[@class='list-group']/div[.='One']'
-INFO  | 2026-06-03 21:39:31 | [main] common.keywords.WebUI (WebUI.java:clickAndHoldAndMoveToOffset:1038) - Clicked and holded on web element with locator '//div[@class='list-group']/div[.='One']' and moved to offset (0, 100)
-INFO  | 2026-06-03 21:39:31 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:36 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:36 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:118) - Navigating to URL: https://demoqa.com/droppable
-INFO  | 2026-06-03 21:39:36 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:120) - Navigated to URL: https://demoqa.com/droppable
-INFO  | 2026-06-03 21:39:36 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//div[@id='draggable']' within 30 second(s)
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//div[@id='draggable']'
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//div[@id='droppable']' within 30 second(s)
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//div[@id='droppable']'
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:dragAndDrop:1078) - Dragging web element located by '//div[@id='draggable']'
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:dragAndDrop:1081) - Dropped web element with locator '//div[@id='draggable']' onto '//div[@id='droppable']'
-INFO  | 2026-06-03 21:39:41 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:46 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:46 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:118) - Navigating to URL: https://demoqa.com/dragabble
-INFO  | 2026-06-03 21:39:47 | [main] common.keywords.WebUI (WebUI.java:navigateToUrl:120) - Navigated to URL: https://demoqa.com/dragabble
-INFO  | 2026-06-03 21:39:47 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:findWebElement:212) - Finding web element located by '//div[@id='dragBox']' within 30 second(s)
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:findWebElement:225) - Found 1 web element located by '//div[@id='dragBox']'
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:dragAndDrop:1092) - Dragging web element located by '//div[@id='dragBox']'
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:dragAndDrop:1095) - Dropped web element with locator '//div[@id='dragBox']' to offset (-200, -100)
-INFO  | 2026-06-03 21:39:52 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:128) - Delaying for 5 seconds
-INFO  | 2026-06-03 21:39:57 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:130) - Delay completed
-INFO  | 2026-06-03 21:39:57 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:72) - Closing browser
-INFO  | 2026-06-03 21:39:57 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:74) - Browser closed successfully
+INFO  | 2026-06-05 21:47:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:40) - Opening browser: CHROME
+INFO  | 2026-06-05 21:47:47 | [main] common.keywords.WebUI (WebUI.java:openBrowser:57) - Browser CHROME opened successfully
+INFO  | 2026-06-05 21:47:47 | [main] common.keywords.WebUI (WebUI.java:openBrowser:65) - Navigating to URL: https://dantri.com.vn/
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:openBrowser:67) - Navigated to URL: https://dantri.com.vn/
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:391) - Maximizing window
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:393) - Window maximized
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:scrollToElementAtCenterOfPage:1180) - Scrolling to web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' to center of page
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:scrollToElementAtCenterOfPage:1186) - Scrolled to web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' to center of page
+INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:132) - Delaying for 5 seconds
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:134) - Delay completed
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1226) - Taking screenshot
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:142) - Delaying for 200 milliseconds
+INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:144) - Delay completed
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:142) - Delaying for 300 milliseconds
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:144) - Delay completed
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1235) - Screenshot taken and marked element successfully
+INFO  | 2026-06-05 21:47:57 | [main] common.helper.FileHelper (FileHelper.java:createFile:20) - File '/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked20260605214757.png' created successfully
+INFO  | 2026-06-05 21:47:57 | [main] common.helper.FileHelper (FileHelper.java:saveFile:31) - Saving file 'screenshot12573649037851041869.png' to path '/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked20260605214757.png'
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
+INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:click:1126) - Clicking on web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
+INFO  | 2026-06-05 21:48:07 | [main] common.keywords.WebUI (WebUI.java:click:1129) - Clicked on web element with locator '//article[@data-content-name='home-category_highlights'][1]//h3/a'
+INFO  | 2026-06-05 21:48:07 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:132) - Delaying for 10 seconds
+INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:134) - Delay completed
+INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:76) - Closing browser
+INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:78) - Browser closed successfully
