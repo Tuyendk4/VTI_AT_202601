@@ -3,6 +3,7 @@ package vn.edu.vitacademy.common.keywords;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,10 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,17 +40,17 @@ public class WebUI {
       LOGGER.info("Opening browser: {}", browserName.toUpperCase());
       switch (browserName.toUpperCase()) {
         case "CHROME":
-          WebDriverManager.chromedriver().setup();
+//          WebDriverManager.chromedriver().setup();
           ChromeOptions options = new ChromeOptions();
           options.addArguments("--remote-allow-origins=*");
           driver = new ChromeDriver(options);
           break;
         case "FIREFOX":
-          WebDriverManager.firefoxdriver().setup();
+//          WebDriverManager.firefoxdriver().setup();
           driver = new FirefoxDriver();
           break;
         case "SAFARI":
-          WebDriverManager.safaridriver().setup();
+//          WebDriverManager.safaridriver().setup();
           driver = new SafariDriver();
           break;
       }
@@ -1140,5 +1144,100 @@ public class WebUI {
       LOGGER.error("Failed to scroll to web element with locator '{}'. Root cause: {}", locator,
           e.getMessage());
     }
+  }
+
+  public void enhancedClick(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Click on web element located by '{}'", locator);
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].click();", we);
+      LOGGER.info("Clicked on web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to click on web element with locator '{}'. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public void scrollIntoView(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Scrolling into view web element located by '{}'", locator);
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].scrollIntoView(true);", we);
+      LOGGER.info("Scrolled into view web element with locator '{}'", locator);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to scroll into view web element with locator '{}'. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public void scrollToElementAtCenterOfPage(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Scrolling to web element located by '{}' to center of page", locator);
+      int xOffset = we.getLocation().getX();
+      int yOffset = we.getLocation().getY();
+      int heightOfBrowser = driver.manage().window().getSize().getHeight();
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("window.scrollTo(arguments[0], arguments[1] - arguments[2] / 2);", xOffset, yOffset, heightOfBrowser);
+      LOGGER.info("Scrolled to web element located by '{}' to center of page", locator);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to scroll to web element with locator '{}' to center of page. Root cause: {}",
+          locator, e.getMessage());
+    }
+  }
+
+  public File takeScreenshot() {
+    try {
+      LOGGER.info("Taking screenshot");
+      File images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+      if(images != null) {
+        LOGGER.info("Screenshot taken");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
+  public File takeScreenshot(String locator, int... timeout) {
+    WebElement we = findWebElement(locator, timeout);
+    try {
+      LOGGER.info("Taking screenshot");
+      File images = we.getScreenshotAs(OutputType.FILE);
+      if(images != null) {
+        LOGGER.info("Screenshot taken");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
+  public File takeScreenshotAndMarkElement(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Taking screenshot");
+      String originStyle = we.getAttribute("style");
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].style.border='4px solid red'", we);
+      delayInMilliseconds(200);
+      File images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+      delayInMilliseconds(300);
+      jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", we, originStyle);
+      if (images != null) {
+        LOGGER.info("Screenshot taken and marked element successfully");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
   }
 }
