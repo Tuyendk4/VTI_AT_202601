@@ -33,6 +33,10 @@ public class WebKeywordsDemo {
   private static final String BTN_ALERT = "//button[@id='alertButton']";
   private static final String BTN_TIME_ALERT = "//button[@id='timerAlertButton']";
 
+  private static final String BUTTON_DEMO_URL = "https://demoqa.com/buttons";
+  private static final String BTN_DOUBLE_CLICK = "//button[@id='doubleClickBtn']";
+  private static final String BTN_RIGHT_CLICK = "//button[@id='rightClickBtn']";
+  private static final String BTN_CLICK_ME = "//button[.='Click Me']";
   private WebUI webUI;
 
   @Test
@@ -202,5 +206,50 @@ public class WebKeywordsDemo {
 
   private boolean shouldShowOptionInOptionsTextBox(String expectedOption) {
     return webUI.verifyElementText(TXT_OPTIONS_VALUE, expectedOption);
+  }
+
+  private static final String TOOL_TIP_DEMO_URL = "https://demoqa.com/tool-tips";
+  private static final String BTN_TOOL_TIP = "//button[@id='toolTipButton']";
+
+  private static final String SORTABLE_DEMO_URL = "https://demoqa.com/sortable";
+  private static final String LBL_ONE = "//div[@class='list-group']/div[.='One']";
+  private static final String LBL_SIX = "//div[@class='list-group']/div[.='Six']";
+
+  private static final String DRAG_AND_DROP_DEMO_URL = "https://demoqa.com/droppable";
+  private static final String BTN_DRAG_ME = "//div[@id='draggable']";
+  private static final String LBL_DROP_HERE = "//div[@id='droppable']";
+
+
+  @Test
+  public void Test09_actions_class_in_selenium() {
+    webUI = new WebUI();
+    webUI.openBrowser("Chrome", BUTTON_DEMO_URL);
+    webUI.maximizeWindow();
+    webUI.delayInSeconds(5);
+    webUI.doubleClick(BTN_DOUBLE_CLICK);
+    webUI.delayInSeconds(5);
+    webUI.rightClick(BTN_RIGHT_CLICK);
+    webUI.delayInSeconds(5);
+    webUI.click(BTN_CLICK_ME);
+    webUI.delayInSeconds(5);
+    webUI.navigateToUrl(TOOL_TIP_DEMO_URL);
+    webUI.delayInSeconds(5);
+    webUI.mouseOver(BTN_TOOL_TIP);
+    webUI.delayInSeconds(5);
+    webUI.navigateToUrl(SORTABLE_DEMO_URL);
+    webUI.delayInSeconds(5);
+    webUI.clickAndHoldAndMoveToOffset(LBL_ONE, 0, 100);
+    webUI.delayInSeconds(5);
+    webUI.clickAndHoldAndMoveToOffset(LBL_ONE, 0, 100);
+    webUI.delayInSeconds(5);
+    webUI.navigateToUrl(DRAG_AND_DROP_DEMO_URL);
+    webUI.delayInSeconds(5);
+    webUI.dragAndDrop(BTN_DRAG_ME, LBL_DROP_HERE);
+    webUI.delayInSeconds(5);
+    webUI.navigateToUrl("https://demoqa.com/dragabble");
+    webUI.delayInSeconds(5);
+    webUI.dragAndDrop("//div[@id='dragBox']", -200, -100);
+    webUI.delayInSeconds(5);
+    webUI.closeBrowser();
   }
 }
