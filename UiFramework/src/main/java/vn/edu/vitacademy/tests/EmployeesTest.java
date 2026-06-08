@@ -4,6 +4,8 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import vn.edu.vitacademy.common.keywords.WebUI;
 
@@ -14,6 +16,7 @@ public class EmployeesTest {
   private static final String BTN_EDIT = "//td[normalize-space()='${param}']/following-sibling::td//span[starts-with(@id,'edit-record')]";
 
   private static final String EMPLOYEE_TABLE_BTN_EDITS = "//span[starts-with(@id,'edit-record')]";
+  private static final String EMPLOYEE_TABLE_BTN_ACTIONS = "//div[@class='action-buttons']";
   private static final String DLG_REGISTRATION_FORM = "//div[@class='modal-content']";
   private static final String REGISTRATION_FORM_TXT_FIRST_NAME = "//input[@id='firstName']";
   private static final String REGISTRATION_FORM_TXT_LAST_NAME = "//input[@id='lastName']";
@@ -31,14 +34,27 @@ public class EmployeesTest {
   private static final String EMPLOYEE_TABLE_LBL_DEPARTMENTS = "//td[6]";
   private WebUI webUI;
 
-  @Test(description = "EM001 - Edit email successfully")
-  public void TC01_edit_email_successfully() {
+  @BeforeMethod
+  public void beforeMethod() {
     webUI = new WebUI();
     webUI.openBrowser(BROWSER, URL);
+    webUI.maximizeWindow();
+  }
+
+  @Test(description = "EM001 - Edit email successfully")
+  public void TC01_edit_email_successfully() {
+//    webUI = new WebUI();
+//    webUI.openBrowser(BROWSER, URL);
+//    webUI.maximizeWindow();
     editEmail("kierra@example.com", "John", "Doe", "johndoe@mailinator.com",
         "34", "3000", "IT");
-    assertTrue(shouldShowFirstNameInEmployeesTable("John"));
+    assertTrue(shouldShowFirstNameInEmployeesTable("Johhn"));
     assertTrue(shouldShowLastNameInEmployeesTable("Doe"));
+//    webUI.closeBrowser();
+  }
+
+  @AfterMethod
+  public void afterMethod() {
     webUI.closeBrowser();
   }
 
@@ -64,10 +80,10 @@ public class EmployeesTest {
 
     // Solution 2: use list web elements to find the edit button
     List<WebElement> lblEmails = webUI.findWebElements(EMPLOYEE_TABLE_LBL_EMAILS);
-    List<WebElement> btnEdits = webUI.findWebElements(EMPLOYEE_TABLE_BTN_EDITS);
+    List<WebElement> btnEdits = webUI.findWebElements(EMPLOYEE_TABLE_BTN_ACTIONS);
     for (int i = 0; i < lblEmails.size(); i++) {
       if (webUI.verifyElementText(lblEmails.get(i), email)) {
-        webUI.clickOn(btnEdits.get(i));
+        webUI.clickOffset(btnEdits.get(i), -36, 0);
         break;
       }
     }

@@ -19,7 +19,7 @@ public class WebKeywordsDemo {
   private static final String DEMO_URL = "https://demoqa.com/text-box";
 
   private static final String DEMO_DROPDOWN_URL = "https://demoqa.com/select-menu";
-  private static final String TXT_OPTIONS = "//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div";
+  private static final String TXT_OPTIONS = "//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div"; ///parent::div/parent::div
   private static final String TXT_OPTIONS_VALUE = "//input[starts-with(@id,'react-select-') and contains(@id,'-input')]/parent::div/preceding-sibling::div[text()='Select Option' or contains(text(), 'option')]";
   private static final String DDL_OPTIONS = "//*[starts-with(@id,'react-select-') and contains(@id,'-option-')]";
   private static final String LBL_FULL_NAME = "//label[@id='userName-label']";
@@ -267,7 +267,7 @@ public class WebKeywordsDemo {
     webUI = new WebUI();
     webUI.openBrowser("Chrome", DANTRI_URL);
     webUI.maximizeWindow();
-    webUI.scrollToElementAtCenterOfPage("//article[@data-content-name='home-category_highlights'][1]//h3/a");
+    webUI.scrollToElementAtCenterOfPage("//article[@data-content-name='home-category_highlights'][1]//h3/a[text()='sfsdfs']");
     webUI.delayInSeconds(5);
 //    FileUtils.copyFile(webUI.takeScreenshot(), new File("/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/fullscreen.png"));
 //    FileUtils.copyFile(webUI.takeScreenshot("//a[.='Điều gì khiến giá xăng dầu liên tục giảm mạnh?']"), new File("/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element.png"));
@@ -275,6 +275,22 @@ public class WebKeywordsDemo {
     webUI.click("//article[@data-content-name='home-category_highlights'][1]//h3/a");
     webUI.delayInSeconds(10);
     webUI.closeBrowser();
+    webUI.click("//article[@data-content-name='home-category_highlights'][1]//h3/a");
   }
+
+  @Test
+  public void Test11_handle_exceptions_in_selenium() {
+    webUI = new WebUI();
+    webUI.openBrowser("Chrome", DEMO_DROPDOWN_URL);
+    webUI.maximizeWindow();
+    webUI.clickOn(TXT_OPTIONS_VALUE);
+    List<WebElement> options = webUI.findWebElements(DDL_OPTIONS);
+    webUI.clickOn(options.get(2));
+    assertTrue(shouldShowOptionInOptionsTextBox("Group 2, option 1"));
+    webUI.delayInSeconds(5);
+    webUI.clickOn(options.get(3));
+    webUI.closeBrowser();
+  }
+
 
 }
