@@ -1120,6 +1120,20 @@ public class WebUI {
     }
   }
 
+  public void clickOffset(WebElement we, int xOffset, int yOffset, int... timeout) {
+    try {
+      LOGGER.info("Clicking on web element '{}'", we);
+      Actions actions = new Actions(driver);
+      actions.moveToElement(we, xOffset, yOffset).click().build().perform();
+      LOGGER.info("Clicked on web element '{}' at offset ({}, {})", we, xOffset,
+          yOffset);
+    } catch (Exception e) {
+      LOGGER.error(
+          "Failed to click on web element '{}' at offset ({}, {}). Root cause: {}",
+          we, xOffset, yOffset, e.getMessage());
+    }
+  }
+
   public void click(String locator, int... timeout) {
     WebElement we = findWebElement(locator, timeout);
     try {
