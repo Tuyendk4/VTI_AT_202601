@@ -1,33 +1,117 @@
-INFO  | 2026-06-05 21:47:43 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
-  /Users/kengzone/Library/Caches/JetBrains/IntelliJIdea2026.1/temp-testng-customsuite.xml
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 2 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 15 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/testsuites/EmployeesTestSuite.xml
 
-INFO  | 2026-06-05 21:47:43 | [main] common.keywords.WebUI (WebUI.java:openBrowser:40) - Opening browser: CHROME
-INFO  | 2026-06-05 21:47:47 | [main] common.keywords.WebUI (WebUI.java:openBrowser:57) - Browser CHROME opened successfully
-INFO  | 2026-06-05 21:47:47 | [main] common.keywords.WebUI (WebUI.java:openBrowser:65) - Navigating to URL: https://dantri.com.vn/
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:openBrowser:67) - Navigated to URL: https://dantri.com.vn/
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:391) - Maximizing window
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:393) - Window maximized
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:scrollToElementAtCenterOfPage:1180) - Scrolling to web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' to center of page
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:scrollToElementAtCenterOfPage:1186) - Scrolled to web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' to center of page
-INFO  | 2026-06-05 21:47:51 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:132) - Delaying for 5 seconds
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:134) - Delay completed
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1226) - Taking screenshot
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:142) - Delaying for 200 milliseconds
-INFO  | 2026-06-05 21:47:56 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:144) - Delay completed
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:142) - Delaying for 300 milliseconds
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:144) - Delay completed
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1235) - Screenshot taken and marked element successfully
-INFO  | 2026-06-05 21:47:57 | [main] common.helper.FileHelper (FileHelper.java:createFile:20) - File '/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked20260605214757.png' created successfully
-INFO  | 2026-06-05 21:47:57 | [main] common.helper.FileHelper (FileHelper.java:saveFile:31) - Saving file 'screenshot12573649037851041869.png' to path '/Users/kengzone/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked20260605214757.png'
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a' within 30 second(s)
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
-INFO  | 2026-06-05 21:47:57 | [main] common.keywords.WebUI (WebUI.java:click:1126) - Clicking on web element located by '//article[@data-content-name='home-category_highlights'][1]//h3/a'
-INFO  | 2026-06-05 21:48:07 | [main] common.keywords.WebUI (WebUI.java:click:1129) - Clicked on web element with locator '//article[@data-content-name='home-category_highlights'][1]//h3/a'
-INFO  | 2026-06-05 21:48:07 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:132) - Delaying for 10 seconds
-INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:134) - Delay completed
-INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:76) - Closing browser
-INFO  | 2026-06-05 21:48:17 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:78) - Browser closed successfully
+INFO  | 2026-06-08 21:37:38 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] DynamicGraphHelper.createDynamicGraph() took 4 ms.
+INFO  | 2026-06-08 21:37:38 | [main] common.keywords.WebUI (WebUI.java:openBrowser:40) - Opening browser: CHROME
+INFO  | 2026-06-08 21:37:40 | [main] common.keywords.WebUI (WebUI.java:openBrowser:57) - Browser CHROME opened successfully
+INFO  | 2026-06-08 21:37:40 | [main] common.keywords.WebUI (WebUI.java:openBrowser:65) - Navigating to URL: https://demoqa.com/webtables
+INFO  | 2026-06-08 21:37:42 | [main] common.keywords.WebUI (WebUI.java:openBrowser:67) - Navigated to URL: https://demoqa.com/webtables
+INFO  | 2026-06-08 21:37:42 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:391) - Maximizing window
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:393) - Window maximized
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElements:277) - Finding web elements located by '//td[4]' within 30 second(s)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElements:282) - Found 3 web elements located by '//td[4]'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElements:277) - Finding web elements located by '//div[@class='action-buttons']' within 30 second(s)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElements:282) - Found 3 web elements located by '//div[@class='action-buttons']'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[4]]'
+ERROR | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:591) - Actual text 'cierra@example.com' and expected text 'kierra@example.com' are not the same
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[4]]'
+ERROR | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:591) - Actual text 'alden@example.com' and expected text 'kierra@example.com' are not the same
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[4]]'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:587) - Actual text 'kierra@example.com' and expected text 'kierra@example.com' are the same
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1125) - Clicking on web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //div[@class='action-buttons']]'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1128) - Clicked on web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //div[@class='action-buttons']]' at offset (-36, 0)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:758) - Waiting for web element located by '//div[@class='modal-content']' to be visible within 30 second(s)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:763) - Web element located by '//div[@class='modal-content']' is visible
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='firstName']' within 20 second(s)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='firstName']'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='firstName']' within 10 second(s)
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-08 21:37:43 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text 'John' into web element located by '//input[@id='firstName']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text 'John' into web element located by '//input[@id='firstName']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='lastName']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text 'Doe' into web element located by '//input[@id='lastName']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text 'Doe' into web element located by '//input[@id='lastName']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='age']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text '34' into web element located by '//input[@id='age']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text '34' into web element located by '//input[@id='age']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='userEmail']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text 'johndoe@mailinator.com' into web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text 'johndoe@mailinator.com' into web element located by '//input[@id='userEmail']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='salary']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text '3000' into web element located by '//input[@id='salary']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text '3000' into web element located by '//input[@id='salary']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:307) - Clearing text in element located by '//input[@id='department']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:clearText:309) - Text cleared
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:295) - Inputting text 'IT' into web element located by '//input[@id='department']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:inputText:297) - Inputted text 'IT' into web element located by '//input[@id='department']' successfully
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:216) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElement:229) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:submit:402) - Submitting web element located by '//button[@id='submit']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:submit:404) - Submitted web element located by '//button[@id='submit']'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElements:277) - Finding web elements located by '//td[1]' within 30 second(s)
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:findWebElements:282) - Found 3 web elements located by '//td[1]'
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[1]]'
+ERROR | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:591) - Actual text 'Cierra' and expected text 'Johhn' are not the same
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[1]]'
+ERROR | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:591) - Actual text 'Alden' and expected text 'Johhn' are not the same
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:584) - Verifying text of web element '[[ChromeDriver: chrome on mac (dd25ea2a17dac3ff68f810678b7072bd)] -> xpath: //td[1]]'
+ERROR | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:591) - Actual text 'John' and expected text 'Johhn' are not the same
+INFO  | 2026-06-08 21:37:44 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:76) - Closing browser
+INFO  | 2026-06-08 21:37:45 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:78) - Browser closed successfully
+INFO  | 2026-06-08 21:37:45 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Time taken by org.testng.internal.ExitCodeListener@44c79f32: 0 ms
