@@ -1,66 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-  <test name="Create User Test" preserve-order="true"
+<!--  <test name="Chrome Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Chrome"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="smoke"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
+
+  <test name="Firefox Test" preserve-order="true"
     verbose="2">
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="url" value="https://demoqa.com/webtables"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
+      <class name="vn.edu.vitacademy.tests.EmployeesTest" />
     </classes>
   </test>
 
-  <test name="Update User Test" preserve-order="true"
-    verbose="2">
-    <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-    </classes>
-  </test>
-
-  <test name="Delete User Test" preserve-order="true"
-    verbose="2">
-    <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest">
-        <methods>
-          <include name="TC01_edit_email_successfully"/>
-        </methods>
-      </class>
-    </classes>
-  </test>
+<!--  <test name="Safari Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Safari"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="regression"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
 </suite>
