@@ -2,17 +2,33 @@ package vn.edu.vitacademy.tests;
 
 import static org.testng.Assert.assertTrue;
 
+import java.lang.reflect.Method;
 import java.util.List;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import vn.edu.vitacademy.common.keywords.WebUI;
+import vn.edu.vitacademy.model.Employee;
 
 public class EmployeesTest {
 
+  private static final Logger LOGGER = LoggerFactory.getLogger(EmployeesTest.class);
   private static final String BROWSER = "Chrome";
   private static final String URL = "https://demoqa.com/webtables";
+
+  private static final String BTN_ADD = "//button[@id='addNewRecordButton']";
   private static final String BTN_EDIT = "//td[normalize-space()='${param}']/following-sibling::td//span[starts-with(@id,'edit-record')]";
 
   private static final String EMPLOYEE_TABLE_BTN_EDITS = "//span[starts-with(@id,'edit-record')]";
@@ -34,35 +50,100 @@ public class EmployeesTest {
   private static final String EMPLOYEE_TABLE_LBL_DEPARTMENTS = "//td[6]";
   private WebUI webUI;
 
-  @BeforeMethod
-  public void beforeMethod() {
+  @BeforeSuite(alwaysRun = true)
+  public void beforeSuite() {
+    LOGGER.info("==================Start suite");
+  }
+
+  @Parameters({"browser", "url"})
+  @BeforeTest(alwaysRun = true)
+  public void beforeTest(String browser, String url) {
+    LOGGER.info("------------------Start test");
     webUI = new WebUI();
-    webUI.openBrowser(BROWSER, URL);
+    webUI.openBrowser(browser, url);
     webUI.maximizeWindow();
   }
 
-  @Test(description = "EM001 - Edit email successfully")
-  public void TC01_edit_email_successfully() {
+
+  @BeforeClass(alwaysRun = true)
+  public void beforeClass() {
+    LOGGER.info("Running test class: {}", this.getClass().getSimpleName());
+  }
+
+  @BeforeMethod(alwaysRun = true)
+  public void beforeMethod(Method method) {
+    LOGGER.info("Running test method: {}", method.getName());
+  }
+
+  //Arrange
+  @DataProvider(name = "EM001")
+  private Object[][] dataProvider() {
+    return new Object[][] {
+        { new Employee("Helle", "Doe", "helledoe@mailinator.com", "34", "3000", "IT")},
+        { new Employee("Long", "Liu", "longliu@mailinator.com", "34", "3000", "IT")}
+    };
+  }
+
+  @Test(description = "EM001 - Create email successfully", dataProvider = "EM001", groups = {"regression"})
+  public void EM001_create_email_successfully(Employee employee) {
+    //Action - Step
+    createEmployee(employee);
+
+    //Assertion
+    assertTrue(shouldShowFirstNameInEmployeesTable(employee.getFirstName())); //is, has, should, ensureThat
+    assertTrue(shouldShowLastNameInEmployeesTable(employee.getLastName()));
+  }
+
+
+  @Test(description = "EM002 - Edit email successfully", groups = {"smoke", "regression"})
+  public void EM002_edit_email_successfully() {
 //    webUI = new WebUI();
 //    webUI.openBrowser(BROWSER, URL);
 //    webUI.maximizeWindow();
-    editEmail("kierra@example.com", "John", "Doe", "johndoe@mailinator.com",
+    SoftAssert softAssert = new SoftAssert();
+    editEmployee("kierra@example.com", "John", "Doe", "johndoe@mailinator.com",
         "34", "3000", "IT");
-    assertTrue(shouldShowFirstNameInEmployeesTable("Johhn"));
-    assertTrue(shouldShowLastNameInEmployeesTable("Doe"));
+    softAssert.assertTrue(shouldShowFirstNameInEmployeesTable("Jozhn"), "Should show first name in Employees table");
+    softAssert.assertTrue(shouldShowLastNameInEmployeesTable("Does"), "Should show last name in Employees table");
+    softAssert.assertAll();
 //    webUI.closeBrowser();
   }
 
-  @AfterMethod
-  public void afterMethod() {
+  @Test(description = "EM003 - Delete email successfully", groups = {"smoke", "regression"})
+  public void EM003_delete_email_successfully() {
+    deleteEmployee("johndoe@mailinator.com");
+    webUI.delayInSeconds(5);
+    assertTrue(shouldNotShowFirstNameInEmployeesTable("John"));
+    assertTrue(shouldNotShowLastNameInEmployeesTable("Doe"));
+  }
+
+  @AfterMethod(alwaysRun = true)
+  public void afterMethod(Method method) {
+    LOGGER.info("Ended test method: {}", method.getName());
+  }
+
+  @AfterClass(alwaysRun = true)
+  public void afterClass() {
     webUI.closeBrowser();
+    LOGGER.info("Ended test class: {}", this.getClass().getSimpleName());
+  }
+
+  @AfterTest(alwaysRun = true)
+  public void afterTest() {
+    webUI.closeBrowser();
+    LOGGER.info("------------------Ended test");
+  }
+
+  @AfterSuite(alwaysRun = true)
+  public void afterSuite() {
+    LOGGER.info("==================Ended suite");
   }
 
 
-  public void editEmail(String email, String newFirstName, String newLastName, String newEmail,
+  public void createEmployee(String newFirstName, String newLastName, String newEmail,
       String newAge, String newSalary, String newDepartment) {
-    clickEditButtonOfEmail(email);
-    if(isRegistrationFormVisible()) {
+    clickAddButton();
+    if (isRegistrationFormVisible()) {
       inputFirstNameOnRegistrationForm(newFirstName);
       inputLastNameOnRegistrationForm(newLastName);
       inputAgeOnRegistrationForm(newAge);
@@ -71,6 +152,43 @@ public class EmployeesTest {
       inputDepartmentOnRegistrationForm(newDepartment);
       clickSubmitButtonOnRegistrationForm();
     }
+  }
+
+  public void createEmployee(Employee employee) {
+    clickAddButton();
+    if (isRegistrationFormVisible()) {
+      inputFirstNameOnRegistrationForm(employee.getFirstName());
+      inputLastNameOnRegistrationForm(employee.getLastName());
+      inputAgeOnRegistrationForm(employee.getAge());
+      inputEmailOnRegistrationForm(employee.getEmail());
+      inputSalaryOnRegistrationForm(employee.getSalary());
+      inputDepartmentOnRegistrationForm(employee.getDepartment());
+      clickSubmitButtonOnRegistrationForm();
+      webUI.delayInSeconds(3);
+    }
+  }
+
+
+  public void editEmployee(String email, String newFirstName, String newLastName, String newEmail,
+      String newAge, String newSalary, String newDepartment) {
+    clickEditButtonOfEmail(email);
+    if (isRegistrationFormVisible()) {
+      inputFirstNameOnRegistrationForm(newFirstName);
+      inputLastNameOnRegistrationForm(newLastName);
+      inputAgeOnRegistrationForm(newAge);
+      inputEmailOnRegistrationForm(newEmail);
+      inputSalaryOnRegistrationForm(newSalary);
+      inputDepartmentOnRegistrationForm(newDepartment);
+      clickSubmitButtonOnRegistrationForm();
+    }
+  }
+
+  public void deleteEmployee(String email) {
+    clickDeleteButtonOfEmail(email);
+  }
+
+  public void clickAddButton() {
+    webUI.clickOn(BTN_ADD);
   }
 
   public void clickEditButtonOfEmail(String email) {
@@ -84,6 +202,22 @@ public class EmployeesTest {
     for (int i = 0; i < lblEmails.size(); i++) {
       if (webUI.verifyElementText(lblEmails.get(i), email)) {
         webUI.clickOffset(btnEdits.get(i), -36, 0);
+        break;
+      }
+    }
+  }
+
+  public void clickDeleteButtonOfEmail(String email) {
+    // Solution 1: use xpath to find the edit button
+//    WebElement btnEdit = webUI.findWebElement(BTN_EDIT, email);
+//    webUI.clickOn(btnEdit);
+
+    // Solution 2: use list web elements to find the edit button
+    List<WebElement> lblEmails = webUI.findWebElements(EMPLOYEE_TABLE_LBL_EMAILS);
+    List<WebElement> btnActions = webUI.findWebElements(EMPLOYEE_TABLE_BTN_ACTIONS);
+    for (int i = 0; i < lblEmails.size(); i++) {
+      if (webUI.verifyElementText(lblEmails.get(i), email)) {
+        webUI.clickOffset(btnActions.get(i), -12, 0);
         break;
       }
     }
@@ -130,7 +264,7 @@ public class EmployeesTest {
   public boolean shouldShowFirstNameInEmployeesTable(String expectedFirstName) {
     List<WebElement> firstNames = webUI.findWebElements(EMPLOYEE_TABLE_LBL_FIRST_NAMES);
     for (WebElement firstName : firstNames) {
-      if(webUI.verifyElementText(firstName, expectedFirstName)) {
+      if (webUI.verifyElementText(firstName, expectedFirstName)) {
         return true;
       }
     }
@@ -140,10 +274,30 @@ public class EmployeesTest {
   public boolean shouldShowLastNameInEmployeesTable(String expectedLastName) {
     List<WebElement> lastNames = webUI.findWebElements(EMPLOYEE_TABLE_LBL_LAST_NAMES);
     for (WebElement lastName : lastNames) {
-      if(webUI.verifyElementText(lastName, expectedLastName)) {
+      if (webUI.verifyElementText(lastName, expectedLastName)) {
         return true;
       }
     }
     return false;
+  }
+
+  public boolean shouldNotShowFirstNameInEmployeesTable(String expectedFirstName) {
+    List<WebElement> firstNames = webUI.findWebElements(EMPLOYEE_TABLE_LBL_FIRST_NAMES);
+    for (WebElement firstName : firstNames) {
+      if (webUI.verifyElementText(firstName, expectedFirstName)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public boolean shouldNotShowLastNameInEmployeesTable(String expectedLastName) {
+    List<WebElement> lastNames = webUI.findWebElements(EMPLOYEE_TABLE_LBL_LAST_NAMES);
+    for (WebElement lastName : lastNames) {
+      if (webUI.verifyElementText(lastName, expectedLastName)) {
+        return false;
+      }
+    }
+    return true;
   }
 }
