@@ -20,6 +20,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -52,6 +53,16 @@ public class WebUI {
         case "SAFARI":
 //          WebDriverManager.safaridriver().setup();
           driver = new SafariDriver();
+          break;
+        case "CHROME_HEADLESS":
+          ChromeOptions optionsHeadless = new ChromeOptions();
+          optionsHeadless.addArguments("--headless=new");
+          driver = new ChromeDriver(optionsHeadless);
+          break;
+        case "FIREFOX_HEADLESS":
+          FirefoxOptions optionsFirefoxHeadless = new FirefoxOptions();
+          optionsFirefoxHeadless.addArguments("--headless");
+          driver = new FirefoxDriver(optionsFirefoxHeadless);
           break;
       }
       LOGGER.info("Browser {} opened successfully", browserName.toUpperCase());

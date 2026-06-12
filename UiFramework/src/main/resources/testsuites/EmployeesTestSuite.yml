@@ -1,0 +1,7 @@
+name: All Test Suite
+
+tests:
+  - name: Firefox Test
+    parameters: { browser: firefox, url: https://demoqa.com/webtables }
+    classes:
+      - vn.edu.vitacademy.tests.EmployeesTest
