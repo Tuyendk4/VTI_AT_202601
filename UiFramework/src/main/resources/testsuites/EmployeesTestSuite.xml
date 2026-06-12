@@ -15,9 +15,24 @@
 <!--    </classes>-->
 <!--  </test>-->
 
-  <test name="Firefox Test" preserve-order="true"
+<!--  <test name="Firefox Headless Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Firefox_headless"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="regression"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
+
+
+  <test name="Chrome Test" preserve-order="true"
     verbose="2">
-    <parameter name="browser" value="Firefox"/>
+    <parameter name="browser" value="Chrome"/>
     <parameter name="url" value="https://demoqa.com/webtables"/>
     <groups>
       <run>
@@ -25,7 +40,7 @@
       </run>
     </groups>
     <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest" />
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM" />
     </classes>
   </test>
 
