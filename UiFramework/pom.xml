@@ -11,12 +11,17 @@
   <properties>
     <maven.compiler.source>25</maven.compiler.source>
     <maven.compiler.target>25</maven.compiler.target>
+    <maven.compiler.version>3.8.1</maven.compiler.version>
+    <maven.surefire.version>3.2.5</maven.surefire.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-webdriver.version>4.44.0</selenium-webdriver.version>
     <log4j-core.version>2.25.4</log4j-core.version>
     <slf4j-api.version>2.0.17</slf4j-api.version>
     <webdrivermanager.version>6.3.4</webdrivermanager.version>
     <testng.version>7.10.2</testng.version>
+    <snakeyaml.version>2.2</snakeyaml.version>
+    <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
+    <allure-testng.version>2.35.2</allure-testng.version>
   </properties>
 
   <dependencies>
@@ -61,6 +66,61 @@
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
     </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectjweaver.version}</version>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>${allure-testng.version}</version>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven.compiler.version}</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven.surefire.version}</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteFile>${project.basedir}/src/main/resources/testsuites/${testsuite}</suiteFile>
+          </suiteXmlFiles>
+          <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver.version}/aspectjweaver-${aspectjweaver.version}.jar"
+          </argLine>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectjweaver.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
