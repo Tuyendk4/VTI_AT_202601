@@ -3,6 +3,7 @@ package vn.edu.vitacademy.common.keywords;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Attachment;
 import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -1245,6 +1246,21 @@ public class WebUI {
     return null;
   }
 
+  @Attachment(value = "Screenshot", type = "image/png")
+  public byte[] attachmentScreenshot() {
+    try {
+      LOGGER.info("Taking screenshot");
+      byte[] images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+      if(images != null) {
+        LOGGER.info("Screenshot taken");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
   public File takeScreenshotAndMarkElement(String locator) {
     WebElement we = findWebElement(locator);
     try {
@@ -1254,6 +1270,48 @@ public class WebUI {
       jsExecutor.executeScript("arguments[0].style.border='4px solid red'", we);
       delayInMilliseconds(200);
       File images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+      delayInMilliseconds(300);
+      jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", we, originStyle);
+      if (images != null) {
+        LOGGER.info("Screenshot taken and marked element successfully");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
+  public File takeScreenshotAndMarkElement(WebElement we) {
+    try {
+      LOGGER.info("Taking screenshot");
+      String originStyle = we.getAttribute("style");
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].style.border='4px solid red'", we);
+      delayInMilliseconds(200);
+      File images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+      delayInMilliseconds(300);
+      jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", we, originStyle);
+      if (images != null) {
+        LOGGER.info("Screenshot taken and marked element successfully");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
+  @Attachment(value = "Screenshot", type = "image/png")
+  public byte[] attachmentScreenshotWhichMarkElement(String locator) {
+    WebElement we = findWebElement(locator);
+    try {
+      LOGGER.info("Taking screenshot");
+      String originStyle = we.getAttribute("style");
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].style.border='4px solid red'", we);
+      delayInMilliseconds(200);
+      byte[] images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
       delayInMilliseconds(300);
       jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", we, originStyle);
       if (images != null) {
