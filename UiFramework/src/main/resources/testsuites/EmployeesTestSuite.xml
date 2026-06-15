@@ -34,13 +34,13 @@
     verbose="2">
     <parameter name="browser" value="Chrome"/>
     <parameter name="url" value="https://demoqa.com/webtables"/>
-    <groups>
-      <run>
-        <include name="regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM" />
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM">
+        <methods>
+          <include name="EM002_edit_email_successfully"/>
+          <include name="EM003_delete_email_successfully"/>
+        </methods>
+      </class>
     </classes>
   </test>
 

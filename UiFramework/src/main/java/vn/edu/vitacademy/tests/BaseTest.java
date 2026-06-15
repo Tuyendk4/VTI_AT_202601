@@ -1,5 +1,6 @@
 package vn.edu.vitacademy.tests;
 
+import java.io.File;
 import java.lang.reflect.Method;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import vn.edu.vitacademy.common.helper.FileHelper;
 import vn.edu.vitacademy.common.keywords.WebUI;
 import vn.edu.vitacademy.pages.EmployeesPage;
 
@@ -20,11 +22,13 @@ public class BaseTest {
   private static final Logger LOGGER = LoggerFactory.getLogger(EmployeesTest_POM.class);
   private WebUI webUI;
   protected EmployeesPage employeesPage;
+  private static final String ALLURE_FOLDER_PATH = System.getProperty("user.dir") + File.separator + "target" + File.separator + "allure-results";
 
 
   @BeforeSuite(alwaysRun = true)
   public void beforeSuite() {
     LOGGER.info("==================Start suite");
+    FileHelper.deleteFolder(ALLURE_FOLDER_PATH);
   }
 
   @Parameters({"browser", "url"})
