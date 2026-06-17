@@ -313,6 +313,17 @@ public class WebUI {
     }
   }
 
+  public void inputText(WebElement we, String text, int... timeout) {
+    try {
+      LOGGER.info("Inputting text '{}' into web element '{}'", text, we);
+      we.sendKeys(text);
+      LOGGER.info("Inputted text '{}' into web element '{}' successfully", text,
+          we);
+    } catch (Exception e) {
+      LOGGER.error("Failed to input text in web element '{}'. Root cause: {}", we, e.getMessage());
+    }
+  }
+
   public void clearText(String locator, int... timeout) {
     WebElement we = findWebElement(locator, timeout);
     try {
@@ -321,6 +332,16 @@ public class WebUI {
       LOGGER.info("Text cleared");
     } catch (Exception e) {
       LOGGER.error("Failed to clear text. Root cause: {}", e.getMessage());
+    }
+  }
+
+  public void clearText(WebElement we, int... timeout) {
+    try {
+      LOGGER.info("Clearing text in web element '{}'", we);
+      we.clear();
+      LOGGER.info("Text cleared in web element '{}' successfully", we);
+    } catch (Exception e) {
+      LOGGER.error("Failed to clear text in web element '{}'. Root cause: {}", we, e.getMessage());
     }
   }
 
@@ -780,6 +801,25 @@ public class WebUI {
     } catch (Exception e) {
       LOGGER.error("Failed to wait for web element located by '{}' to be visible. Root cause: {}",
           locator, e.getMessage());
+    }
+    return false;
+  }
+
+  public boolean waitForElementVisible(WebElement we, int timeout) {
+    try {
+      LOGGER.info("Waiting for web element '{}' to be visible within {} second(s)",
+          we, timeout);
+      Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      WebElement foundElement = wait.until(ExpectedConditions.visibilityOf(we));
+      if (foundElement != null) {
+        LOGGER.info("Web element '{}' is visible", we);
+        return true;
+      }
+      LOGGER.error("Web element '{}' is not visible within {} second(s)", we,
+          timeout);
+    } catch (Exception e) {
+      LOGGER.error("Failed to wait for web element '{}' to be visible. Root cause: {}",
+          we, e.getMessage());
     }
     return false;
   }
@@ -1323,4 +1363,30 @@ public class WebUI {
     }
     return null;
   }
+
+  @Attachment(value = "Screenshot", type = "image/png")
+  public byte[] attachmentScreenshotWhichMarkElement(WebElement we) {
+    try {
+      LOGGER.info("Taking screenshot");
+      String originStyle = we.getAttribute("style");
+      JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+      jsExecutor.executeScript("arguments[0].style.border='4px solid red'", we);
+      delayInMilliseconds(200);
+      byte[] images = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+      delayInMilliseconds(300);
+      jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", we, originStyle);
+      if (images != null) {
+        LOGGER.info("Screenshot taken and marked element successfully");
+        return images;
+      }
+    } catch (Exception e) {
+      LOGGER.error("Failed to take screenshot. Root cause: {}", e.getMessage());
+    }
+    return null;
+  }
+
+  public WebDriver getWebDriver() {
+    return driver;
+  }
+
 }

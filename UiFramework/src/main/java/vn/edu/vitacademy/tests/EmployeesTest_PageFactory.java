@@ -2,29 +2,12 @@ package vn.edu.vitacademy.tests;
 
 import static org.testng.Assert.assertTrue;
 
-import java.lang.reflect.Method;
-import java.util.List;
-import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import vn.edu.vitacademy.common.keywords.WebUI;
 import vn.edu.vitacademy.model.Employee;
-import vn.edu.vitacademy.pages.EmployeesPage;
-import vn.edu.vitacademy.pages.TextBoxPage;
 
-public class EmployeesTest_POM extends BaseTest {
+public class EmployeesTest_PageFactory extends BaseTest_PageFactory {
 
   //Arrange
   @DataProvider(name = "EM001")
@@ -66,8 +49,8 @@ public class EmployeesTest_POM extends BaseTest {
 //    webUI.delayInSeconds(5);
     assertTrue(employeesPage.shouldNotShowFirstNameInEmployeesTable("John"));
     assertTrue(employeesPage.shouldNotShowLastNameInEmployeesTable("Doe"));
-    TextBoxPage textBoxPage = employeesPage.leftMenu().moveToTextBox();
-    textBoxPage.inputFullName("John Doe");
+    employeesPage.leftMenu().moveToTextBox();
+//    webUI.delayInSeconds(5);
   }
 
 }
