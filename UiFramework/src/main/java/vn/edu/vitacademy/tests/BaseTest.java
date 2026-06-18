@@ -16,11 +16,13 @@ import org.testng.annotations.Parameters;
 import vn.edu.vitacademy.common.helper.FileHelper;
 import vn.edu.vitacademy.common.keywords.WebUI;
 import vn.edu.vitacademy.pages.EmployeesPage;
+import vn.edu.vitacademy.pages.PageManager;
 
 public class BaseTest {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(EmployeesTest_POM.class);
-  private WebUI webUI;
+  private static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
+  protected WebUI webUI;
+  protected PageManager pages;
   protected EmployeesPage employeesPage;
   private static final String ALLURE_FOLDER_PATH = System.getProperty("user.dir") + File.separator + "target" + File.separator + "allure-results";
 
@@ -38,7 +40,12 @@ public class BaseTest {
     webUI = new WebUI();
     webUI.openBrowser(browser, url);
     webUI.maximizeWindow();
-    employeesPage = new EmployeesPage(webUI);
+    pages = new PageManager(webUI);
+    employeesPage = pages.employeesPage();
+  }
+
+  protected <T> T page(Class<T> pageClass) {
+    return pages.get(pageClass);
   }
 
 
@@ -59,7 +66,6 @@ public class BaseTest {
 
   @AfterClass(alwaysRun = true)
   public void afterClass() {
-    webUI.closeBrowser();
     LOGGER.info("Ended test class: {}", this.getClass().getSimpleName());
   }
 
