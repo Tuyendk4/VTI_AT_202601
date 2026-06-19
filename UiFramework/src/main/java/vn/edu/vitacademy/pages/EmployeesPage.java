@@ -79,6 +79,20 @@ public class EmployeesPage extends BasePage {
     }
   }
 
+  @Step("Edit employee with email '{0}' by new employee '{1}'")
+  public void editEmployee(String email, Employee employee) {
+    clickEditButtonOfEmail(email);
+    if (addEmployeePopup.isVisible()) {
+      addEmployeePopup.inputFirstNameOnRegistrationForm(employee.getFirstName());
+      addEmployeePopup.inputLastNameOnRegistrationForm(employee.getLastName());
+      addEmployeePopup.inputAgeOnRegistrationForm(employee.getAge());
+      addEmployeePopup.inputEmailOnRegistrationForm(employee.getEmail());
+      addEmployeePopup.inputSalaryOnRegistrationForm(employee.getSalary());
+      addEmployeePopup.inputDepartmentOnRegistrationForm(employee.getDepartment());
+      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
+    }
+  }
+
   @Step("Delete employee with email '{0}'")
   public void deleteEmployee(String email) {
     clickDeleteButtonOfEmail(email);

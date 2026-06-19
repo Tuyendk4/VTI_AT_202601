@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+<!--  <test name="Chrome Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Chrome"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="smoke"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
+
+<!--  <test name="Firefox Headless Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Firefox_headless"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="regression"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
+
+
+  <test name="Chrome Test" preserve-order="true"
+    verbose="2">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://demoqa.com/webtables"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM_DataFaker"/>
+    </classes>
+  </test>
+
+<!--  <test name="Safari Test" preserve-order="true"-->
+<!--    verbose="2">-->
+<!--    <parameter name="browser" value="Safari"/>-->
+<!--    <parameter name="url" value="https://demoqa.com/webtables"/>-->
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <include name="regression"/>-->
+<!--      </run>-->
+<!--    </groups>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--    </classes>-->
+<!--  </test>-->
+</suite>
