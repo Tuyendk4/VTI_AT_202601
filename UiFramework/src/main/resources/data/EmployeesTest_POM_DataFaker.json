@@ -1,0 +1,10 @@
+{
+  "EC002": {
+    "firstName": "Kevin",
+    "lastName": "Hope",
+    "email": "kevin_hope@mailinator.com",
+    "age": "28",
+    "salary": "3000",
+    "department": "Marketing"
+  }
+}
