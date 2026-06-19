@@ -4,6 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.lang.reflect.Method;
 import java.util.List;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -173,7 +174,6 @@ public class EmployeesTest {
       String newAge, String newSalary, String newDepartment) {
     clickEditButtonOfEmail(email);
     if (isRegistrationFormVisible()) {
-      inputFirstNameOnRegistrationForm(newFirstName);
       inputLastNameOnRegistrationForm(newLastName);
       inputAgeOnRegistrationForm(newAge);
       inputEmailOnRegistrationForm(newEmail);
@@ -228,8 +228,13 @@ public class EmployeesTest {
   }
 
   public void inputFirstNameOnRegistrationForm(String firstName) {
-    webUI.clearText(REGISTRATION_FORM_TXT_FIRST_NAME, 20);
-    webUI.inputText(REGISTRATION_FORM_TXT_FIRST_NAME, firstName, 10);
+    if(firstName.isEmpty()) {
+      webUI.clickOn(REGISTRATION_FORM_TXT_FIRST_NAME);
+      webUI.inputText(REGISTRATION_FORM_TXT_FIRST_NAME, Keys.chord(Keys.TAB));
+    } else {
+      webUI.clearText(REGISTRATION_FORM_TXT_FIRST_NAME, 20);
+      webUI.inputText(REGISTRATION_FORM_TXT_FIRST_NAME, firstName, 10);
+    }
   }
 
   public void inputLastNameOnRegistrationForm(String lastName) {

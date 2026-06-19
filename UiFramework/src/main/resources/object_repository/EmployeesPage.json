@@ -1,0 +1,12 @@
+{
+  "BTN_ADD": "//button[@id='addNewRecordButton']",
+  "BTN_EDIT": "//td[normalize-space()='${param}']/following-sibling::td//span[starts-with(@id,'edit-record')]",
+  "EMPLOYEE_TABLE_BTN_EDITS": "//span[starts-with(@id,'edit-record')]",
+  "EMPLOYEE_TABLE_BTN_ACTIONS": "//div[@class='action-buttons']",
+  "EMPLOYEE_TABLE_LBL_FIRST_NAMES": "//td[1]",
+  "EMPLOYEE_TABLE_LBL_LAST_NAMES": "//td[2]",
+  "EMPLOYEE_TABLE_LBL_AGES": "//td[3]",
+  "EMPLOYEE_TABLE_LBL_EMAILS": "//td[4]",
+  "EMPLOYEE_TABLE_LBL_SALARIES": "//td[5]",
+  "EMPLOYEE_TABLE_LBL_DEPARTMENTS": "//td[6]"
+}

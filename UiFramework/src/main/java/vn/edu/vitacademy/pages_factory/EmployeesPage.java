@@ -1,36 +1,52 @@
-package vn.edu.vitacademy.pages;
+package vn.edu.vitacademy.pages_factory;
 
-import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import vn.edu.vitacademy.common.helper.DateTimeHelper;
-import vn.edu.vitacademy.common.helper.FileHelper;
+import org.openqa.selenium.support.FindBy;
 import vn.edu.vitacademy.common.keywords.WebUI;
 import vn.edu.vitacademy.model.Employee;
-import vn.edu.vitacademy.object_repository.EmployeeRepo;
-import vn.edu.vitacademy.pages.components.AddEmployeePopup;
-import vn.edu.vitacademy.tests.EmployeesTest;
+import vn.edu.vitacademy.pages_factory.components.AddEmployeePopup;
 
 // is-a: Eployees page is a web page
 public class EmployeesPage extends BasePage {
 
-  public static final Logger LOGGER = LoggerFactory.getLogger(EmployeesPage.class);
+  @FindBy(xpath = "//button[@id='addNewRecordButton']")
+  private WebElement btnAdd;
+
+  @FindBy(xpath = "//td[normalize-space()='${param}']/following-sibling::td//span[starts-with(@id,'edit-record')]")
+  private WebElement btnEdit;
+
+  @FindBy(xpath = "//span[starts-with(@id,'edit-record')]")
+  private List<WebElement> employeeTable_BtnEdits;
+
+  @FindBy(xpath = "//div[@class='action-buttons']")
+  private List<WebElement> employeeTable_BtnActions;
+
+  @FindBy(xpath = "//td[1]")
+  private List<WebElement> employeeTable_LblFirstNames;
+
+  @FindBy(xpath = "//td[2]")
+  private List<WebElement> employeeTable_LblLastNames;
+
+  @FindBy(xpath = "//td[3]")
+  private List<WebElement> employeeTable_LblAges;
+
+  @FindBy(xpath = "//td[4]")
+  private List<WebElement> employeeTable_LblEmails;
+
+  @FindBy(xpath = "//td[5]")
+  private List<WebElement> employeeTable_LblSalaries;
+
+  @FindBy(xpath = "//td[6]")
+  private List<WebElement> employeeTable_LblDepartments;
+
   //Has-a: Employees page has an Add Employee popup
-  private AddEmployeePopup addEmployeePopup;
+  private final AddEmployeePopup addEmployeePopup;
 
   public EmployeesPage(WebUI webUI) {
     super(webUI);
     addEmployeePopup = new AddEmployeePopup(webUI);
-    setRepoName(EmployeesPage.class.getSimpleName());
   }
 
   @Step("Create new employee with first name '{0}', last name '{1}', email '{2}', age '{3}', salary '{4}', department '{5}'")
@@ -79,20 +95,6 @@ public class EmployeesPage extends BasePage {
     }
   }
 
-  @Step("Edit employee with email '{0}' by new employee '{1}'")
-  public void editEmployee(String email, Employee employee) {
-    clickEditButtonOfEmail(email);
-    if (addEmployeePopup.isVisible()) {
-      addEmployeePopup.inputFirstNameOnRegistrationForm(employee.getFirstName());
-      addEmployeePopup.inputLastNameOnRegistrationForm(employee.getLastName());
-      addEmployeePopup.inputAgeOnRegistrationForm(employee.getAge());
-      addEmployeePopup.inputEmailOnRegistrationForm(employee.getEmail());
-      addEmployeePopup.inputSalaryOnRegistrationForm(employee.getSalary());
-      addEmployeePopup.inputDepartmentOnRegistrationForm(employee.getDepartment());
-      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
-    }
-  }
-
   @Step("Delete employee with email '{0}'")
   public void deleteEmployee(String email) {
     clickDeleteButtonOfEmail(email);
@@ -100,21 +102,14 @@ public class EmployeesPage extends BasePage {
 
   @Step("Nhấn nút Thêm")
   public void clickAddButton() {
-    webUI.clickOn(findTestObject("BTN_ADD"));
+    webUI.clickOn(btnAdd);
   }
 
   @Step("Nhấn nút Chỉnh sửa của email '{0}'")
   public void clickEditButtonOfEmail(String email) {
-    // Solution 1: use xpath to find the edit button
-//    WebElement btnEdit = webUI.findWebElement(BTN_EDIT, email);
-//    webUI.clickOn(btnEdit);
-
-    // Solution 2: use list web elements to find the edit button
-    List<WebElement> lblEmails = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_EMAILS"));
-    List<WebElement> btnEdits = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_BTN_ACTIONS"));
-    for (int i = 0; i < lblEmails.size(); i++) {
-      if (webUI.verifyElementText(lblEmails.get(i), email)) {
-        webUI.clickOffset(btnEdits.get(i), -36, 0);
+    for (int i = 0; i < employeeTable_LblEmails.size(); i++) {
+      if (webUI.verifyElementText(employeeTable_LblEmails.get(i), email)) {
+        webUI.clickOffset(employeeTable_BtnEdits.get(i), -36, 0);
         break;
       }
     }
@@ -122,16 +117,9 @@ public class EmployeesPage extends BasePage {
 
   @Step("Click delete button of employee with email '{0}'")
   public void clickDeleteButtonOfEmail(String email) {
-    // Solution 1: use xpath to find the edit button
-//    WebElement btnEdit = webUI.findWebElement(BTN_EDIT, email);
-//    webUI.clickOn(btnEdit);
-
-    // Solution 2: use list web elements to find the edit button
-    List<WebElement> lblEmails = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_EMAILS"));
-    List<WebElement> btnActions = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_BTN_ACTIONS"));
-    for (int i = 0; i < lblEmails.size(); i++) {
-      if (webUI.verifyElementText(lblEmails.get(i), email)) {
-        webUI.clickOffset(btnActions.get(i), -12, 0);
+    for (int i = 0; i < employeeTable_LblEmails.size(); i++) {
+      if (webUI.verifyElementText(employeeTable_LblEmails.get(i), email)) {
+        webUI.clickOffset(employeeTable_BtnActions.get(i), -12, 0);
         break;
       }
     }
@@ -139,16 +127,9 @@ public class EmployeesPage extends BasePage {
 
   @Step("Should show first name '{0}' in employees table")
   public boolean shouldShowFirstNameInEmployeesTable(String expectedFirstName) {
-    List<WebElement> firstNames = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_FIRST_NAMES"));
-    for (WebElement firstName : firstNames) {
+    for (WebElement firstName : employeeTable_LblFirstNames) {
       if (webUI.verifyElementText(firstName, expectedFirstName)) {
-        String targetFilePath = IMAGES_FOLDER_PATH + File.separator + "element_marked_" + DateTimeHelper.formatCurrentDateAs("yyyyMMddHHmmss") + ".png";
-        FileHelper.saveFile(webUI.takeScreenshotAndMarkElement(firstName), targetFilePath);
-        try (InputStream is = Files.newInputStream(Paths.get(targetFilePath))) {
-          Allure.addAttachment("Screenshot", is);
-        } catch (IOException e) {
-          throw new RuntimeException(e);
-        }
+        webUI.takeScreenshotAndMarkElement(firstName);
         return true;
       }
     }
@@ -157,9 +138,9 @@ public class EmployeesPage extends BasePage {
 
   @Step("Should show last name '{0}' in employees table")
   public boolean shouldShowLastNameInEmployeesTable(String expectedLastName) {
-    List<WebElement> lastNames = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_LAST_NAMES"));
-    for (WebElement lastName : lastNames) {
+    for (WebElement lastName : employeeTable_LblLastNames) {
       if (webUI.verifyElementText(lastName, expectedLastName)) {
+        webUI.takeScreenshotAndMarkElement(lastName);
         return true;
       }
     }
@@ -168,23 +149,23 @@ public class EmployeesPage extends BasePage {
 
   @Step("Should not show first name '{0}' in employees table")
   public boolean shouldNotShowFirstNameInEmployeesTable(String expectedFirstName) {
-    List<WebElement> firstNames = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_FIRST_NAMES"));
-    for (WebElement firstName : firstNames) {
+    for (WebElement firstName : employeeTable_LblFirstNames) {
       if (webUI.verifyElementText(firstName, expectedFirstName)) {
         return false;
       }
     }
+    webUI.attachmentScreenshot();
     return true;
   }
 
   @Step("Should not show last name '{0}' in employees table")
   public boolean shouldNotShowLastNameInEmployeesTable(String expectedLastName) {
-    List<WebElement> lastNames = webUI.findWebElements(findTestObject("EMPLOYEE_TABLE_LBL_LAST_NAMES"));
-    for (WebElement lastName : lastNames) {
+    for (WebElement lastName : employeeTable_LblLastNames) {
       if (webUI.verifyElementText(lastName, expectedLastName)) {
         return false;
       }
     }
+    webUI.attachmentScreenshot();
     return true;
   }
 }

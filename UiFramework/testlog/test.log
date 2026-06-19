@@ -1,229 +1,647 @@
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 8 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 11 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 4 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 6 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-INFO  | 2026-06-15 21:38:54 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
-  /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/testsuites/EmployeesTestSuite.xml
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 8 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 12 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 4 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 12 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-06-19 21:18:02 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/testsuites/EmployeesTestSuite_DataFaker.xml
 
-INFO  | 2026-06-15 21:38:54 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeSuite:30) - ==================Start suite
-INFO  | 2026-06-15 21:38:54 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:51) - Deleting folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results'
-INFO  | 2026-06-15 21:38:54 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:58) - Deleted folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results' successfully
-INFO  | 2026-06-15 21:38:54 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeTest:37) - ------------------Start test
-INFO  | 2026-06-15 21:38:55 | [main] common.keywords.WebUI (WebUI.java:openBrowser:42) - Opening browser: CHROME
-INFO  | 2026-06-15 21:38:57 | [main] common.keywords.WebUI (WebUI.java:openBrowser:69) - Browser CHROME opened successfully
-INFO  | 2026-06-15 21:38:57 | [main] common.keywords.WebUI (WebUI.java:openBrowser:77) - Navigating to URL: https://demoqa.com/webtables
-INFO  | 2026-06-15 21:39:00 | [main] common.keywords.WebUI (WebUI.java:openBrowser:79) - Navigated to URL: https://demoqa.com/webtables
-INFO  | 2026-06-15 21:39:00 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:403) - Maximizing window
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:405) - Window maximized
-INFO  | 2026-06-15 21:39:01 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] DynamicGraphHelper.createDynamicGraph() took 5 ms.
-INFO  | 2026-06-15 21:39:01 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeClass:47) - Running test class: EmployeesTest_POM
-INFO  | 2026-06-15 21:39:01 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:52) - Running test method: EM002_edit_email_successfully
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[4]' within 30 second(s)
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//td[4]'
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//div[@class='action-buttons']' within 30 second(s)
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//div[@class='action-buttons']'
-INFO  | 2026-06-15 21:39:01 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-ERROR | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'cierra@example.com' and expected text 'kierra@example.com' are not the same
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-ERROR | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'alden@example.com' and expected text 'kierra@example.com' are not the same
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:599) - Actual text 'kierra@example.com' and expected text 'kierra@example.com' are the same
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1137) - Clicking on web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //div[@class='action-buttons']]'
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1140) - Clicked on web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //div[@class='action-buttons']]' at offset (-36, 0)
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:770) - Waiting for web element located by '//div[@class='modal-content']' to be visible within 30 second(s)
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:775) - Web element located by '//div[@class='modal-content']' is visible
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 20 second(s)
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
-INFO  | 2026-06-15 21:39:02 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='firstName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 10 second(s)
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'John' into web element located by '//input[@id='firstName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'John' into web element located by '//input[@id='firstName']' successfully
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 30 second(s)
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='lastName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
-INFO  | 2026-06-15 21:39:03 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Doe' into web element located by '//input[@id='lastName']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Doe' into web element located by '//input[@id='lastName']' successfully
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='age']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '34' into web element located by '//input[@id='age']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '34' into web element located by '//input[@id='age']' successfully
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:04 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='userEmail']'
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'johndoe@mailinator.com' into web element located by '//input[@id='userEmail']'
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'johndoe@mailinator.com' into web element located by '//input[@id='userEmail']' successfully
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:05 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='salary']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '3000' into web element located by '//input[@id='salary']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '3000' into web element located by '//input[@id='salary']' successfully
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:clearText:319) - Clearing text in element located by '//input[@id='department']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:clearText:321) - Text cleared
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'IT' into web element located by '//input[@id='department']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'IT' into web element located by '//input[@id='department']' successfully
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:06 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1309) - Taking screenshot
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:07 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1318) - Screenshot taken and marked element successfully
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:submit:414) - Submitting web element located by '//button[@id='submit']'
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:submit:416) - Submitted web element located by '//button[@id='submit']'
-INFO  | 2026-06-15 21:39:08 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 1 seconds
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1252) - Taking screenshot
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1255) - Screenshot taken
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//td[1]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[1]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Cierra' and expected text 'Jozhn' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[1]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Alden' and expected text 'Jozhn' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[1]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'John' and expected text 'Jozhn' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//td[2]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[2]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Vega' and expected text 'Does' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[2]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Cantrell' and expected text 'Does' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[2]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Doe' and expected text 'Does' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:57) - Ended test method: EM002_edit_email_successfully
-INFO  | 2026-06-15 21:39:09 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:52) - Running test method: EM003_delete_email_successfully
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[4]' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//td[4]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//div[@class='action-buttons']' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 3 web elements located by '//div[@class='action-buttons']'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'cierra@example.com' and expected text 'johndoe@mailinator.com' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'alden@example.com' and expected text 'johndoe@mailinator.com' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[4]]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:599) - Actual text 'johndoe@mailinator.com' and expected text 'johndoe@mailinator.com' are the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1137) - Clicking on web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //div[@class='action-buttons']]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1140) - Clicked on web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //div[@class='action-buttons']]' at offset (-12, 0)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 2 web elements located by '//td[1]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[1]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Cierra' and expected text 'John' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[1]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Alden' and expected text 'John' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 2 web elements located by '//td[2]'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[2]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Vega' and expected text 'Doe' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:596) - Verifying text of web element '[[ChromeDriver: chrome on mac (0849c56c39244cf11279ddc2c9306543)] -> xpath: //td[2]]'
-ERROR | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:603) - Actual text 'Cantrell' and expected text 'Doe' are not the same
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//a/span[.='Text Box']' within 30 second(s)
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//a/span[.='Text Box']'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:clickOn:382) - Clicking on web element located by '//a/span[.='Text Box']'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:clickOn:384) - Clicked on web element located by '//a/span[.='Text Box']'
-INFO  | 2026-06-15 21:39:09 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 3 seconds
-INFO  | 2026-06-15 21:39:12 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
-INFO  | 2026-06-15 21:39:12 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:57) - Ended test method: EM003_delete_email_successfully
-INFO  | 2026-06-15 21:39:12 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:88) - Closing browser
-INFO  | 2026-06-15 21:39:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:90) - Browser closed successfully
-INFO  | 2026-06-15 21:39:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterClass:63) - Ended test class: EmployeesTest_POM
-INFO  | 2026-06-15 21:39:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:88) - Closing browser
-INFO  | 2026-06-15 21:39:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:90) - Browser closed successfully
-INFO  | 2026-06-15 21:39:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterTest:69) - ------------------Ended test
-INFO  | 2026-06-15 21:39:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterSuite:74) - ==================Ended suite
-INFO  | 2026-06-15 21:39:13 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Time taken by org.testng.internal.ExitCodeListener@3f06ebe0: 0 ms
+INFO  | 2026-06-19 21:18:02 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeSuite:39) - ==================Start suite
+INFO  | 2026-06-19 21:18:02 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:51) - Deleting folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results'
+INFO  | 2026-06-19 21:18:02 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:58) - Deleted folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results' successfully
+INFO  | 2026-06-19 21:18:02 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeTest:46) - ------------------Start test
+INFO  | 2026-06-19 21:18:02 | [main] common.keywords.WebUI (WebUI.java:openBrowser:42) - Opening browser: CHROME
+INFO  | 2026-06-19 21:18:06 | [main] common.keywords.WebUI (WebUI.java:openBrowser:69) - Browser CHROME opened successfully
+INFO  | 2026-06-19 21:18:06 | [main] common.keywords.WebUI (WebUI.java:openBrowser:77) - Navigating to URL: https://demoqa.com/webtables
+INFO  | 2026-06-19 21:18:09 | [main] common.keywords.WebUI (WebUI.java:openBrowser:79) - Navigated to URL: https://demoqa.com/webtables
+INFO  | 2026-06-19 21:18:09 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:424) - Maximizing window
+INFO  | 2026-06-19 21:18:09 | [main] common.keywords.WebUI (WebUI.java:maximizeWindow:426) - Window maximized
+INFO  | 2026-06-19 21:18:09 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] DynamicGraphHelper.createDynamicGraph() took 9 ms.
+INFO  | 2026-06-19 21:18:09 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeClass:56) - Running test class: EmployeesTest_POM_DataFaker
+INFO  | 2026-06-19 21:18:10 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:61) - Running test method: EM001_create_email_successfully
+INFO  | 2026-06-19 21:18:10 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'BTN_ADD' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:10 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='addNewRecordButton']' within 30 second(s)
+INFO  | 2026-06-19 21:18:10 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:10 | [main] common.keywords.WebUI (WebUI.java:clickOn:403) - Clicking on web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:clickOn:405) - Clicked on web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:11 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'DLG_REGISTRATION_FORM' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:791) - Waiting for web element located by '//div[@class='modal-content']' to be visible within 30 second(s)
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:796) - Web element located by '//div[@class='modal-content']' is visible
+INFO  | 2026-06-19 21:18:11 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 20 second(s)
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:11 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 10 second(s)
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Mellie' into web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Mellie' into web element located by '//input[@id='firstName']' successfully
+INFO  | 2026-06-19 21:18:11 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:11 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:12 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:12 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Kuvalis' into web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Kuvalis' into web element located by '//input[@id='lastName']' successfully
+INFO  | 2026-06-19 21:18:12 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:12 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:13 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:13 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '71' into web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '71' into web element located by '//input[@id='age']' successfully
+INFO  | 2026-06-19 21:18:13 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:13 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:13 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:13 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'milo.emmerich@gmail.com' into web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'milo.emmerich@gmail.com' into web element located by '//input[@id='userEmail']' successfully
+INFO  | 2026-06-19 21:18:14 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:14 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:14 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '7025' into web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '7025' into web element located by '//input[@id='salary']' successfully
+INFO  | 2026-06-19 21:18:14 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:14 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:15 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:15 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Agent' into web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Agent' into web element located by '//input[@id='department']' successfully
+INFO  | 2026-06-19 21:18:15 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:15 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:16 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:16 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:submit:435) - Submitting web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:submit:437) - Submitted web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:16 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 1 seconds
+INFO  | 2026-06-19 21:18:17 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:17 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1292) - Taking screenshot
+INFO  | 2026-06-19 21:18:18 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1295) - Screenshot taken
+INFO  | 2026-06-19 21:18:18 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 3 seconds
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_FIRST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 4 web elements located by '//td[1]'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cierra' and expected text 'Mellie' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Alden' and expected text 'Mellie' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Kierra' and expected text 'Mellie' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Mellie' and expected text 'Mellie' are the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1327) - Taking screenshot
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1336) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:21 | [main] common.helper.FileHelper (FileHelper.java:saveFile:37) - Saving file 'screenshot5474284576787545680.png' to path '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked_20260619211821.png'
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_LAST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 4 web elements located by '//td[2]'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Vega' and expected text 'Kuvalis' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cantrell' and expected text 'Kuvalis' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Gentry' and expected text 'Kuvalis' are not the same
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Kuvalis' and expected text 'Kuvalis' are the same
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:66) - Ended test method: EM001_create_email_successfully
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:61) - Running test method: EM001_create_email_successfully
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'BTN_ADD' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='addNewRecordButton']' within 30 second(s)
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:clickOn:403) - Clicking on web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:clickOn:405) - Clicked on web element located by '//button[@id='addNewRecordButton']'
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'DLG_REGISTRATION_FORM' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:791) - Waiting for web element located by '//div[@class='modal-content']' to be visible within 30 second(s)
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:796) - Web element located by '//div[@class='modal-content']' is visible
+INFO  | 2026-06-19 21:18:21 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:21 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 20 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:22 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 10 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Jay' into web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Jay' into web element located by '//input[@id='firstName']' successfully
+INFO  | 2026-06-19 21:18:22 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:22 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:22 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Bruen' into web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Bruen' into web element located by '//input[@id='lastName']' successfully
+INFO  | 2026-06-19 21:18:22 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:22 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:23 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:23 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '20' into web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '20' into web element located by '//input[@id='age']' successfully
+INFO  | 2026-06-19 21:18:23 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:23 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:24 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:24 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'thurman.senger@hotmail.com' into web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'thurman.senger@hotmail.com' into web element located by '//input[@id='userEmail']' successfully
+INFO  | 2026-06-19 21:18:24 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:24 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:25 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:25 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '8392' into web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '8392' into web element located by '//input[@id='salary']' successfully
+INFO  | 2026-06-19 21:18:25 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:25 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:25 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:25 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Producer' into web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Producer' into web element located by '//input[@id='department']' successfully
+INFO  | 2026-06-19 21:18:26 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:26 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:26 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:27 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:submit:435) - Submitting web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:submit:437) - Submitted web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:27 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 1 seconds
+INFO  | 2026-06-19 21:18:28 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:28 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1292) - Taking screenshot
+INFO  | 2026-06-19 21:18:28 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1295) - Screenshot taken
+INFO  | 2026-06-19 21:18:28 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 3 seconds
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:31 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_FIRST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[1]'
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cierra' and expected text 'Jay' are not the same
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Alden' and expected text 'Jay' are not the same
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Kierra' and expected text 'Jay' are not the same
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Mellie' and expected text 'Jay' are not the same
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Jay' and expected text 'Jay' are the same
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1327) - Taking screenshot
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:31 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1336) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:32 | [main] common.helper.FileHelper (FileHelper.java:saveFile:37) - Saving file 'screenshot8714479470487954177.png' to path '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked_20260619211831.png'
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_LAST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[2]'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Vega' and expected text 'Bruen' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cantrell' and expected text 'Bruen' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Gentry' and expected text 'Bruen' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Kuvalis' and expected text 'Bruen' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Bruen' and expected text 'Bruen' are the same
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:66) - Ended test method: EM001_create_email_successfully
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:61) - Running test method: EM002_edit_email_successfully
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.firstName' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.lastName' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.email' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.age' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.salary' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.department' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_EMAILS' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[4]' within 30 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[4]'
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_BTN_ACTIONS' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//div[@class='action-buttons']' within 30 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//div[@class='action-buttons']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'cierra@example.com' and expected text 'kierra@example.com' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'alden@example.com' and expected text 'kierra@example.com' are not the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'kierra@example.com' and expected text 'kierra@example.com' are the same
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1177) - Clicking on web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //div[@class='action-buttons']]'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:clickOffset:1180) - Clicked on web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //div[@class='action-buttons']]' at offset (-36, 0)
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'DLG_REGISTRATION_FORM' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:791) - Waiting for web element located by '//div[@class='modal-content']' to be visible within 30 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:waitForElementVisible:796) - Web element located by '//div[@class='modal-content']' is visible
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 20 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 10 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Kevin' into web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Kevin' into web element located by '//input[@id='firstName']' successfully
+INFO  | 2026-06-19 21:18:32 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_FIRST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='firstName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='firstName']'
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:32 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:33 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:33 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Hope' into web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Hope' into web element located by '//input[@id='lastName']' successfully
+INFO  | 2026-06-19 21:18:33 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_LAST_NAME' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='lastName']' within 30 second(s)
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='lastName']'
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:33 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:34 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:34 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '28' into web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '28' into web element located by '//input[@id='age']' successfully
+INFO  | 2026-06-19 21:18:34 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_AGE' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='age']' within 30 second(s)
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='age']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:34 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:34 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:35 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'kevin_hope@mailinator.com' into web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'kevin_hope@mailinator.com' into web element located by '//input[@id='userEmail']' successfully
+INFO  | 2026-06-19 21:18:35 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_EMAIL' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='userEmail']' within 30 second(s)
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='userEmail']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:35 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:35 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text '3000' into web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text '3000' into web element located by '//input[@id='salary']' successfully
+INFO  | 2026-06-19 21:18:35 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_SALARY' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='salary']' within 30 second(s)
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='salary']'
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:35 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:36 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:clearText:330) - Clearing text in element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:clearText:332) - Text cleared
+INFO  | 2026-06-19 21:18:36 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'Marketing' into web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:inputText:309) - Inputted text 'Marketing' into web element located by '//input[@id='department']' successfully
+INFO  | 2026-06-19 21:18:36 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_TXT_DEPARTMENT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//input[@id='department']' within 30 second(s)
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//input[@id='department']'
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:36 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:37 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1349) - Taking screenshot
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshotWhichMarkElement:1358) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:37 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'REGISTRATION_FORM_BTN_SUBMIT' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/AddEmployeePopup.json' file
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//button[@id='submit']' within 30 second(s)
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:submit:435) - Submitting web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:submit:437) - Submitted web element located by '//button[@id='submit']'
+INFO  | 2026-06-19 21:18:37 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 1 seconds
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1292) - Taking screenshot
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:attachmentScreenshot:1295) - Screenshot taken
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.firstName' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_FIRST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[1]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cierra' and expected text 'Kevin' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Alden' and expected text 'Kevin' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Kevin' and expected text 'Kevin' are the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1327) - Taking screenshot
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 200 milliseconds
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:154) - Delaying for 300 milliseconds
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:delayInMilliseconds:156) - Delay completed
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:takeScreenshotAndMarkElement:1336) - Screenshot taken and marked element successfully
+INFO  | 2026-06-19 21:18:39 | [main] common.helper.FileHelper (FileHelper.java:saveFile:37) - Saving file 'screenshot8962072627137546481.png' to path '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/images/element_marked_20260619211839.png'
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.tests.BaseTest (BaseTest.java:findTestData:95) - Finding test object 'EC002.lastName' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/data/EmployeesTest_POM_DataFaker.json' file
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_LAST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[2]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Vega' and expected text 'Hope' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cantrell' and expected text 'Hope' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:620) - Actual text 'Hope' and expected text 'Hope' are the same
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:66) - Ended test method: EM002_edit_email_successfully
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.tests.BaseTest (BaseTest.java:beforeMethod:61) - Running test method: EM003_delete_email_successfully
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_EMAILS' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[4]' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[4]'
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_BTN_ACTIONS' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//div[@class='action-buttons']' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//div[@class='action-buttons']'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'cierra@example.com' and expected text 'johndoe@mailinator.com' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'alden@example.com' and expected text 'johndoe@mailinator.com' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'kevin_hope@mailinator.com' and expected text 'johndoe@mailinator.com' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'milo.emmerich@gmail.com' and expected text 'johndoe@mailinator.com' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[4]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'thurman.senger@hotmail.com' and expected text 'johndoe@mailinator.com' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_FIRST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[1]' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[1]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cierra' and expected text 'John' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Alden' and expected text 'John' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Kevin' and expected text 'John' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Mellie' and expected text 'John' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[1]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Jay' and expected text 'John' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] vitacademy.pages.BasePage (BasePage.java:findTestObject:41) - Finding test object 'EMPLOYEE_TABLE_LBL_LAST_NAMES' in '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/object_repository/EmployeesPage.json' file
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:289) - Finding web elements located by '//td[2]' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElements:294) - Found 5 web elements located by '//td[2]'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Vega' and expected text 'Doe' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Cantrell' and expected text 'Doe' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Hope' and expected text 'Doe' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Kuvalis' and expected text 'Doe' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:617) - Verifying text of web element '[[ChromeDriver: chrome on mac (1824d38bca1b38c891121dd23d7fe017)] -> xpath: //td[2]]'
+ERROR | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:verifyElementText:624) - Actual text 'Bruen' and expected text 'Doe' are not the same
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by '//a/span[.='Text Box']' within 30 second(s)
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:findWebElement:241) - Found 1 web element located by '//a/span[.='Text Box']'
+INFO  | 2026-06-19 21:18:39 | [main] common.keywords.WebUI (WebUI.java:clickOn:403) - Clicking on web element located by '//a/span[.='Text Box']'
+INFO  | 2026-06-19 21:18:40 | [main] common.keywords.WebUI (WebUI.java:clickOn:405) - Clicked on web element located by '//a/span[.='Text Box']'
+INFO  | 2026-06-19 21:18:40 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:144) - Delaying for 3 seconds
+INFO  | 2026-06-19 21:18:43 | [main] common.keywords.WebUI (WebUI.java:delayInSeconds:146) - Delay completed
+INFO  | 2026-06-19 21:18:43 | [main] common.keywords.WebUI (WebUI.java:findWebElement:228) - Finding web element located by 'FullName' within 30 second(s)
+ERROR | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:findWebElement:248) - Failed to find web element locate by 'FullName'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: FullName
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.116, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/gm/9w1n371x6fl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57415}, goog:processID: 5855, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57415/devtoo..., se:cdpVersion: 149.0.7827.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1824d38bca1b38c891121dd23d7fe017
+INFO  | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:inputText:307) - Inputting text 'John Doe' into web element located by 'FullName'
+ERROR | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:inputText:312) - Failed to input text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "we" is null
+INFO  | 2026-06-19 21:19:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterMethod:66) - Ended test method: EM003_delete_email_successfully
+INFO  | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:88) - Closing browser
+INFO  | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:90) - Browser closed successfully
+INFO  | 2026-06-19 21:19:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterClass:72) - Ended test class: EmployeesTest_POM_DataFaker
+INFO  | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:88) - Closing browser
+INFO  | 2026-06-19 21:19:13 | [main] common.keywords.WebUI (WebUI.java:closeBrowser:90) - Browser closed successfully
+INFO  | 2026-06-19 21:19:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterTest:78) - ------------------Ended test
+INFO  | 2026-06-19 21:19:13 | [main] vitacademy.tests.BaseTest (BaseTest.java:afterSuite:83) - ==================Ended suite
+INFO  | 2026-06-19 21:19:13 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Time taken by org.testng.internal.ExitCodeListener@1a16583d: 0 ms
