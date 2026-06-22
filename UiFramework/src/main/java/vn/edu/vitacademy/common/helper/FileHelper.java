@@ -7,7 +7,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,5 +66,113 @@ public class FileHelper {
         LOGGER.error("Failed to delete folder '{}'. Root cause: {}", folderPath, e.getMessage());
       }
     }
+  }
+
+  public static String getCellValueFromExcel(String excelFilePath, String sheetName, String testCaseId, String columnName) {
+    XSSFWorkbook workbook = ExcelHelper.getWorkbook(excelFilePath);
+    if (workbook == null) {
+      return "";
+    }
+    XSSFSheet sheet = workbook.getSheet(sheetName);
+    if (sheet == null) {
+      LOGGER.error("Sheet '{}' not found in file '{}'", sheetName, excelFilePath);
+      return "";
+    }
+
+    // Find column index
+    int colIndex = -1;
+    XSSFRow headerRow = sheet.getRow(0);
+    for (int i = 0; i < headerRow.getLastCellNum(); i++) {
+      if (ExcelHelper.getCellValue(sheet, 0, i).equalsIgnoreCase(columnName)) {
+        colIndex = i;
+        break;
+      }
+    }
+    if (colIndex == -1) {
+      LOGGER.error("Column '{}' not found in sheet '{}'", columnName, sheetName);
+      return "";
+    }
+
+    // Find row index
+    int rowIndex = -1;
+    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+      if (ExcelHelper.getCellValue(sheet, i, 0).equalsIgnoreCase(testCaseId)) {
+        rowIndex = i;
+        break;
+      }
+    }
+    if (rowIndex == -1) {
+      LOGGER.error("Test Case ID '{}' not found in sheet '{}'", testCaseId, sheetName);
+      return "";
+    }
+
+    return ExcelHelper.getCellValue(sheet, rowIndex, colIndex);
+  }
+
+  public static List<HashMap<String, String>> getExcelData(String excelFilePath, String sheetName, String testCaseId) {
+    List<HashMap<String, String>> data = new ArrayList<>();
+    XSSFWorkbook workbook = ExcelHelper.getWorkbook(excelFilePath);
+    if (workbook == null) {
+      return data;
+    }
+    XSSFSheet sheet = workbook.getSheet(sheetName);
+    if (sheet == null) {
+      LOGGER.error("Sheet '{}' not found in file '{}'", sheetName, excelFilePath);
+      return data;
+    }
+
+    int startRow = -1;
+    int endRow = -1;
+    int startCol = -1;
+    int endCol = -1;
+
+    for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+      XSSFRow row = sheet.getRow(i);
+      if (row != null) {
+        for (int j = 0; j < row.getLastCellNum(); j++) {
+          if (ExcelHelper.getCellValue(sheet, i, j).equalsIgnoreCase(testCaseId)) {
+            if (startRow == -1) {
+              startRow = i;
+            }
+            endRow = i;
+            if (startCol == -1) {
+              startCol = j;
+            }
+            endCol = j;
+          }
+        }
+      }
+    }
+
+    if (startRow != -1) {
+      XSSFRow headerRow = sheet.getRow(startRow);
+      if (headerRow == null) {
+        LOGGER.error("Header row not found for test case '{}' in sheet '{}'", testCaseId, sheetName);
+        return data;
+      }
+
+      for (int i = startRow + 1; i <= endRow; i++) {
+        HashMap<String, String> rowMap = new HashMap<>();
+        XSSFRow dataRow = sheet.getRow(i);
+        if (dataRow != null) {
+          for (int j = startCol; j <= endCol; j++) {
+            String header = ExcelHelper.getCellValue(sheet, startRow, j);
+            String cellValue = ExcelHelper.getCellValue(sheet, i, j);
+            if (header != null && !header.isEmpty()) {
+              rowMap.put(header, cellValue);
+            }
+          }
+        }
+        data.add(rowMap);
+      }
+    }
+
+    try {
+      workbook.close();
+    } catch (IOException e) {
+      LOGGER.error("Failed to close workbook. Root cause: {}", e.getMessage());
+    }
+
+    return data;
   }
 }
