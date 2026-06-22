@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+  <test name="Chrome Test" preserve-order="true"
+    verbose="2">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://demoqa.com/webtables"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM_Excel02" />
+    </classes>
+  </test>
+</suite>
