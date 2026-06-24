@@ -5,6 +5,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.not;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import java.io.File;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -23,7 +25,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -34,6 +38,7 @@ import org.slf4j.LoggerFactory;
 public class WebUI {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebUI.class);
+  private static final String REMOTE_URL = "http://localhost:4444/";
   private static final int DEFAULT_TIMEOUT = 30;
   private WebDriver driver;
 
@@ -64,6 +69,25 @@ public class WebUI {
           FirefoxOptions optionsFirefoxHeadless = new FirefoxOptions();
           optionsFirefoxHeadless.addArguments("--headless");
           driver = new FirefoxDriver(optionsFirefoxHeadless);
+          break;
+        case "CHROME_REMOTE":
+          ChromeOptions optionsChromeRemote = new ChromeOptions();
+          optionsChromeRemote.addArguments("--remote-allow-origins=*");
+          optionsChromeRemote.addArguments("--headless=new");
+          optionsChromeRemote.addArguments("--window-size=2560,1600");
+          driver = new RemoteWebDriver(new URL(REMOTE_URL), optionsChromeRemote);
+//          driver.manage().window().setSize(new Dimension(2560, 1600));
+          break;
+        case "FIREFOX_REMOTE":
+          FirefoxOptions optionsFirefoxRemote = new FirefoxOptions();
+          optionsFirefoxRemote.addArguments("--headless");
+          optionsFirefoxRemote.addArguments("--width=1920");
+          optionsFirefoxRemote.addArguments("--height=1080");
+          driver = new RemoteWebDriver(new URL(REMOTE_URL), optionsFirefoxRemote);
+          break;
+        case "SAFARI_REMOTE":
+          SafariOptions optionsSafariRemote = new SafariOptions();
+          driver = new RemoteWebDriver(new URL(REMOTE_URL), optionsSafariRemote);
           break;
       }
       LOGGER.info("Browser {} opened successfully", browserName.toUpperCase());
