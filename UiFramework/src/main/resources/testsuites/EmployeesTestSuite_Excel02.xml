@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
   <test name="Chrome Test" preserve-order="true"
     verbose="2">
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="Chrome_Remote"/>
+    <parameter name="url" value="https://demoqa.com/webtables"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM_Excel02" />
+    </classes>
+  </test>
+
+  <test name="Firefox Test" preserve-order="true"
+    verbose="2">
+    <parameter name="browser" value="Firefox_Remote"/>
+    <parameter name="url" value="https://demoqa.com/webtables"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM_Excel02" />
+    </classes>
+  </test>
+
+  <test name="Safari Test" preserve-order="true"
+    verbose="2">
+    <parameter name="browser" value="Safari_Remote"/>
     <parameter name="url" value="https://demoqa.com/webtables"/>
     <classes>
       <class name="vn.edu.vitacademy.tests.EmployeesTest_POM_Excel02" />
