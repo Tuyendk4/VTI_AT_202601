@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -115,37 +116,45 @@ public class FileHelper {
     if (workbook == null) {
       return data;
     }
-    XSSFSheet sheet = workbook.getSheet(sheetName);
+    XSSFSheet sheet = ExcelHelper.getSheet(workbook, sheetName);
     if (sheet == null) {
       LOGGER.error("Sheet '{}' not found in file '{}'", sheetName, excelFilePath);
       return data;
     }
 
-    int startRow = -1;
-    int endRow = -1;
-    int startCol = -1;
-    int endCol = -1;
-
-    for (int i = 0; i <= sheet.getLastRowNum(); i++) {
-      XSSFRow row = sheet.getRow(i);
-      if (row != null) {
-        for (int j = 0; j < row.getLastCellNum(); j++) {
-          if (ExcelHelper.getCellValue(sheet, i, j).equalsIgnoreCase(testCaseId)) {
-            if (startRow == -1) {
-              startRow = i;
-            }
-            endRow = i;
-            if (startCol == -1) {
-              startCol = j;
-            }
-            endCol = j;
-          }
-        }
-      }
+    Cell startCell = ExcelHelper.findFirstCellWithStringValue(sheet, testCaseId);
+    if (startCell == null) {
+      LOGGER.error("Test Case ID '{}' not found in sheet '{}'", testCaseId, sheetName);
+      return data;
     }
 
+    Cell endCell = ExcelHelper.findLastCellWithStringValue(sheet, testCaseId);
+
+    int startRow = ExcelHelper.getRowFromCell(startCell);
+    int endRow = ExcelHelper.getRowFromCell(endCell);
+    int startCol = ExcelHelper.getColumnFromCell(startCell);
+    int endCol = ExcelHelper.getColumnFromCell(endCell);
+
+//    for (int i = 0; i <= ExcelHelper.getLastRowNumber(sheet); i++) {
+//      XSSFRow row = ExcelHelper.getRowByIndex(sheet, i);
+//      if (row != null) {
+//        for (int j = 0; j < row.getLastCellNum(); j++) {
+//          if (ExcelHelper.getCellValue(sheet, i, j).equalsIgnoreCase(testCaseId)) {
+//            if (startRow == -1) {
+//              startRow = i;
+//            }
+//            endRow = i;
+//            if (startCol == -1) {
+//              startCol = j;
+//            }
+//            endCol = j;
+//          }
+//        }
+//      }
+//    }
+
     if (startRow != -1) {
-      XSSFRow headerRow = sheet.getRow(startRow);
+      XSSFRow headerRow = ExcelHelper.getRowByIndex(sheet, startRow);
       if (headerRow == null) {
         LOGGER.error("Header row not found for test case '{}' in sheet '{}'", testCaseId, sheetName);
         return data;
@@ -153,7 +162,7 @@ public class FileHelper {
 
       for (int i = startRow + 1; i <= endRow; i++) {
         HashMap<String, String> rowMap = new HashMap<>();
-        XSSFRow dataRow = sheet.getRow(i);
+        XSSFRow dataRow = ExcelHelper.getRowByIndex(sheet, i);
         if (dataRow != null) {
           for (int j = startCol; j <= endCol; j++) {
             String header = ExcelHelper.getCellValue(sheet, startRow, j);

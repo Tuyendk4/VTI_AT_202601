@@ -3,7 +3,6 @@ package vn.edu.vitacademy.pages;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -16,9 +15,7 @@ import vn.edu.vitacademy.common.helper.DateTimeHelper;
 import vn.edu.vitacademy.common.helper.FileHelper;
 import vn.edu.vitacademy.common.keywords.WebUI;
 import vn.edu.vitacademy.model.Employee;
-import vn.edu.vitacademy.object_repository.EmployeeRepo;
 import vn.edu.vitacademy.pages.components.AddEmployeePopup;
-import vn.edu.vitacademy.tests.EmployeesTest;
 
 // is-a: Eployees page is a web page
 public class EmployeesPage extends BasePage {
@@ -33,18 +30,22 @@ public class EmployeesPage extends BasePage {
     setRepoName(EmployeesPage.class.getSimpleName());
   }
 
+  public AddEmployeePopup onAddEmployeePopup() {
+    return new AddEmployeePopup(webUI);
+  }
+
   @Step("Create new employee with first name '{0}', last name '{1}', email '{2}', age '{3}', salary '{4}', department '{5}'")
   public void createEmployee(String newFirstName, String newLastName, String newEmail,
       String newAge, String newSalary, String newDepartment) {
     clickAddButton();
     if (addEmployeePopup.isVisible()) {
-      addEmployeePopup.inputFirstNameOnRegistrationForm(newFirstName);
-      addEmployeePopup.inputLastNameOnRegistrationForm(newLastName);
-      addEmployeePopup.inputAgeOnRegistrationForm(newAge);
-      addEmployeePopup.inputEmailOnRegistrationForm(newEmail);
-      addEmployeePopup.inputSalaryOnRegistrationForm(newSalary);
-      addEmployeePopup.inputDepartmentOnRegistrationForm(newDepartment);
-      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
+      addEmployeePopup.inputFirstName(newFirstName);
+      addEmployeePopup.inputLastName(newLastName);
+      addEmployeePopup.inputAge(newAge);
+      addEmployeePopup.inputEmail(newEmail);
+      addEmployeePopup.inputSalary(newSalary);
+      addEmployeePopup.inputDepartment(newDepartment);
+      addEmployeePopup.clickSubmitButton();
     }
   }
 
@@ -52,13 +53,13 @@ public class EmployeesPage extends BasePage {
   public void createEmployee(Employee employee) {
     clickAddButton();
     if (addEmployeePopup.isVisible()) {
-      addEmployeePopup.inputFirstNameOnRegistrationForm(employee.getFirstName());
-      addEmployeePopup.inputLastNameOnRegistrationForm(employee.getLastName());
-      addEmployeePopup.inputAgeOnRegistrationForm(employee.getAge());
-      addEmployeePopup.inputEmailOnRegistrationForm(employee.getEmail());
-      addEmployeePopup.inputSalaryOnRegistrationForm(employee.getSalary());
-      addEmployeePopup.inputDepartmentOnRegistrationForm(employee.getDepartment());
-      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
+      addEmployeePopup.inputFirstName(employee.getFirstName());
+      addEmployeePopup.inputLastName(employee.getLastName());
+      addEmployeePopup.inputAge(employee.getAge());
+      addEmployeePopup.inputEmail(employee.getEmail());
+      addEmployeePopup.inputSalary(employee.getSalary());
+      addEmployeePopup.inputDepartment(employee.getDepartment());
+      addEmployeePopup.clickSubmitButton();
       webUI.delayInSeconds(3);
     }
   }
@@ -69,13 +70,13 @@ public class EmployeesPage extends BasePage {
       String newAge, String newSalary, String newDepartment) {
     clickEditButtonOfEmail(email);
     if (addEmployeePopup.isVisible()) {
-      addEmployeePopup.inputFirstNameOnRegistrationForm(newFirstName);
-      addEmployeePopup.inputLastNameOnRegistrationForm(newLastName);
-      addEmployeePopup.inputAgeOnRegistrationForm(newAge);
-      addEmployeePopup.inputEmailOnRegistrationForm(newEmail);
-      addEmployeePopup.inputSalaryOnRegistrationForm(newSalary);
-      addEmployeePopup.inputDepartmentOnRegistrationForm(newDepartment);
-      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
+      addEmployeePopup.inputFirstName(newFirstName);
+      addEmployeePopup.inputLastName(newLastName);
+      addEmployeePopup.inputAge(newAge);
+      addEmployeePopup.inputEmail(newEmail);
+      addEmployeePopup.inputSalary(newSalary);
+      addEmployeePopup.inputDepartment(newDepartment);
+      addEmployeePopup.clickSubmitButton();
     }
   }
 
@@ -83,13 +84,13 @@ public class EmployeesPage extends BasePage {
   public void editEmployee(String email, Employee employee) {
     clickEditButtonOfEmail(email);
     if (addEmployeePopup.isVisible()) {
-      addEmployeePopup.inputFirstNameOnRegistrationForm(employee.getFirstName());
-      addEmployeePopup.inputLastNameOnRegistrationForm(employee.getLastName());
-      addEmployeePopup.inputAgeOnRegistrationForm(employee.getAge());
-      addEmployeePopup.inputEmailOnRegistrationForm(employee.getEmail());
-      addEmployeePopup.inputSalaryOnRegistrationForm(employee.getSalary());
-      addEmployeePopup.inputDepartmentOnRegistrationForm(employee.getDepartment());
-      addEmployeePopup.clickSubmitButtonOnRegistrationForm();
+      addEmployeePopup.inputFirstName(employee.getFirstName());
+      addEmployeePopup.inputLastName(employee.getLastName());
+      addEmployeePopup.inputAge(employee.getAge());
+      addEmployeePopup.inputEmail(employee.getEmail());
+      addEmployeePopup.inputSalary(employee.getSalary());
+      addEmployeePopup.inputDepartment(employee.getDepartment());
+      addEmployeePopup.clickSubmitButton();
     }
   }
 

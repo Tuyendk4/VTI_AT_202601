@@ -2,8 +2,11 @@ package vn.edu.vitacademy.common.helper;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
@@ -40,6 +43,10 @@ public class ExcelHelper {
     return null;
   }
 
+  public static XSSFSheet getSheet(XSSFWorkbook workbook, String sheetName) {
+    return workbook.getSheet(sheetName);
+  }
+
   public static String getCellValue(XSSFSheet sheet, int rowIndex, int colIndex) {
     String cellValue = "";
     try {
@@ -67,6 +74,45 @@ public class ExcelHelper {
       LOGGER.error("Failed to get cell value at row '{}' and column '{}'. Root cause: {}", rowIndex, colIndex, e.getMessage());
     }
     return cellValue;
+  }
+
+  public static Cell findFirstCellWithStringValue(XSSFSheet sheet, String value) {
+    for (Row row : sheet) {
+      for (Cell cell : row) {
+        if (cell.getCellType() == CellType.STRING && cell.getStringCellValue().equals(value)) {
+          return cell;
+        }
+      }
+    }
+    return null;
+  }
+
+  public static Cell findLastCellWithStringValue(XSSFSheet sheet, String value) {
+    Cell lastCell = null;
+    for (Row row : sheet) {
+      for (Cell cell : row) {
+        if (cell.getCellType() == CellType.STRING && cell.getStringCellValue().equals(value)) {
+          lastCell = cell;
+        }
+      }
+    }
+    return lastCell;
+  }
+
+  public static int getLastRowNumber(XSSFSheet sheet) {
+    return sheet.getLastRowNum();
+  }
+
+  public static int getRowFromCell(Cell cell) {
+    return cell.getRow().getRowNum();
+  }
+
+  public static XSSFRow getRowByIndex(XSSFSheet sheet, int rowIndex) {
+    return sheet.getRow(rowIndex);
+  }
+
+  public static int getColumnFromCell(Cell cell) {
+    return cell.getColumnIndex();
   }
 
   public static void saveWorkbook(String excelFilePath, XSSFWorkbook workbook) {
