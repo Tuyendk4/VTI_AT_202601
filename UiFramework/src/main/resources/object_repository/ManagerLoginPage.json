@@ -1,0 +1,6 @@
+{
+  "TXT_USER_ID": "name:uid",
+  "TXT_PASSWORD": "name:password",
+  "BTN_LOGIN": "name:btnLogin",
+  "BTN_RESET": "name:btnReset"
+}

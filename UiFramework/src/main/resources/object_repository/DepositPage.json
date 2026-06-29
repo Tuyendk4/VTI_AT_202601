@@ -1,0 +1,9 @@
+{
+  "TXT_ACCOUNT_NUMBER": "name:accountno",
+  "TXT_AMOUNT": "name:ammount",
+  "TXT_DESCRIPTION": "name:desc",
+  "BTN_SUBMIT": "name:AccSubmit",
+  "BTN_RESET": "name:res",
+  "LBL_ACCOUNT_NUMBER_ERROR": "id:message14",
+  "LBL_AMOUNT_ERROR": "id:message12"
+}

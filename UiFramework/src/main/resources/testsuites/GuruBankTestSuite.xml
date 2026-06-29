@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+  Guru99 Banking data-driven suite.
+  Test data is read from src/main/resources/data/TestCaseSuite_v2.xlsx (Apache POI).
+  Login credentials are resolved by ConfigReader: env vars GURU_USERNAME /
+  GURU_PASSWORD, -Dguru.username/-Dguru.password, or a gitignored config.properties
+  (copy config.properties.example). Guru99 emails fresh credentials on registration
+  at https://demo.guru99.com/V4/. As a last-resort fallback you may add
+  <parameter name="username"/> and <parameter name="password"/> below, but do NOT
+  commit real values.
+-->
+<suite name="Guru99 Banking Suite">
+
+  <test name="Guru99 Banking - Chrome" preserve-order="true" verbose="2">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://demo.guru99.com/V4/index.php"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.guru.NewCustomerTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.EditCustomerTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.DeleteCustomerTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.NewAccountTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.EditAccountTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.DeleteAccountTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.DepositTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.FundTransferTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.BalanceEnquiryTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.MiniStatementTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.CustomizedStatementTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.ChangePasswordTest"/>
+    </classes>
+  </test>
+
+</suite>

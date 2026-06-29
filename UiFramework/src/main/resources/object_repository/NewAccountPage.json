@@ -1,0 +1,9 @@
+{
+  "TXT_CUSTOMER_ID": "name:cusid",
+  "SEL_ACCOUNT_TYPE": "name:selaccount",
+  "TXT_INITIAL_DEPOSIT": "name:inideposit",
+  "BTN_SUBMIT": "name:button2",
+  "BTN_RESET": "name:res",
+  "LBL_CUSTOMER_ID_ERROR": "id:message14",
+  "LBL_INITIAL_DEPOSIT_ERROR": "id:message18"
+}

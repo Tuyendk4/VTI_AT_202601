@@ -1,0 +1,16 @@
+{
+  "LNK_NEW_CUSTOMER": "//a[normalize-space()='New Customer']",
+  "LNK_EDIT_CUSTOMER": "//a[normalize-space()='Edit Customer']",
+  "LNK_DELETE_CUSTOMER": "//a[normalize-space()='Delete Customer']",
+  "LNK_NEW_ACCOUNT": "//a[normalize-space()='New Account']",
+  "LNK_EDIT_ACCOUNT": "//a[normalize-space()='Edit Account']",
+  "LNK_DELETE_ACCOUNT": "//a[normalize-space()='Delete Account']",
+  "LNK_DEPOSIT": "//a[normalize-space()='Deposit']",
+  "LNK_WITHDRAWAL": "//a[normalize-space()='Withdrawal']",
+  "LNK_FUND_TRANSFER": "//a[normalize-space()='Fund Transfer']",
+  "LNK_BALANCE_ENQUIRY": "//a[normalize-space()='Balance Enquiry']",
+  "LNK_MINI_STATEMENT": "//a[normalize-space()='Mini Statement']",
+  "LNK_CUSTOMIZED_STATEMENT": "//a[normalize-space()='Customised Statement']",
+  "LNK_CHANGE_PASSWORD": "//a[normalize-space()='Change Password']",
+  "LBL_WELCOME": "//marquee"
+}

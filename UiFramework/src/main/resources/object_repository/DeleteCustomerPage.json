@@ -1,0 +1,6 @@
+{
+  "TXT_CUSTOMER_ID": "name:cusid",
+  "BTN_SUBMIT": "name:AccSubmit",
+  "BTN_RESET": "name:res",
+  "LBL_CUSTOMER_ID_ERROR": "id:message14"
+}

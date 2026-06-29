@@ -1,0 +1,11 @@
+{
+  "TXT_PAYERS_ACCOUNT": "name:payersaccount",
+  "TXT_PAYEES_ACCOUNT": "name:payeeaccount",
+  "TXT_AMOUNT": "name:ammount",
+  "TXT_DESCRIPTION": "name:desc",
+  "BTN_SUBMIT": "name:AccSubmit",
+  "BTN_RESET": "name:res",
+  "LBL_PAYERS_ACCOUNT_ERROR": "id:message14",
+  "LBL_PAYEES_ACCOUNT_ERROR": "id:message10",
+  "LBL_AMOUNT_ERROR": "id:message12"
+}

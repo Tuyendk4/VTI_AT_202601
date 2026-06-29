@@ -1,0 +1,21 @@
+{
+  "TXT_NAME": "name:name",
+  "TXT_GENDER": "name:rad1",
+  "TXT_DOB": "name:dob",
+  "TXT_ADDRESS": "name:addr",
+  "TXT_CITY": "name:city",
+  "TXT_STATE": "name:state",
+  "TXT_PIN": "name:pinno",
+  "TXT_TELEPHONE": "name:telephoneno",
+  "TXT_EMAIL": "name:emailid",
+  "TXT_PASSWORD": "name:password",
+  "BTN_SUBMIT": "name:sub",
+  "BTN_RESET": "name:res",
+  "LBL_NAME_ERROR": "id:message",
+  "LBL_ADDRESS_ERROR": "id:message3",
+  "LBL_CITY_ERROR": "id:message4",
+  "LBL_STATE_ERROR": "id:message5",
+  "LBL_PIN_ERROR": "id:message6",
+  "LBL_TELEPHONE_ERROR": "id:message7",
+  "LBL_EMAIL_ERROR": "id:message9"
+}

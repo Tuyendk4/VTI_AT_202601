@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+  Demo suite: runs a single Guru99 Banking scenario (New Customer) so the
+  data-driven flow can be shown end-to-end quickly. Swap the <class> below to
+  demo a different scenario. Credentials are resolved by ConfigReader (env vars
+  GURU_USERNAME / GURU_PASSWORD, -Dguru.username/-Dguru.password, or a gitignored
+  config.properties) - never commit real credentials.
+-->
+<suite name="Guru99 Banking Demo">
+
+  <test name="Guru99 Banking Demo - New Customer" preserve-order="true" verbose="2">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://demo.guru99.com/V4/index.php"/>
+    <classes>
+      <class name="vn.edu.vitacademy.tests.guru.NewCustomerTest"/>
+      <class name="vn.edu.vitacademy.tests.guru.NewAccountTest"/>
+    </classes>
+  </test>
+
+</suite>

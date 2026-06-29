@@ -1,0 +1,10 @@
+{
+  "TXT_ACCOUNT_NUMBER": "name:accountno",
+  "TXT_MIN_TRANSACTION_VALUE": "name:amountlowerlimit",
+  "TXT_NUM_TRANSACTION": "name:numtransaction",
+  "BTN_SUBMIT": "name:AccSubmit",
+  "BTN_RESET": "name:res",
+  "LBL_ACCOUNT_NUMBER_ERROR": "id:message14",
+  "LBL_MIN_TRANSACTION_VALUE_ERROR": "id:message12",
+  "LBL_NUM_TRANSACTION_ERROR": "id:message13"
+}

@@ -1,0 +1,18 @@
+{
+  "TXT_CUSTOMER_ID": "name:cusid",
+  "TXT_ADDRESS": "name:addr",
+  "TXT_CITY": "name:city",
+  "TXT_STATE": "name:state",
+  "TXT_PIN": "name:pinno",
+  "TXT_TELEPHONE": "name:telephoneno",
+  "TXT_EMAIL": "name:emailid",
+  "BTN_SUBMIT": "name:sub",
+  "BTN_RESET": "name:res",
+  "LBL_CUSTOMER_ID_ERROR": "id:message14",
+  "LBL_ADDRESS_ERROR": "id:message3",
+  "LBL_CITY_ERROR": "id:message4",
+  "LBL_STATE_ERROR": "id:message5",
+  "LBL_PIN_ERROR": "id:message6",
+  "LBL_TELEPHONE_ERROR": "id:message7",
+  "LBL_EMAIL_ERROR": "id:message9"
+}
