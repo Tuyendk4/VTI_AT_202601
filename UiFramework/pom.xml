@@ -25,6 +25,7 @@
     <json-path.version>3.0.0</json-path.version>
     <java-faker.version>1.0.2</java-faker.version>
     <apache-poi.version>5.5.1</apache-poi.version>
+    <cucumber.version>7.34.3</cucumber.version>
   </properties>
 
   <dependencies>
@@ -117,6 +118,32 @@
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>${apache-poi.version}</version>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+      <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+      <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-picocontainer</artifactId>
+        <version>${cucumber.version}</version>
+      </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+    <!-- Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-cucumber7-jvm</artifactId>
+      <version>${allure-testng.version}</version>
     </dependency>
   </dependencies>
 
