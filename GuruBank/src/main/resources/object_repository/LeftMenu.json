@@ -1,0 +1,5 @@
+{
+  "LNK_MANAGER": "//a[.='Manager']",
+  "LNK_NEW_CUSTOMER": "//a[.='New Customer']",
+  "LNK_EDIT_CUSTOMER": "//a[.='Edit Customer']"
+}

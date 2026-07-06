@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Manager Test Suite">
+
+  <test name="Chrome Test" preserve-order="true"
+    verbose="2">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://demo.guru99.com/V4/index.php"/>
+    <parameter name="email" value="test@mailinator.com" />
+    <classes>
+      <class name="vn.edu.vitacademy.tests.ManagerTest"/>
+    </classes>
+  </test>
+
+</suite>

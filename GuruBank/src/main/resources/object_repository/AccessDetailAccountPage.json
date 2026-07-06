@@ -1,0 +1,4 @@
+{
+  "LBL_USER_ID": "//td[.='User ID :']/following-sibling::td",
+  "LBL_PASSWORD": "//td[.='Password :']/following-sibling::td"
+}

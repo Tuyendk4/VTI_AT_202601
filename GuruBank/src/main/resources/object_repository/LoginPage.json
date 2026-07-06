@@ -1,0 +1,6 @@
+{
+  "TXT_USER_ID": "//input[@name='uid']",
+  "TXT_PASSWORD": "//input[@name='password']",
+  "BTN_LOGIN": "//input[@name='btnLogin']",
+  "LNK_HERE": "//a[.='here']"
+}

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
     features = "src/main/resources/features",
     glue = "vn.edu.vitacademy.steps",
-//    tags = "@regression",
+//    tags = "@smoke",
     plugin = {
         "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
     }
