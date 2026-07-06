@@ -24,15 +24,34 @@ public class EmployeeSteps extends BaseSteps {
     employeesPage = new EmployeesPage(webUI);
   }
 
+//  @Given("^[A-Za-z]?.* access to Employee page")
+//  public void accessToEmployeePage_expression() {
+////    webUI = new WebUI();
+////    webUI.openBrowser("Chrome");
+////    webUI.maximizeWindow();
+////    webUI.navigateToUrl(EMPLOYEE_URL);
+//    employeesPage = new EmployeesPage(webUI);
+//  }
+
   @When("I click Add button")
   public void clickAddButton() {
     employeesPage.clickAddButton();
   }
 
+//  @When("^[A-Za-z]?.* click Add button$")
+//  public void clickAddButton_expression() {
+//    employeesPage.clickAddButton();
+//  }
+
   @When("I input {string} into First name text box")
   public void inputIntoFirstNameTextBox(String firstName) {
     employeesPage.onAddEmployeePopup().inputFirstName(firstName);
   }
+
+//  @When("^[A-Za-z]?.* input \"([^\"]*)\" into First name text box")
+//  public void inputIntoFirstNameTextBox_expression(String firstName) {
+//    employeesPage.onAddEmployeePopup().inputFirstName(firstName);
+//  }
 
   @When("I input {string} into Last name text box")
   public void inputIntoLastNameTextBox(String lastName) {

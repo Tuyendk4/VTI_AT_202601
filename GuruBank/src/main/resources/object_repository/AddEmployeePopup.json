@@ -1,0 +1,10 @@
+{
+  "DLG_REGISTRATION_FORM": "//div[@class='modal-content']",
+  "REGISTRATION_FORM_TXT_FIRST_NAME": "//input[@id='firstName']",
+  "REGISTRATION_FORM_TXT_LAST_NAME": "//input[@id='lastName']",
+  "REGISTRATION_FORM_TXT_EMAIL": "//input[@id='userEmail']",
+  "REGISTRATION_FORM_TXT_AGE": "//input[@id='age']",
+  "REGISTRATION_FORM_TXT_SALARY": "//input[@id='salary']",
+  "REGISTRATION_FORM_TXT_DEPARTMENT": "//input[@id='department']",
+  "REGISTRATION_FORM_BTN_SUBMIT": "//button[@id='submit']"
+}

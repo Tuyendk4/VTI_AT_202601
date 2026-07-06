@@ -1,0 +1,4 @@
+{
+  "LBL_WELCOME": "//tr[1]/td",
+  "LBL_USER_ID": "//tr[@class='heading3']/td"
+}
