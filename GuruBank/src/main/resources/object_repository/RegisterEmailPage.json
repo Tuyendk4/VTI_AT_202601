@@ -1,0 +1,4 @@
+{
+  "TXT_EMAIL": "//input[@name='emailid']",
+  "BTN_SUBMIT": "//input[@name='btnLogin']"
+}

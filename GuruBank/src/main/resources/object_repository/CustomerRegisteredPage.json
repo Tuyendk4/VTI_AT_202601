@@ -1,0 +1,5 @@
+{
+  "LBL_SUCCESS_MESSAGE": "//p[@class='heading3']",
+  "LBL_CUSTOMER_ID": "//td[.='Customer ID']/following-sibling::td",
+  "LNK_CONTINUE": "//a[.='Continue']"
+}

@@ -5,6 +5,9 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import vn.edu.vitacademy.common.keywords.WebUI;
 
 public class Hooks extends BaseSteps {
@@ -34,3 +37,9 @@ public class Hooks extends BaseSteps {
     LOGGER.info("================================After all===============================");
   }
 }
+
+
+
+
+
+
