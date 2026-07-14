@@ -34,12 +34,13 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.edu.vitacademy.common.helper.PropertyHelper;
 
 public class WebUI {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebUI.class);
   private static final String REMOTE_URL = "http://localhost:4444/";
-  private static final int DEFAULT_TIMEOUT = 30;
+  private static final int DEFAULT_TIMEOUT = PropertyHelper.getIntegerProperty("timeout", 30);;
   private WebDriver driver;
 
   public void openBrowser(String browserName, String... url) {

@@ -1,22 +1,44 @@
-INFO  | 2026-07-10 21:35:12 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:32) - Starting application with path: /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk
-INFO  | 2026-07-10 21:35:19 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:50) - Application started successfully
-INFO  | 2026-07-10 21:35:19 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 5 seconds
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:258) - Clicking on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:25 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:260) - Clicked on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:25 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:inputText:214) - Inputting text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:inputText:216) - Inputted text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]' successfully
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 10 seconds
-INFO  | 2026-07-10 21:35:36 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:36 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:clearText:237) - Clearing text in element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:clearText:239) - Text cleared
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 10 seconds
-INFO  | 2026-07-10 21:35:47 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:47 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:106) - Stopping application
-INFO  | 2026-07-10 21:35:48 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:108) - Application stopped successfully
+INFO  | 2026-07-13 21:40:47 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:321) - Starting Appium server
+INFO  | 2026-07-13 21:40:49 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:330) - Appium server started
+INFO  | 2026-07-13 21:40:49 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:46) - Starting application with path: /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk
+INFO  | 2026-07-13 21:40:57 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:64) - Application started successfully
+INFO  | 2026-07-13 21:40:57 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:127) - Delaying for 5 seconds
+INFO  | 2026-07-13 21:41:02 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:129) - Delay completed
+INFO  | 2026-07-13 21:41:02 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:185) - Finding mobile element located by '//android.widget.Button[@content-desc="Logins"]' within 30 second(s)
+ERROR | 2026-07-13 21:41:32 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:197) - Failed to find mobile element locate by '//android.widget.Button[@content-desc="Logins"]'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: //android.widget.Button[@content-desc="Logins"]
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: /Users/tuyenluu/training-wo..., appium:appActivity: com.wdiodemoapp.MainActivity, appium:appPackage: com.wdiodemoapp, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/tuyenluu/training-wo..., automationName: UiAutomator2, deviceName: Redmi Note 9 Pro, platformName: ANDROID, platformVersion: 12, udid: 80eabbae}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: Redmi Note 9 Pro, appium:deviceName: 80eabbae, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 80eabbae, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 102, appium:takesScreenshot: true, appium:udid: 80eabbae, appium:viewportRect: {height: 2298, left: 0, top: 102, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c55e1a34-7c4c-4e16-ac10-521c0fc7e441
+INFO  | 2026-07-13 21:41:32 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:300) - Clicking on mobile element located by '//android.widget.Button[@content-desc="Logins"]'
+ERROR | 2026-07-13 21:41:32 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:304) - Failed to click on mobile element located by '//android.widget.Button[@content-desc="Logins"]'. Root cause: Cannot invoke "org.openqa.selenium.WebElement.click()" because "we" is null
+INFO  | 2026-07-13 21:41:32 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:185) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+ERROR | 2026-07-13 21:42:02 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:197) - Failed to find mobile element locate by '//android.widget.EditText[@content-desc="input-email"]'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: //android.widget.EditText[@content-desc="input-email"]
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: /Users/tuyenluu/training-wo..., appium:appActivity: com.wdiodemoapp.MainActivity, appium:appPackage: com.wdiodemoapp, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/tuyenluu/training-wo..., automationName: UiAutomator2, deviceName: Redmi Note 9 Pro, platformName: ANDROID, platformVersion: 12, udid: 80eabbae}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: Redmi Note 9 Pro, appium:deviceName: 80eabbae, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 80eabbae, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 102, appium:takesScreenshot: true, appium:udid: 80eabbae, appium:viewportRect: {height: 2298, left: 0, top: 102, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c55e1a34-7c4c-4e16-ac10-521c0fc7e441
+INFO  | 2026-07-13 21:42:02 | [main] common.keywords.MobileUI (MobileUI.java:inputText:256) - Inputting text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+ERROR | 2026-07-13 21:42:02 | [main] common.keywords.MobileUI (MobileUI.java:inputText:261) - Failed to input text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "we" is null
+INFO  | 2026-07-13 21:42:02 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:127) - Delaying for 10 seconds
+INFO  | 2026-07-13 21:42:12 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:129) - Delay completed
+INFO  | 2026-07-13 21:42:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:185) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+ERROR | 2026-07-13 21:42:43 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:197) - Failed to find mobile element locate by '//android.widget.EditText[@content-desc="input-email"]'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: //android.widget.EditText[@content-desc="input-email"]
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: /Users/tuyenluu/training-wo..., appium:appActivity: com.wdiodemoapp.MainActivity, appium:appPackage: com.wdiodemoapp, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/tuyenluu/training-wo..., automationName: UiAutomator2, deviceName: Redmi Note 9 Pro, platformName: ANDROID, platformVersion: 12, udid: 80eabbae}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: Redmi Note 9 Pro, appium:deviceName: 80eabbae, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 80eabbae, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 102, appium:takesScreenshot: true, appium:udid: 80eabbae, appium:viewportRect: {height: 2298, left: 0, top: 102, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c55e1a34-7c4c-4e16-ac10-521c0fc7e441
+INFO  | 2026-07-13 21:42:43 | [main] common.keywords.MobileUI (MobileUI.java:clearText:279) - Clearing text in element located by '//android.widget.EditText[@content-desc="input-email"]'
+ERROR | 2026-07-13 21:42:43 | [main] common.keywords.MobileUI (MobileUI.java:clearText:283) - Failed to clear text. Root cause: Cannot invoke "org.openqa.selenium.WebElement.clear()" because "we" is null
+INFO  | 2026-07-13 21:42:43 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:127) - Delaying for 10 seconds
+INFO  | 2026-07-13 21:42:53 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:129) - Delay completed
+INFO  | 2026-07-13 21:42:53 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:147) - Stopping application
+INFO  | 2026-07-13 21:42:54 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:149) - Application stopped successfully
+INFO  | 2026-07-13 21:42:54 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:338) - Stopping Appium server
+INFO  | 2026-07-13 21:42:54 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:340) - Appium server stopped
