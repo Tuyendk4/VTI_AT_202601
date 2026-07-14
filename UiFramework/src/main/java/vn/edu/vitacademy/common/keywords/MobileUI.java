@@ -3,6 +3,9 @@ package vn.edu.vitacademy.common.keywords;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import java.io.File;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
@@ -17,17 +20,54 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.edu.vitacademy.common.helper.PropertyHelper;
 
 public class MobileUI {
 
   private AppiumDriver appiumDriver;
   private static final String APPIUM_SERVER_URL = "http://127.0.0.1:4723";
 
+  private static final String NODE_EXECUTE_PATH = "/usr/local/bin/node";
+  private static final String APPIUM_JS_PATH = "/usr/local/lib/node_modules/appium/build/lib/main.js";
+
+  private static final String DEFAULT_IP_ADDRESS = "127.0.0.1";
+
+  private static final String APPIUM_LOG_FILE_PATH = System.getProperty("user.dir") + File.separator + "testlog" + File.separator + "appium.log";
+
   private static final Logger LOGGER = LoggerFactory.getLogger(MobileUI.class);
 
-  private static final int DEFAULT_TIMEOUT = 30;
+  private static final int DEFAULT_TIMEOUT = PropertyHelper.getIntegerProperty("timeout", 30);
 
+  private AppiumDriverLocalService appiumDriverLocalService;
+
+  public void startApplication() {
+    startAppiumServer();
+    try {
+      LOGGER.info("Starting application with path: {}", PropertyHelper.getProperty("appName"));
+      DesiredCapabilities dc = new DesiredCapabilities();
+      if (PropertyHelper.getProperty("platform").equalsIgnoreCase("ios")) {
+        dc.setPlatform(Platform.IOS);
+        dc.setCapability("appium:automationName", "XCUITest");
+      } else {
+        dc.setPlatform(Platform.ANDROID);
+        dc.setCapability("appium:automationName", "UiAutomator2");
+      }
+      dc.setCapability("appium:deviceName", PropertyHelper.getProperty("deviceName"));
+      dc.setCapability("appium:app", PropertyHelper.getProperty("appName"));
+      dc.setCapability("appium:platformVersion", PropertyHelper.getProperty("platformVersion"));
+      dc.setCapability("appium:udid", PropertyHelper.getProperty("udid"));
+      if (PropertyHelper.getProperty("platform").equalsIgnoreCase("ios")) {
+        appiumDriver = new IOSDriver(appiumDriverLocalService.getUrl(), dc);
+      } else {
+        appiumDriver = new AndroidDriver(appiumDriverLocalService.getUrl(), dc);
+      }
+      LOGGER.info("Application started successfully");
+    } catch (Exception e) {
+      LOGGER.error("Failed to start application {}. Root cause: {}", PropertyHelper.getProperty("appName"), e.getMessage());
+    }
+  }
   public void startApplication(String platformName, String platformVersion, String appPath,  String udid, String deviceName) {
+    startAppiumServer();
     try {
       LOGGER.info("Starting application with path: {}", appPath);
       DesiredCapabilities dc = new DesiredCapabilities();
@@ -43,9 +83,9 @@ public class MobileUI {
       dc.setCapability("appium:platformVersion", platformVersion);
       dc.setCapability("appium:udid", udid);
       if (platformName.equalsIgnoreCase("ios")) {
-        appiumDriver = new IOSDriver(new URL(APPIUM_SERVER_URL), dc);
+        appiumDriver = new IOSDriver(appiumDriverLocalService.getUrl(), dc);
       } else {
-        appiumDriver = new AndroidDriver(new URL(APPIUM_SERVER_URL), dc);
+        appiumDriver = new AndroidDriver(appiumDriverLocalService.getUrl(), dc);
       }
       LOGGER.info("Application started successfully");
     } catch (Exception e) {
@@ -54,6 +94,7 @@ public class MobileUI {
   }
 
   public void startApplication(String platformName, String platformVersion,  String udid, String deviceName, String bundleIdOrAppPackage, String appActivity) {
+    startAppiumServer();
     try {
       LOGGER.info("Starting application with with bundleIdOrAppPackage: {}, appActivity: {}", bundleIdOrAppPackage, appActivity);
       DesiredCapabilities dc = new DesiredCapabilities();
@@ -109,6 +150,7 @@ public class MobileUI {
     } catch (Exception e) {
       LOGGER.error("Failed to stop application. Root cause: {}", e.getMessage());
     }
+    stopAppiumServer();
   }
 
   private By findBy(String locator) {
@@ -271,6 +313,33 @@ public class MobileUI {
       LOGGER.info("Clicked on mobile element '{}'", we);
     } catch (Exception e) {
       LOGGER.error("Failed to click on mobile element '{}'. Root cause: {}", we, e.getMessage());
+    }
+  }
+
+  public void startAppiumServer() {
+    try {
+      LOGGER.info("Starting Appium server");
+      AppiumServiceBuilder appiumServiceBuilder = new AppiumServiceBuilder();
+      appiumServiceBuilder.usingDriverExecutable(new File(NODE_EXECUTE_PATH))
+          .withAppiumJS(new File(APPIUM_JS_PATH))
+          .withIPAddress(DEFAULT_IP_ADDRESS)
+          .usingAnyFreePort()
+          .withLogFile(new File(APPIUM_LOG_FILE_PATH));
+      appiumDriverLocalService = AppiumDriverLocalService.buildService(appiumServiceBuilder);
+      appiumDriverLocalService.start();
+      LOGGER.info("Appium server started");
+    } catch (Exception e) {
+      LOGGER.error("Failed to start Appium server. Root cause: {}", e.getMessage());
+    }
+  }
+
+  public void stopAppiumServer() {
+    try {
+      LOGGER.info("Stopping Appium server");
+      appiumDriverLocalService.stop();
+      LOGGER.info("Appium server stopped");
+    } catch (Exception e) {
+      LOGGER.info("Failed to stop Appium server. Root cause: {}", e.getMessage());
     }
   }
 }
