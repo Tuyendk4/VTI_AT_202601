@@ -1,22 +1,41 @@
-INFO  | 2026-07-10 21:35:12 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:32) - Starting application with path: /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk
-INFO  | 2026-07-10 21:35:19 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:50) - Application started successfully
-INFO  | 2026-07-10 21:35:19 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 5 seconds
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:24 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:258) - Clicking on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:25 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:260) - Clicked on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-10 21:35:25 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:inputText:214) - Inputting text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:inputText:216) - Inputted text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]' successfully
-INFO  | 2026-07-10 21:35:26 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 10 seconds
-INFO  | 2026-07-10 21:35:36 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:36 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:143) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:148) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:clearText:237) - Clearing text in element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:clearText:239) - Text cleared
-INFO  | 2026-07-10 21:35:37 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:86) - Delaying for 10 seconds
-INFO  | 2026-07-10 21:35:47 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:88) - Delay completed
-INFO  | 2026-07-10 21:35:47 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:106) - Stopping application
-INFO  | 2026-07-10 21:35:48 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:108) - Application stopped successfully
+INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: devices/redminote9pro.properties
+INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:08:57 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:348) - Starting Appium server
+INFO  | 2026-07-15 21:09:00 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:357) - Appium server started
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:59) - Starting application with path: null
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-15 21:09:07 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:91) - Application started successfully
+INFO  | 2026-07-15 21:09:07 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 5 seconds
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:327) - Clicking on mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:329) - Clicked on mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:inputText:283) - Inputting text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:inputText:285) - Inputted text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]' successfully
+INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 10 seconds
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:clearText:306) - Clearing text in element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:clearText:308) - Text cleared
+INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 10 seconds
+INFO  | 2026-07-15 21:09:33 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
+INFO  | 2026-07-15 21:09:33 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:174) - Stopping application
+INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:176) - Application stopped successfully
+INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:365) - Stopping Appium server
+INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:367) - Appium server stopped

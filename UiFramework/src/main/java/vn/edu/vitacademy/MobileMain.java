@@ -2,6 +2,7 @@ package vn.edu.vitacademy;
 
 import io.appium.java_client.AppiumDriver;
 import java.net.MalformedURLException;
+import vn.edu.vitacademy.common.helper.Device;
 import vn.edu.vitacademy.common.keywords.MobileUI;
 
 public class MobileMain {
@@ -32,14 +33,16 @@ public class MobileMain {
 //    driver = new AndroidDriver(new URL(APPIUM_SERVER_URL), dc);
 //    Thread.sleep(60);
 //    driver.quit();
+    new Device("redminote9pro");
     MobileUI mobileUI = new MobileUI();
-    mobileUI.startApplication("Android", "12",
-        "/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk",
-        "80eabbae", "Redmi Note 9 Pro");
+//    mobileUI.startApplication("Android", "12",
+//        "/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk",
+//        "80eabbae", "Redmi Note 9 Pro");
 //    mobileUI.startApplication("ios", "16.7.16", "d7ad0223e16d29a3587a96cf0cc45e4cbd9b9994",
 //        "iPhone X", "com.apple.weather", "");
 //    mobileUI.startApplication("Android", "12", "80eabbae",
 //        "Redmi Note 9 Pro", "com.shopee.vn", "com.shopee.app.ui.home.HomeActivity_");
+    mobileUI.startApplication();
     mobileUI.delayInSeconds(5);
     mobileUI.clickOn(TAB_LOGIN);
     mobileUI.inputText(TXT_EMAIL, "tuyenluu@vti.com.vn");
