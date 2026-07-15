@@ -2,6 +2,7 @@ package vn.edu.vitacademy;
 
 import io.appium.java_client.AppiumDriver;
 import java.net.MalformedURLException;
+import vn.edu.vitacademy.common.helper.Device;
 import vn.edu.vitacademy.common.keywords.MobileUI;
 
 public class MobileMain {
@@ -9,7 +10,7 @@ public class MobileMain {
   private static final String APPIUM_SERVER_URL = "http://127.0.0.1:4723";
   static AppiumDriver driver;
 
-  private static final String TAB_LOGIN = "//android.widget.Button[@content-desc=\"Logins\"]";
+  private static final String TAB_LOGIN = "//android.widget.Button[@content-desc=\"Login\"]";
   private static final String TXT_EMAIL = "//android.widget.EditText[@content-desc=\"input-email\"]";
 
   static void main() throws InterruptedException, MalformedURLException {
@@ -32,6 +33,7 @@ public class MobileMain {
 //    driver = new AndroidDriver(new URL(APPIUM_SERVER_URL), dc);
 //    Thread.sleep(60);
 //    driver.quit();
+    new Device("redminote9pro");
     MobileUI mobileUI = new MobileUI();
 //    mobileUI.startApplication("Android", "12",
 //        "/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/apps/android.wdio.native.app.v2.2.0.apk",
