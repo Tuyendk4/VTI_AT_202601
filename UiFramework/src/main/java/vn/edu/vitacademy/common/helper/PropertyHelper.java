@@ -3,20 +3,35 @@ package vn.edu.vitacademy.common.helper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import vn.edu.vitacademy.common.exceptions.UnableToLoadPropertiesException;
 
 public class PropertyHelper {
 
+  private static final Logger LOGGER = LoggerFactory.getLogger(PropertyHelper.class.getSimpleName());
+  // Use a static final field initialized at class load time for a thread-safe singleton.
   private static PropertyHelper INSTANCE = null;
-  private final Properties props = new Properties();
+  private static final String PROPERTIES_EXTENSION = ".properties";
+  private static final Properties props = new Properties();
+  private static String propertyName;
+
   private PropertyHelper() {
     this.loadProperties("configuration.properties");
-    this.props.putAll(System.getProperties());
+    props.putAll(System.getProperties());
   }
+
+  // This constructor allows creating separate instances, which might be useful for testing.
+  protected PropertyHelper(String propertyName) {
+    PropertyHelper.propertyName = propertyName;
+    this.loadProperties(propertyName + PROPERTIES_EXTENSION);
+    props.putAll(System.getProperties());
+  }
+
   private static PropertyHelper getInstance() {
-    if (PropertyHelper.INSTANCE == null) {
-      PropertyHelper.INSTANCE = new PropertyHelper();
-    }
+//    if (INSTANCE == null) {
+      INSTANCE = new PropertyHelper(propertyName);
+//    }
     return PropertyHelper.INSTANCE;
   }
   /**
@@ -39,13 +54,16 @@ public class PropertyHelper {
   public static int getIntegerProperty(final String key,
       final int defaultValue) {
     int integerValue = 0;
-    final String value =
-        PropertyHelper.getInstance().props.getProperty(key);
+    final String value = getProperty(key);
     if (value == null || value.isEmpty()) {
       return defaultValue;
     }
-    integerValue = Integer.parseInt(value);
-    return integerValue;
+    try {
+      return Integer.parseInt(value);
+    } catch (NumberFormatException e) {
+      LOGGER.warn("Could not parse integer for key '{}', value was '{}'. Returning default value {}.", key, value, defaultValue, e);
+      return defaultValue;
+    }
   }
   /**
    * If key couldn't be found then it will return default
@@ -68,27 +86,19 @@ public class PropertyHelper {
    * @param path
    */
   public void loadProperties(final String path) {
-    InputStream inputStream = null;
-    try {
-      inputStream =
-          ClassLoader.getSystemResourceAsStream(path);
-      System.out.println(inputStream);
+    LOGGER.info("Attempting to load properties file from classpath: {}", path);
+    // Use try-with-resources for automatic stream closing.
+    try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(path)) {
       if (inputStream != null) {
         this.props.load(inputStream);
       } else {
-        throw new
-            UnableToLoadPropertiesException("property file '" + path + " not found in the classpath");
+        // Throwing an exception here is better than just printing a stack trace.
+        throw new UnableToLoadPropertiesException("Property file '" + path + "' not found in the classpath.");
       }
-    } catch (final Exception e) {
-      e.printStackTrace();
-    } finally {
-      try {
-        inputStream.close();
-      } catch (final IOException e) {
-        e.printStackTrace();
-      }
+    } catch (final IOException e) {
+      // Wrap the IOException in your custom runtime exception.
+      throw new UnableToLoadPropertiesException("Failed to load properties file '" + path + "'.", e);
     }
-    return;
   }
   /**
    * @return Properties
