@@ -1,0 +1,8 @@
+{
+  "TAB_HOME": "//android.widget.Button[@content-desc=\"tab-home\"]",
+  "TAB_WEBVIEW": "//android.widget.Button[@content-desc=\"Webview\"]",
+  "TAB_LOGIN": "//android.widget.Button[@content-desc=\"Login\"]",
+  "TAB_FORMS": "//android.widget.Button[@content-desc=\"Forms\"]",
+  "TAB_SWIPE": "//android.widget.Button[@content-desc=\"Swipe\"]",
+  "TAB_DRAG": "//android.widget.Button[@content-desc=\"Drag\"]"
+}

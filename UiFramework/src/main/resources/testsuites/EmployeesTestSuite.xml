@@ -11,7 +11,7 @@
 <!--      </run>-->
 <!--    </groups>-->
 <!--    <classes>-->
-<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--      <class name="vn.edu.vtiacademy.tests.web.EmployeesTest" />-->
 <!--    </classes>-->
 <!--  </test>-->
 
@@ -25,7 +25,7 @@
 <!--      </run>-->
 <!--    </groups>-->
 <!--    <classes>-->
-<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--      <class name="vn.edu.vtiacademy.tests.web.EmployeesTest" />-->
 <!--    </classes>-->
 <!--  </test>-->
 
@@ -35,7 +35,7 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="url" value="https://demoqa.com/webtables"/>
     <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest_POM">
+      <class name="vn.edu.vtiacademy.tests.web.EmployeesTest_POM">
         <methods>
           <include name="EM002_edit_email_successfully"/>
           <include name="EM003_delete_email_successfully"/>
@@ -54,7 +54,7 @@
 <!--      </run>-->
 <!--    </groups>-->
 <!--    <classes>-->
-<!--      <class name="vn.edu.vitacademy.tests.EmployeesTest" />-->
+<!--      <class name="vn.edu.vtiacademy.tests.web.EmployeesTest" />-->
 <!--    </classes>-->
 <!--  </test>-->
 </suite>

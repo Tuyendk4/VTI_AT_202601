@@ -6,7 +6,7 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="url" value="https://demoqa.com/webtables"/>
     <classes>
-      <class name="vn.edu.vitacademy.tests.EmployeesTest_PageFactory" />
+      <class name="vn.edu.vtiacademy.tests.web.EmployeesTest_PageFactory" />
     </classes>
   </test>
 </suite>

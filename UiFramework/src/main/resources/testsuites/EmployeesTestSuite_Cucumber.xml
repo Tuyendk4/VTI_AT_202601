@@ -4,7 +4,7 @@
   <test name="Chrome Test" preserve-order="true"
     verbose="2">
     <classes>
-      <class name="vn.edu.vitacademy.runner.CucumberTest" />
+      <class name="vn.edu.vtiacademy.runner.CucumberTest" />
     </classes>
   </test>
 </suite>
