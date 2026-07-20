@@ -1,0 +1,8 @@
+{
+  "TAB_HOME": "//XCUIElementTypeButton[@name=\"Home\"]",
+  "TAB_WEBVIEW": "//XCUIElementTypeButton[@name=\"Webview\"]",
+  "TAB_LOGIN": "//XCUIElementTypeButton[@name=\"Login\"]",
+  "TAB_FORMS": "//XCUIElementTypeButton[@name=\"Forms\"]",
+  "TAB_SWIPE": "//XCUIElementTypeButton[@name=\"Swipe\"]",
+  "TAB_DRAG": "//XCUIElementTypeButton[@name=\"Drag\"]"
+}

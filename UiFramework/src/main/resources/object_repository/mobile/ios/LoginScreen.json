@@ -1,0 +1,7 @@
+{
+  "TXT_EMAIL": "//XCUIElementTypeTextField[@name=\"input-email\"]",
+  "LBL_EMAIL_ERROR_MESSAGE": "//XCUIElementTypeTextField[@name=\"input-email\"]/parent::XCUIElementTypeOther/parent::XCUIElementTypeOther/following-sibling::XCUIElementTypeStaticText",
+  "TXT_PASSWORD": "//XCUIElementTypeSecureTextField[@name=\"input-password\"]",
+  "LBL_PASSWORD_ERROR_MESSAGE": "//XCUIElementTypeSecureTextField[@name=\"input-password\"]/parent::XCUIElementTypeOther/parent::XCUIElementTypeOther/following-sibling::XCUIElementTypeStaticText",
+  "BTN_LOGIN": "//XCUIElementTypeOther[@name=\"button-LOGIN\"]"
+}

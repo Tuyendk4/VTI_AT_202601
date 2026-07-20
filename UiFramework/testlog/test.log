@@ -1,41 +1,144 @@
-INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: devices/redminote9pro.properties
-INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:08:57 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:08:57 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:348) - Starting Appium server
-INFO  | 2026-07-15 21:09:00 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:357) - Appium server started
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:59) - Starting application with path: null
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:00 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
-INFO  | 2026-07-15 21:09:07 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:91) - Application started successfully
-INFO  | 2026-07-15 21:09:07 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 5 seconds
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:327) - Clicking on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:clickOn:329) - Clicked on mobile element located by '//android.widget.Button[@content-desc="Login"]'
-INFO  | 2026-07-15 21:09:12 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:inputText:283) - Inputting text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:inputText:285) - Inputted text 'tuyenluu@vti.com.vn' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]' successfully
-INFO  | 2026-07-15 21:09:13 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 10 seconds
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:212) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:217) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:clearText:306) - Clearing text in element located by '//android.widget.EditText[@content-desc="input-email"]'
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:clearText:308) - Text cleared
-INFO  | 2026-07-15 21:09:23 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:154) - Delaying for 10 seconds
-INFO  | 2026-07-15 21:09:33 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:156) - Delay completed
-INFO  | 2026-07-15 21:09:33 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:174) - Stopping application
-INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:176) - Application stopped successfully
-INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:365) - Stopping Appium server
-INFO  | 2026-07-15 21:09:34 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:367) - Appium server stopped
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 14 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 3 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 8 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-07-20 21:45:16 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/testsuites/mobile/MobileLoginTestSuite.xml
+
+INFO  | 2026-07-20 21:45:16 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: devices/redminote9pro.properties
+INFO  | 2026-07-20 21:45:16 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:16 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:16 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:16 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:16 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:364) - Starting Appium server
+INFO  | 2026-07-20 21:45:19 | [main] common.keywords.MobileUI (MobileUI.java:startAppiumServer:374) - Appium server started
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:80) - Starting application with path: null
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:19 | [main] common.helper.PropertyHelper (PropertyHelper.java:loadProperties:89) - Attempting to load properties file from classpath: configuration.properties
+INFO  | 2026-07-20 21:45:26 | [main] common.keywords.MobileUI (MobileUI.java:startApplication:112) - Application started successfully
+INFO  | 2026-07-20 21:45:26 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] DynamicGraphHelper.createDynamicGraph() took 13 ms.
+INFO  | 2026-07-20 21:45:26 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:beforeClass:35) - --------------------------Start vn.edu.vtiacademy.tests.mobile.LoginTest------------------------
+INFO  | 2026-07-20 21:45:26 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:setUp:41) - ===========================Start LG001_should_show_email_error_message_after_inputted_invalid_email==========================
+INFO  | 2026-07-20 21:45:26 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:26 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:26 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:744) - Tapping on mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:26 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:725) - Tapping on point '386, 2189'
+INFO  | 2026-07-20 21:45:27 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:735) - Tapped on point '386, 2189'
+INFO  | 2026-07-20 21:45:27 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:749) - Tapped on mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:27 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:45:27 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:45:27 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:28 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:28 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1097) - Taking screenshot of mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:28 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1100) - Screenshot of mobile element located by '//android.widget.Button[@content-desc="Login"]' taken
+INFO  | 2026-07-20 21:45:28 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.Button[@content-desc="Login"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:29 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.Button[@content-desc="Login"]'
+INFO  | 2026-07-20 21:45:29 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshotAndMarkElement:1119) - Taking screenshot and marking element '[[AndroidDriver:  on ANDROID (750dfe9c-5592-4b24-af75-6c3bc60c7c5c)] -> xpath: //android.widget.Button[@content-desc="Login"]]' with a red border
+INFO  | 2026-07-20 21:45:30 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshotAndMarkElement:1135) - Screenshot taken and element '[[AndroidDriver:  on ANDROID (750dfe9c-5592-4b24-af75-6c3bc60c7c5c)] -> xpath: //android.widget.Button[@content-desc="Login"]]' marked successfully
+INFO  | 2026-07-20 21:45:30 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:31 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-20 21:45:31 | [main] common.keywords.MobileUI (MobileUI.java:inputText:298) - Inputting text 'abdgmail.com' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-20 21:45:31 | [main] common.keywords.MobileUI (MobileUI.java:inputText:300) - Inputted text 'abdgmail.com' into mobile element located by '//android.widget.EditText[@content-desc="input-email"]' successfully
+INFO  | 2026-07-20 21:45:31 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:45:32 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:45:32 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:32 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-20 21:45:32 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1097) - Taking screenshot of mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-20 21:45:33 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1100) - Screenshot of mobile element located by '//android.widget.EditText[@content-desc="input-email"]' taken
+INFO  | 2026-07-20 21:45:33 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]' within 30 second(s)
+INFO  | 2026-07-20 21:45:33 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]'
+INFO  | 2026-07-20 21:45:33 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshotAndMarkElement:1119) - Taking screenshot and marking element '[[AndroidDriver:  on ANDROID (750dfe9c-5592-4b24-af75-6c3bc60c7c5c)] -> xpath: //android.widget.EditText[@content-desc="input-email"]]' with a red border
+INFO  | 2026-07-20 21:45:34 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshotAndMarkElement:1135) - Screenshot taken and element '[[AndroidDriver:  on ANDROID (750dfe9c-5592-4b24-af75-6c3bc60c7c5c)] -> xpath: //android.widget.EditText[@content-desc="input-email"]]' marked successfully
+INFO  | 2026-07-20 21:45:34 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:45:35 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:45:35 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup' within 30 second(s)
+ERROR | 2026-07-20 21:46:05 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:240) - Failed to find mobile element locate by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: //android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.wdiodemoapp.MainActivity, appium:appPackage: com.wdiodemoapp, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.wdiodemoapp.MainActivity, appPackage: com.wdiodemoapp, automationName: UiAutomator2, deviceName: Redmi Note 9 Pro, platformName: ANDROID, platformVersion: 12, udid: 80eabbae}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: Redmi Note 9 Pro, appium:deviceName: 80eabbae, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 80eabbae, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 102, appium:takesScreenshot: true, appium:udid: 80eabbae, appium:viewportRect: {height: 2298, left: 0, top: 102, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 750dfe9c-5592-4b24-af75-6c3bc60c7c5c
+INFO  | 2026-07-20 21:46:05 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:744) - Tapping on mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'
+ERROR | 2026-07-20 21:46:05 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:751) - Failed to tap on mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'. Root cause: Cannot invoke "org.openqa.selenium.WebElement.getRect()" because "we" is null
+INFO  | 2026-07-20 21:46:05 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:182) - Delaying for 2 seconds
+INFO  | 2026-07-20 21:46:07 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:184) - Delay completed
+INFO  | 2026-07-20 21:46:07 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:07 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:07 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-email"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]' within 30 second(s)
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-email"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]'
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:verifyElementText:498) - Verifying text of web element located by '//android.widget.EditText[@content-desc="input-email"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]'
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:verifyElementText:501) - Actual text 'Please enter a valid email address' and expected text 'Please enter a valid email address' are the same
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:08 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:tearDown:46) - ===========================End LG001_should_show_email_error_message_after_inputted_invalid_email==========================
+INFO  | 2026-07-20 21:46:08 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:setUp:41) - ===========================Start LG002_should_show_password_error_message_after_inputted_invalid_password==========================
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-password"]' within 30 second(s)
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-password"]'
+INFO  | 2026-07-20 21:46:08 | [main] common.keywords.MobileUI (MobileUI.java:inputText:298) - Inputting text '123456' into mobile element located by '//android.widget.EditText[@content-desc="input-password"]'
+INFO  | 2026-07-20 21:46:09 | [main] common.keywords.MobileUI (MobileUI.java:inputText:300) - Inputted text '123456' into mobile element located by '//android.widget.EditText[@content-desc="input-password"]' successfully
+INFO  | 2026-07-20 21:46:09 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:09 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:09 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:10 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:10 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup' within 30 second(s)
+ERROR | 2026-07-20 21:46:40 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:240) - Failed to find mobile element locate by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'. Root cause: Expected condition failed: waiting for presence of element found by By.xpath: //android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.7.7', java.version: '25.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.wdiodemoapp.MainActivity, appium:appPackage: com.wdiodemoapp, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.wdiodemoapp.MainActivity, appPackage: com.wdiodemoapp, automationName: UiAutomator2, deviceName: Redmi Note 9 Pro, platformName: ANDROID, platformVersion: 12, udid: 80eabbae}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Xiaomi, appium:deviceModel: Redmi Note 9 Pro, appium:deviceName: 80eabbae, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 80eabbae, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 102, appium:takesScreenshot: true, appium:udid: 80eabbae, appium:viewportRect: {height: 2298, left: 0, top: 102, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 750dfe9c-5592-4b24-af75-6c3bc60c7c5c
+INFO  | 2026-07-20 21:46:40 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:744) - Tapping on mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'
+ERROR | 2026-07-20 21:46:40 | [main] common.keywords.MobileUI (MobileUI.java:tapOn:751) - Failed to tap on mobile element located by '//android.view.ViewGroup[@content-desc="button-LOGIN"]/android.view.ViewGroup'. Root cause: Cannot invoke "org.openqa.selenium.WebElement.getRect()" because "we" is null
+INFO  | 2026-07-20 21:46:40 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:182) - Delaying for 2 seconds
+INFO  | 2026-07-20 21:46:42 | [main] common.keywords.MobileUI (MobileUI.java:delayInSeconds:184) - Delay completed
+INFO  | 2026-07-20 21:46:42 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:232) - Finding mobile element located by '//android.widget.EditText[@content-desc="input-password"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]' within 30 second(s)
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:findMobileElement:236) - Found 1 mobile element located by '//android.widget.EditText[@content-desc="input-password"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]'
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:verifyElementText:498) - Verifying text of web element located by '//android.widget.EditText[@content-desc="input-password"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]'
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:verifyElementText:501) - Actual text 'Please enter at least 8 characters' and expected text 'Please enter at least 8 characters' are the same
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1081) - Taking screenshot
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:takeScreenshot:1084) - Screenshot taken
+INFO  | 2026-07-20 21:46:43 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:tearDown:46) - ===========================End LG002_should_show_password_error_message_after_inputted_invalid_password==========================
+INFO  | 2026-07-20 21:46:43 | [main] tests.mobile.BaseMobileTest (BaseMobileTest.java:afterClass:51) - --------------------------End vn.edu.vtiacademy.tests.mobile.LoginTest------------------------
+INFO  | 2026-07-20 21:46:43 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:202) - Stopping application
+INFO  | 2026-07-20 21:46:45 | [main] common.keywords.MobileUI (MobileUI.java:stopApplication:204) - Application stopped successfully
+INFO  | 2026-07-20 21:46:45 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:382) - Stopping Appium server
+INFO  | 2026-07-20 21:46:45 | [main] common.keywords.MobileUI (MobileUI.java:stopAppiumServer:384) - Appium server stopped
+INFO  | 2026-07-20 21:46:45 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Time taken by org.testng.internal.ExitCodeListener@1760e594: 0 ms

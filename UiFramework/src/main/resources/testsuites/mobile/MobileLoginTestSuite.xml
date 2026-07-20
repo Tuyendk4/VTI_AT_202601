@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+  <test name="Login Test - Android" verbose="2">
+    <parameter name="deviceName" value="redminote9pro"/>
+    <classes>
+      <class name="vn.edu.vtiacademy.tests.mobile.LoginTest"/>
+    </classes>
+  </test>
+<!--  <test name="Login Test - iOS" verbose="2">-->
+<!--    <parameter name="deviceName" value="iPhone15Pro"/>-->
+<!--    <classes>-->
+<!--      <class name="vn.edu.vtiacademy.tests.mobile.LoginTest"/>-->
+<!--    </classes>-->
+<!--  </test>-->
+</suite>

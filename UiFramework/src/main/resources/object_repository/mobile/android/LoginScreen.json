@@ -1,0 +1,7 @@
+{
+  "TXT_EMAIL": "//android.widget.EditText[@content-desc=\"input-email\"]",
+  "LBL_EMAIL_ERROR_MESSAGE": "//android.widget.EditText[@content-desc=\"input-email\"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]",
+  "TXT_PASSWORD": "//android.widget.EditText[@content-desc=\"input-password\"]",
+  "LBL_PASSWORD_ERROR_MESSAGE": "//android.widget.EditText[@content-desc=\"input-password\"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]",
+  "BTN_LOGIN": "//android.view.ViewGroup[@content-desc=\"button-LOGIN\"]/android.view.ViewGroup"
+}
