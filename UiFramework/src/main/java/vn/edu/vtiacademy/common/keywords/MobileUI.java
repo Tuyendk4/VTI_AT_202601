@@ -54,8 +54,8 @@ public class MobileUI {
 
   //  private static final String NODE_EXECUTE_PATH = "/usr/local/bin/node";
 //  private static final String APPIUM_JS_PATH = "/usr/local/lib/node_modules/appium/build/lib/main.js";
-  private static final String APPIUM_LOG_FILE_PATH =
-      System.getProperty("user.dir") + File.separator + "testlog" + File.separator + "appium.log";
+  private static final String APPIUM_LOG_DIR =
+      System.getProperty("user.dir") + File.separator + "testlog";
   private static final Logger LOGGER = LoggerFactory.getLogger(MobileUI.class);
   private final int defaultTimeout;
   private final String nodePath;
@@ -82,25 +82,22 @@ public class MobileUI {
       if (Device.getPlatformName().equalsIgnoreCase("ios")) {
         dc.setPlatform(Platform.IOS);
         dc.setCapability("appium:automationName", "XCUITest");
+        if(!Device.getBundleId().isEmpty()) {
+          dc.setCapability("appium:bundleId", Device.getBundleId());
+        }
       } else {
         dc.setPlatform(Platform.ANDROID);
         dc.setCapability("appium:automationName", "UiAutomator2");
+        if(!Device.getAppPackage().isEmpty() && !Device.getAppActivity().isEmpty()) {
+          dc.setCapability("appium:appPackage", Device.getAppPackage());
+          dc.setCapability("appium:appActivity", Device.getAppActivity());
+        }
       }
       dc.setCapability("appium:deviceName", Device.getDeviceName());
       if (Device.getAppPath() != null && !Device.getAppPath().isEmpty()) {
         dc.setCapability("appium:app", Device.getAppPath());
-        dc.setCapability("appium:noReset", false);
-        dc.setCapability("appium:fullReset", true);
-      }
-      if (Device.getPlatformName().equalsIgnoreCase("ios")) {
-        dc.setPlatform(Platform.IOS);
-        dc.setCapability("appium:automationName", "XCUITest");
-        dc.setCapability("appium:bundleId", Device.getBundleId());
-      } else {
-        dc.setPlatform(Platform.ANDROID);
-        dc.setCapability("appium:automationName", "UiAutomator2");
-        dc.setCapability("appium:appPackage", Device.getAppPackage());
-        dc.setCapability("appium:appActivity", Device.getAppActivity());
+//        dc.setCapability("appium:noReset", true);
+//        dc.setCapability("appium:fullReset", false);
       }
       dc.setCapability("appium:platformVersion", Device.getPlatformVersion());
       dc.setCapability("appium:udid", Device.getUdid());
@@ -368,13 +365,22 @@ public class MobileUI {
           .withIPAddress(DEFAULT_IP_ADDRESS)
           .usingAnyFreePort()
           .withArgument(() -> "--allow-insecure", "*:chromedriver_autodownload")
-          .withLogFile(new File(APPIUM_LOG_FILE_PATH));
+          .withLogFile(new File(getAppiumLogFilePath()));
       appiumDriverLocalService = AppiumDriverLocalService.buildService(appiumServiceBuilder);
       appiumDriverLocalService.start();
       LOGGER.info("Appium server started");
     } catch (Exception e) {
       LOGGER.error("Failed to start Appium server. Root cause: {}", e.getMessage());
     }
+  }
+
+  private String getAppiumLogFilePath() {
+    String deviceId = Device.getUdid();
+    if (deviceId == null || deviceId.isEmpty()) {
+      deviceId = "thread-" + Thread.currentThread().getId();
+    }
+    String safeDeviceId = deviceId.replaceAll("[^a-zA-Z0-9_.-]", "_");
+    return APPIUM_LOG_DIR + File.separator + "appium-" + safeDeviceId + ".log";
   }
 
   public void stopAppiumServer() {

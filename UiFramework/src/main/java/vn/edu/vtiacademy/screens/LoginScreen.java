@@ -35,7 +35,7 @@ public class LoginScreen extends BaseScreen {
   @Step("Should show email error message: {0}")
   public boolean shouldShowEmailErrorMessage(String expectedErrorMessage) {
     if(mobileUI.verifyElementText(findTestObject("LBL_EMAIL_ERROR_MESSAGE"), expectedErrorMessage)) {
-      mobileUI.takeScreenshot();
+      mobileUI.takeScreenshotAndMarkElement(findTestObject("LBL_EMAIL_ERROR_MESSAGE"));
       return true;
     }
     mobileUI.takeScreenshot();
@@ -45,7 +45,7 @@ public class LoginScreen extends BaseScreen {
   @Step("Should show password error message: {0}")
   public boolean shouldShowPasswordErrorMessage(String expectedErrorMessage) {
     if(mobileUI.verifyElementText(findTestObject("LBL_PASSWORD_ERROR_MESSAGE"), expectedErrorMessage)) {
-      mobileUI.takeScreenshot();
+      mobileUI.takeScreenshotAndMarkElement(findTestObject("LBL_PASSWORD_ERROR_MESSAGE"));
       return true;
     }
     mobileUI.takeScreenshot();

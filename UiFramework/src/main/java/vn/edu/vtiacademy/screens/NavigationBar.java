@@ -1,5 +1,6 @@
 package vn.edu.vtiacademy.screens;
 
+import io.qameta.allure.Step;
 import vn.edu.vtiacademy.common.keywords.MobileUI;
 
 public class NavigationBar extends BaseScreen{
@@ -16,6 +17,7 @@ public class NavigationBar extends BaseScreen{
     mobileUI.takeScreenshotAndMarkElement(findTestObject("TAB_WEBVIEW"));
   }
 
+  @Step("Tap on Login tab")
   public LoginScreen clickLoginTab() {
     mobileUI.tapOn(findTestObject("TAB_LOGIN"));
     mobileUI.takeScreenshot();
