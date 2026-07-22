@@ -13,24 +13,32 @@ public class PropertyHelper {
   // Use a static final field initialized at class load time for a thread-safe singleton.
   private static PropertyHelper INSTANCE = null;
   private static final String PROPERTIES_EXTENSION = ".properties";
-  private static final Properties props = new Properties();
-  private static String propertyName;
+  private static final ThreadLocal<Properties> props = new ThreadLocal<Properties>() {
+    @Override public Properties initialValue() {
+      return new Properties();
+    }
+  };
+  private static ThreadLocal<String> propertyName = new ThreadLocal<String>() {
+    @Override public String initialValue() {
+      return null;
+    }
+  };
 
   private PropertyHelper() {
     this.loadProperties("configuration.properties");
-    props.putAll(System.getProperties());
+    props.get().putAll(System.getProperties());
   }
 
   // This constructor allows creating separate instances, which might be useful for testing.
   protected PropertyHelper(String propertyName) {
-    PropertyHelper.propertyName = propertyName;
+    PropertyHelper.propertyName.set(propertyName);
     this.loadProperties(propertyName + PROPERTIES_EXTENSION);
-    props.putAll(System.getProperties());
+    props.get().putAll(System.getProperties());
   }
 
   private static PropertyHelper getInstance() {
 //    if (INSTANCE == null) {
-      INSTANCE = new PropertyHelper(propertyName);
+      INSTANCE = new PropertyHelper(propertyName.get());
 //    }
     return PropertyHelper.INSTANCE;
   }
@@ -42,7 +50,7 @@ public class PropertyHelper {
    */
   public static String getProperty(final String key) {
     return
-        PropertyHelper.getInstance().props.getProperty(key);
+        PropertyHelper.getInstance().props.get().getProperty(key);
   }
   /**
    * This method will read any integer property value
@@ -76,7 +84,7 @@ public class PropertyHelper {
   public static String getProperty(final String key, final
   String defaultValue) {
     return
-        PropertyHelper.getInstance().props.getProperty(key,
+        PropertyHelper.getInstance().props.get().getProperty(key,
             defaultValue);
   }
   /**
@@ -90,7 +98,7 @@ public class PropertyHelper {
     // Use try-with-resources for automatic stream closing.
     try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(path)) {
       if (inputStream != null) {
-        this.props.load(inputStream);
+        this.props.get().load(inputStream);
       } else {
         // Throwing an exception here is better than just printing a stack trace.
         throw new UnableToLoadPropertiesException("Property file '" + path + "' not found in the classpath.");
@@ -104,6 +112,6 @@ public class PropertyHelper {
    * @return Properties
    */
   public static Properties getProps() {
-    return PropertyHelper.getInstance().props;
+    return PropertyHelper.getInstance().props.get();
   }
 }
