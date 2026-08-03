@@ -1,0 +1,7 @@
+{
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Sun, 02 Aug 2026 13:55:01 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}

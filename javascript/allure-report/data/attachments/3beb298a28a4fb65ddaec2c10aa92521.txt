@@ -1,0 +1,41 @@
+const moment = require('moment');
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Booking ID matches the request", function () {
+    const bookingIdFromResponse = pm.response.json().bookingid;
+    pm.expect(bookingIdFromResponse).to.be.a("number");
+    pm.expect(bookingIdFromResponse).to.equal(pm.variables.get("bookingId"));
+});
+
+pm.test("Check-in date is correct", function () {
+    const checkinDate = pm.response.json().bookingdates.checkin;
+    pm.expect(checkinDate).to.be.a("string");
+    const isValidDate = moment(checkinDate, "YYYY-MM-DD", true).isValid();
+    pm.expect(isValidDate).to.be.true;
+});
+
+pm.test("Check-out date is correct", function () {
+    const checkoutDate = pm.response.json().bookingdates.checkout;
+    pm.expect(checkoutDate).to.be.a("string");
+    const isValidDate = moment(checkoutDate, "YYYY-MM-DD", true).isValid();
+    pm.expect(isValidDate).to.be.true;
+});
+
+pm.test("depositpaid is correct", function () {
+    pm.expect(pm.response.json().depositpaid).to.be.a("boolean");
+});
+
+pm.test("firstname is correct", function () {
+    pm.expect(pm.response.json().firstname).to.be.a("string");
+});
+
+pm.test("lastname is correct", function () {
+    pm.expect(pm.response.json().lastname).to.be.a("string");
+});
+
+pm.test("roomid is correct", function () {
+    pm.expect(pm.response.json().roomid).to.be.a("number");
+});

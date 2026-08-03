@@ -1,0 +1,2 @@
+let bookingId = 1;
+pm.variables.set("bookingId", bookingId)
