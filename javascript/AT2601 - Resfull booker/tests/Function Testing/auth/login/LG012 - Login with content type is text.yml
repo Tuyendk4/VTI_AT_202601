@@ -1,0 +1,51 @@
+info:
+  name: LG012 - Login with content type is text
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/login"
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: admin
+      - name: password
+        type: text
+        value: password
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let username = "SELECT * FROM members WHERE username = 'admin'--' AND password = 'password'";
+        bru.setVar("username", username);
+    - type: after-response
+      code: |-
+        test("Status code is 415", function () {
+            expect(res.getStatus()).to.equal(415);
+        });
+
+        test("Status in response body is 415", function() {
+            expect(res.getBody().status).to.be.a("number");
+            expect(res.getBody().status).to.eql(415); // pm.response.json() = $ => $.status
+        });
+
+        test("Error in response body is 'Method Not Allowed'", function() {
+            expect(res.getBody().error).to.be.a("string");
+            expect(res.getBody().error).to.eql("Unsupported Media Type");
+        });
+
+        test("Path in response body is /auth/login", function() {
+            expect(res.getBody().path).to.be.a("string");
+            expect(res.getBody().path).to.eql("/auth/login");
+        })
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: LGE2E006 - Get booking after logout successfully
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{bookingUrl}}/booking/{{bookingId}}"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let bookingId = 1;
+        bru.setVar("bookingId", bookingId)
+    - type: after-response
+      code: |-
+        test("Status code is 403", function () {
+            expect(res.getStatus()).to.equal(403);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

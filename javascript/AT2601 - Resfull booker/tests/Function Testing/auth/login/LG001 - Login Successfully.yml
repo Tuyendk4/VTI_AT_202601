@@ -1,0 +1,39 @@
+info:
+  name: LG001 - Login Successfully
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "admin",
+        "password": "password"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test("Status code is 200", function () {
+            expect(res.getStatus()).to.equal(200);
+        });
+
+        test("Cookies have token attribute", function () {
+            expect(bru.cookies.get("token")).to.not.be.null;
+            expect(bru.cookies.get("token")).to.be.a("string");
+        });
+
+        console.log("Token: " + bru.cookies.get("token"));
+
+        bru.setVar("token", bru.cookies.get("token"));
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,33 @@
+info:
+  name: LG007 - Login lack username
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "password": "password"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let username = {"username": "admin"};
+        bru.setVar("username", username);
+    - type: after-response
+      code: |-
+        test("Status code is 403", function () {
+            expect(res.getStatus()).to.equal(403);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

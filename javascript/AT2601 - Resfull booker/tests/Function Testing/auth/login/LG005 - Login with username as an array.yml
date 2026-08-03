@@ -1,0 +1,49 @@
+info:
+  name: LG005 - Login with username as an array
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "username": {{username}},
+        "password": "password"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let username = [1431313, 32423423];
+        bru.setVar("username", username);
+    - type: after-response
+      code: |-
+        test("Status code is 400", function () {
+            expect(res.getStatus()).to.equal(400);
+        });
+
+        test("Status in response body is 400", function() {
+            expect(res.getBody().status).to.be.a("number");
+            expect(res.getBody().status).to.eql(400); // pm.response.json() = $ => $.status
+        });
+
+        test("Error in response body is 'Bad Request'", function() {
+            expect(res.getBody().error).to.be.a("string");
+            expect(res.getBody().error).to.eql("Bad Request");
+        });
+
+        test("Path in response body is /auth/login", function() {
+            expect(res.getBody().path).to.be.a("string");
+            expect(res.getBody().path).to.eql("/auth/login");
+        })
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

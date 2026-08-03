@@ -1,0 +1,7 @@
+info:
+  name: E2E testing
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

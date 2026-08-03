@@ -1,0 +1,34 @@
+info:
+  name: LG008 - Login with invalid user
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+          "username": "admin123",
+          "password": "password"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let username = {"username": "admin"};
+        bru.setVar("username", username);
+    - type: after-response
+      code: |-
+        test("Status code is 403", function () {
+            expect(res.getStatus()).to.equal(403);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
