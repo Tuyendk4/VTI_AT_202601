@@ -1,0 +1,31 @@
+info:
+  name: Create booking
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{bookingUrl}}/booking"
+  body:
+    type: json
+    data: |-
+      {
+        "bookingid": 1,
+        "roomid": 1,
+        "firstname": "Hua",
+        "lastname": "Dean",
+        "depositpaid": true,
+        "email": "hua_dean@example.com",
+        "phone": "0123141241245",
+        "bookingdates": {
+          "checkin": "2026-07-27",
+          "checkout": "2026-07-27"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,1343 @@
+{
+  "info": {
+    "_postman_id": "df49418e-f87b-4f84-81e0-d2ed33851d57",
+    "name": "AT2601 - Resfull booker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8701796"
+  },
+  "item": [
+    {
+      "name": "docs",
+      "item": [
+        {
+          "name": "auth",
+          "item": [
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "logout",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"token\": \"QYjEYyiiXpjFAuJk\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/logout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "validate",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"token\": \"QYjEYyiiXpjFAuJk\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/validate",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "booking",
+          "item": [
+            {
+              "name": "Get booking",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{bookingUrl}}/booking/1",
+                  "host": [
+                    "{{bookingUrl}}"
+                  ],
+                  "path": [
+                    "booking",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update booking",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bookingid\": 1,\n  \"roomid\": 1,\n  \"firstname\": \"Hua\",\n  \"lastname\": \"Dean\",\n  \"depositpaid\": true,\n  \"email\": \"hua_dean@example.com\",\n  \"phone\": \"0923456478387\",\n  \"bookingdates\": {\n    \"checkin\": \"2026-07-27\",\n    \"checkout\": \"2026-07-27\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{bookingUrl}}/booking/1",
+                  "host": [
+                    "{{bookingUrl}}"
+                  ],
+                  "path": [
+                    "booking",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete booking",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{bookingUrl}}/booking/1",
+                  "host": [
+                    "{{bookingUrl}}"
+                  ],
+                  "path": [
+                    "booking",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get booking room",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bookingid\": 1,\n  \"roomid\": 1,\n  \"firstname\": \"James\",\n  \"lastname\": \"Dean\",\n  \"depositpaid\": true,\n  \"email\": \"james_dean@example.com\",\n  \"phone\": \"092345678387\",\n  \"bookingdates\": {\n    \"checkin\": \"2026-07-27\",\n    \"checkout\": \"2026-07-27\"\n  }\n}"
+                },
+                "url": {
+                  "raw": "{{bookingUrl}}/booking/?roomId=1",
+                  "host": [
+                    "{{bookingUrl}}"
+                  ],
+                  "path": [
+                    "booking",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "roomId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create booking",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bookingid\": 1,\n  \"roomid\": 1,\n  \"firstname\": \"Hua\",\n  \"lastname\": \"Dean\",\n  \"depositpaid\": true,\n  \"email\": \"hua_dean@example.com\",\n  \"phone\": \"0123141241245\",\n  \"bookingdates\": {\n    \"checkin\": \"2026-07-27\",\n    \"checkout\": \"2026-07-27\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{bookingUrl}}/booking",
+                  "host": [
+                    "{{bookingUrl}}"
+                  ],
+                  "path": [
+                    "booking"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tests",
+      "item": [
+        {
+          "name": "Function Testing",
+          "item": [
+            {
+              "name": "auth",
+              "item": [
+                {
+                  "name": "login",
+                  "item": [
+                    {
+                      "name": "LG001 - Login Successfully",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 200\", function () {",
+                              "    pm.response.to.have.status(200);",
+                              "});",
+                              "",
+                              "pm.test(\"Cookies have token attribute\", function () {",
+                              "    pm.expect(pm.cookies.get(\"token\")).to.not.be.null;",
+                              "    pm.expect(pm.cookies.get(\"token\")).to.be.a(\"string\");",
+                              "});",
+                              "",
+                              "console.log(\"Token: \" + pm.cookies.get(\"token\"));",
+                              "",
+                              "pm.collectionVariables.set(\"token\", pm.cookies.get(\"token\"));"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG002 - Login with empty user",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = \"\";",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": \"{{username}}\",\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG003 - Login with username = null",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = null;",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": {{username}},\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG004 - Login with username as number",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = 1431313;",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": {{username}},\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG005 - Login with username as an array",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 400\", function () {",
+                              "    pm.response.to.have.status(400);",
+                              "});",
+                              "",
+                              "pm.test(\"Status in response body is 400\", function() {",
+                              "    pm.expect(pm.response.json().status).to.be.a(\"number\");",
+                              "    pm.expect(pm.response.json().status).to.eql(400); // pm.response.json() = $ => $.status",
+                              "});",
+                              "",
+                              "pm.test(\"Error in response body is 'Bad Request'\", function() {",
+                              "    pm.expect(pm.response.json().error).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().error).to.eql(\"Bad Request\");",
+                              "});",
+                              "",
+                              "pm.test(\"Path in response body is /auth/login\", function() {",
+                              "    pm.expect(pm.response.json().path).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().path).to.eql(\"/auth/login\");",
+                              "}) ",
+                              "",
+                              "",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = [1431313, 32423423];",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": {{username}},\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG006 - Login with username as an object",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 400\", function () {",
+                              "    pm.response.to.have.status(400);",
+                              "});",
+                              "",
+                              "pm.test(\"Status in response body is 400\", function() {",
+                              "    pm.expect(pm.response.json().status).to.be.a(\"number\");",
+                              "    pm.expect(pm.response.json().status).to.eql(400); // pm.response.json() = $ => $.status",
+                              "});",
+                              "",
+                              "pm.test(\"Error in response body is 'Bad Request'\", function() {",
+                              "    pm.expect(pm.response.json().error).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().error).to.eql(\"Bad Request\");",
+                              "});",
+                              "",
+                              "pm.test(\"Path in response body is /auth/login\", function() {",
+                              "    pm.expect(pm.response.json().path).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().path).to.eql(\"/auth/login\");",
+                              "}) ",
+                              "",
+                              "",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = {\"username\": \"admin\"};",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"username\": {{username}},\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG007 - Login lack username",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = {\"username\": \"admin\"};",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG008 - Login with invalid user",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = {\"username\": \"admin\"};",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"username\": \"admin123\",\n    \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG009 - Login with usename as sql injection",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 403\", function () {",
+                              "    pm.response.to.have.status(403);",
+                              "});",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = \"SELECT * FROM members WHERE username = 'admin'--' AND password = 'password'\";",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG010 - Login with GET method",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 405\", function () {",
+                              "    pm.response.to.have.status(405);",
+                              "});",
+                              "",
+                              "pm.test(\"Status in response body is 405\", function() {",
+                              "    pm.expect(pm.response.json().status).to.be.a(\"number\");",
+                              "    pm.expect(pm.response.json().status).to.eql(405); // pm.response.json() = $ => $.status",
+                              "});",
+                              "",
+                              "pm.test(\"Error in response body is 'Method Not Allowed'\", function() {",
+                              "    pm.expect(pm.response.json().error).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().error).to.eql(\"Method Not Allowed\");",
+                              "});",
+                              "",
+                              "pm.test(\"Path in response body is /auth/login\", function() {",
+                              "    pm.expect(pm.response.json().path).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().path).to.eql(\"/auth/login\");",
+                              "}) ",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = \"SELECT * FROM members WHERE username = 'admin'--' AND password = 'password'\";",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG011 - Login with PUT method",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 405\", function () {",
+                              "    pm.response.to.have.status(405);",
+                              "});",
+                              "",
+                              "pm.test(\"Status in response body is 405\", function() {",
+                              "    pm.expect(pm.response.json().status).to.be.a(\"number\");",
+                              "    pm.expect(pm.response.json().status).to.eql(405); // pm.response.json() = $ => $.status",
+                              "});",
+                              "",
+                              "pm.test(\"Error in response body is 'Method Not Allowed'\", function() {",
+                              "    pm.expect(pm.response.json().error).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().error).to.eql(\"Method Not Allowed\");",
+                              "});",
+                              "",
+                              "pm.test(\"Path in response body is /auth/login\", function() {",
+                              "    pm.expect(pm.response.json().path).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().path).to.eql(\"/auth/login\");",
+                              "}) ",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = \"SELECT * FROM members WHERE username = 'admin'--' AND password = 'password'\";",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"password\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    },
+                    {
+                      "name": "LG012 - Login with content type is text",
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              "pm.test(\"Status code is 415\", function () {",
+                              "    pm.response.to.have.status(415);",
+                              "});",
+                              "",
+                              "pm.test(\"Status in response body is 415\", function() {",
+                              "    pm.expect(pm.response.json().status).to.be.a(\"number\");",
+                              "    pm.expect(pm.response.json().status).to.eql(415); // pm.response.json() = $ => $.status",
+                              "});",
+                              "",
+                              "pm.test(\"Error in response body is 'Method Not Allowed'\", function() {",
+                              "    pm.expect(pm.response.json().error).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().error).to.eql(\"Unsupported Media Type\");",
+                              "});",
+                              "",
+                              "pm.test(\"Path in response body is /auth/login\", function() {",
+                              "    pm.expect(pm.response.json().path).to.be.a(\"string\");",
+                              "    pm.expect(pm.response.json().path).to.eql(\"/auth/login\");",
+                              "}) ",
+                              ""
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        },
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "exec": [
+                              "let username = \"SELECT * FROM members WHERE username = 'admin'--' AND password = 'password'\";",
+                              "pm.variables.set(\"username\", username);"
+                            ],
+                            "type": "text/javascript",
+                            "packages": {},
+                            "requests": {}
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "formdata",
+                          "formdata": [
+                            {
+                              "key": "username",
+                              "value": "admin",
+                              "type": "text",
+                              "uuid": "c445ebda-0a72-46ba-bb81-41c7c5ce442c"
+                            },
+                            {
+                              "key": "password",
+                              "value": "password",
+                              "type": "text",
+                              "uuid": "839fae01-d00b-4ba7-9d36-26d4d5b8dc5d"
+                            }
+                          ]
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "response": []
+                    }
+                  ]
+                },
+                {
+                  "name": "logout",
+                  "item": []
+                },
+                {
+                  "name": "validate",
+                  "item": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "E2E testing",
+          "item": [
+            {
+              "name": "Login E2E",
+              "item": [
+                {
+                  "name": "LGE2E001 - login successfully",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});",
+                          "",
+                          "pm.test(\"Cookies have token attribute\", function () {",
+                          "    pm.expect(pm.cookies.get(\"token\")).to.not.be.null;",
+                          "    pm.expect(pm.cookies.get(\"token\")).to.be.a(\"string\");",
+                          "});",
+                          "",
+                          "console.log(\"Token: \" + pm.cookies.get(\"token\"));",
+                          "",
+                          "pm.collectionVariables.set(\"token\", pm.cookies.get(\"token\"));"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/auth/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "LGE2E002 - validate token successfully",
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "exec": [
+                          "// let token = pm.collectionVariables.get(\"token\");"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    },
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"token\": \"{{token}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/auth/validate",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "LGE2E003 - Get booking successfully",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "const moment = require('moment');",
+                          "",
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});",
+                          "",
+                          "pm.test(\"Booking ID matches the request\", function () {",
+                          "    const bookingIdFromResponse = pm.response.json().bookingid;",
+                          "    pm.expect(bookingIdFromResponse).to.be.a(\"number\");",
+                          "    pm.expect(bookingIdFromResponse).to.equal(pm.variables.get(\"bookingId\"));",
+                          "});",
+                          "",
+                          "pm.test(\"Check-in date is correct\", function () {",
+                          "    const checkinDate = pm.response.json().bookingdates.checkin;",
+                          "    pm.expect(checkinDate).to.be.a(\"string\");",
+                          "    const isValidDate = moment(checkinDate, \"YYYY-MM-DD\", true).isValid();",
+                          "    pm.expect(isValidDate).to.be.true;",
+                          "});",
+                          "",
+                          "pm.test(\"Check-out date is correct\", function () {",
+                          "    const checkoutDate = pm.response.json().bookingdates.checkout;",
+                          "    pm.expect(checkoutDate).to.be.a(\"string\");",
+                          "    const isValidDate = moment(checkoutDate, \"YYYY-MM-DD\", true).isValid();",
+                          "    pm.expect(isValidDate).to.be.true;",
+                          "});",
+                          "",
+                          "pm.test(\"depositpaid is correct\", function () {",
+                          "    pm.expect(pm.response.json().depositpaid).to.be.a(\"boolean\");",
+                          "});",
+                          "",
+                          "pm.test(\"firstname is correct\", function () {",
+                          "    pm.expect(pm.response.json().firstname).to.be.a(\"string\");",
+                          "});",
+                          "",
+                          "pm.test(\"lastname is correct\", function () {",
+                          "    pm.expect(pm.response.json().lastname).to.be.a(\"string\");",
+                          "});",
+                          "",
+                          "pm.test(\"roomid is correct\", function () {",
+                          "    pm.expect(pm.response.json().roomid).to.be.a(\"number\");",
+                          "});"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    },
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "exec": [
+                          "let bookingId = 1;",
+                          "pm.variables.set(\"bookingId\", bookingId)"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{bookingUrl}}/booking/{{bookingId}}",
+                      "host": [
+                        "{{bookingUrl}}"
+                      ],
+                      "path": [
+                        "booking",
+                        "{{bookingId}}"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "LGE2E004 - Logout successfully",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test(\"Status code is 200\", function () {",
+                          "    pm.response.to.have.status(200);",
+                          "});"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"token\": \"{{token}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/auth/logout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "logout"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "LGE2E005 - validate token again after logout successfully",
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "exec": [
+                          "// let token = pm.collectionVariables.get(\"token\");"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    },
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test(\"Status code is 403\", function () {",
+                          "    pm.response.to.have.status(403);",
+                          "});"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"token\": \"{{token}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/auth/validate",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "LGE2E006 - Get booking after logout successfully",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test(\"Status code is 403\", function () {",
+                          "    pm.response.to.have.status(403);",
+                          "});"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    },
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "exec": [
+                          "let bookingId = 1;",
+                          "pm.variables.set(\"bookingId\", bookingId)"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{bookingUrl}}/booking/{{bookingId}}",
+                      "host": [
+                        "{{bookingUrl}}"
+                      ],
+                      "path": [
+                        "booking",
+                        "{{bookingId}}"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

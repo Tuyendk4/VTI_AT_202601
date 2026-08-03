@@ -27,6 +27,7 @@
     <apache-poi.version>5.5.1</apache-poi.version>
     <cucumber.version>7.34.3</cucumber.version>
     <appium-java-client.version>10.1.1</appium-java-client.version>
+    <rest-assured.version>6.0.0</rest-assured.version>
   </properties>
 
   <dependencies>
@@ -152,6 +153,13 @@
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
       <version>${appium-java-client.version}</version>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>${rest-assured.version}</version>
     </dependency>
   </dependencies>
 

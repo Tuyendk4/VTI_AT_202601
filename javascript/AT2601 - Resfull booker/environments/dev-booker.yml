@@ -1,0 +1,6 @@
+name: dev-booker
+variables:
+  - name: baseUrl
+    value: http://localhost:3004
+  - name: bookingUrl
+    value: http://localhost:3000

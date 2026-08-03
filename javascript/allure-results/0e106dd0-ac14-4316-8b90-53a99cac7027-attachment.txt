@@ -1,0 +1,12 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Cookies have token attribute", function () {
+    pm.expect(pm.cookies.get("token")).to.not.be.null;
+    pm.expect(pm.cookies.get("token")).to.be.a("string");
+});
+
+console.log("Token: " + pm.cookies.get("token"));
+
+pm.collectionVariables.set("token", pm.cookies.get("token"));

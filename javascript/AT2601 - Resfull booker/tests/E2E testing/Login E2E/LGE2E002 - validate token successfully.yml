@@ -1,0 +1,34 @@
+info:
+  name: LGE2E002 - validate token successfully
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/validate"
+  body:
+    type: json
+    data: |-
+      {
+        "token": "{{token}}"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        // let token = pm.collectionVariables.get("token");
+        // let token = bru.getGlobalEnvVar("token");
+        // bru.setVar("token", token);
+    - type: after-response
+      code: |-
+        test("Status code is 200", function () {
+            expect(res.getStatus()).to.equal(200);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

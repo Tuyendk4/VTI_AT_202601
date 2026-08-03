@@ -1,0 +1,31 @@
+info:
+  name: Update booking
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{bookingUrl}}/booking/1"
+  body:
+    type: json
+    data: |-
+      {
+        "bookingid": 1,
+        "roomid": 1,
+        "firstname": "Hua",
+        "lastname": "Dean",
+        "depositpaid": true,
+        "email": "hua_dean@example.com",
+        "phone": "0923456478387",
+        "bookingdates": {
+          "checkin": "2026-07-27",
+          "checkout": "2026-07-27"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
