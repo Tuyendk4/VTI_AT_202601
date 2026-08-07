@@ -1,4 +1,38 @@
-INFO  | 2026-08-03 21:33:51 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
-  /Users/tuyenluu/Library/Caches/JetBrains/IntelliJIdea2026.2/temp-testng-customsuite.xml
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 7 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 12 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 3 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 4 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+INFO  | 2026-08-07 20:37:52 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Running:
+  /Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/src/main/resources/testsuites/apis/function_test/LoginApiTestSuite.xml
 
-ERROR | 2026-08-03 21:33:53 | [main] allure.util.NamingUtils (NamingUtils.java:processPattern:74) - Could not find parameter 1
+INFO  | 2026-08-07 20:37:52 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:58) - Deleting folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results'
+INFO  | 2026-08-07 20:37:52 | [main] common.helper.FileHelper (FileHelper.java:deleteFolder:65) - Deleted folder '/Users/tuyenluu/training-workspace/VTI_AT_202601/UiFramework/target/allure-results' successfully
+INFO  | 2026-08-07 20:37:53 | [main] testng.log4testng.Logger (Logger.java:info:112) - [Utils] DynamicGraphHelper.createDynamicGraph() took 5 ms.
+ERROR | 2026-08-07 20:37:55 | [main] allure.util.NamingUtils (NamingUtils.java:processPattern:74) - Could not find parameter 1
+INFO  | 2026-08-07 20:37:56 | [main] testng.log4testng.Logger (Logger.java:info:112) - [TestNG] Time taken by org.testng.internal.ExitCodeListener@11df0bc7: 0 ms

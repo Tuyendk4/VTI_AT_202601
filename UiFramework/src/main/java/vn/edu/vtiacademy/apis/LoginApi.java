@@ -3,8 +3,9 @@ package vn.edu.vtiacademy.apis;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import vn.edu.vtiacademy.model.apis.LoginErrorResponseBody;
+import vn.edu.vtiacademy.model.apis.UserRequestBody;
 
 public class LoginApi extends BaseApi {
 
@@ -14,7 +15,7 @@ public class LoginApi extends BaseApi {
   @Step("Send login api with username '{0}' and password '{1}'")
   public static Response send(String username, String password) {
     String body = "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(getAuthenUrl())
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -25,7 +26,7 @@ public class LoginApi extends BaseApi {
   @Step("Send login api with username '{0}' and password '{1}'")
   public static void send(int username, String password) {
     String body = "{\"username\":" + username + ",\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -35,7 +36,7 @@ public class LoginApi extends BaseApi {
   @Step("Send login api with username '{0}' and password '{1}'")
   public static void sendUserNameAsNull(String password) {
     String body = "{\"username\":" + null + ",\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -45,7 +46,7 @@ public class LoginApi extends BaseApi {
   @Step("Send login api with username '{0}' and password '{1}'")
   public static void send(ArrayList<String> username, String password) {
     String body = "{\"username\":" + username.toArray() + ",\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -55,7 +56,7 @@ public class LoginApi extends BaseApi {
   @Step("Send login api with username '{0}' and password '{1}'")
   public static void sendUserNameAsObject(String username, String password) {
     String body = "{\"username\":{\"username\":\"" + username + "\"}," + ",\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -63,9 +64,20 @@ public class LoginApi extends BaseApi {
   }
 
   @Step("Send login api with username '{0}' and password '{1}'")
+  public static LoginErrorResponseBody sendUserNameAsObject_POJO(String username, String password) {
+    String body = "{\"username\":{\"username\":\"" + username + "\"}," + ",\"password\":\"" + password + "\"}";
+    LoginErrorResponseBody response = RestAssured.given().baseUri(authenUrl)
+        .header("Content-Type", "application/json")
+        .body(body)
+        .when().post(LOGIN_END_POINT)
+        .then().log().all().extract().body().as(LoginErrorResponseBody.class);
+    return response;
+  }
+
+  @Step("Send login api with username '{0}' and password '{1}'")
   public static void sendWithLackUsername(String password) {
     String body = "{\"password\":\"" + password + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_END_POINT)
@@ -91,5 +103,15 @@ public class LoginApi extends BaseApi {
   @Step("Should show path '{0}'")
   public static boolean shouldShowPath(String path) {
     return response.jsonPath().get("path").equals(path);
+  }
+
+  @Step("Send login api with username '{0}'")
+  public static Response send(UserRequestBody userRequestBody) {
+    response = RestAssured.given().baseUri(getAuthenUrl())
+        .header("Content-Type", "application/json")
+        .body(userRequestBody)
+        .when().post(LOGIN_END_POINT)
+        .then().log().all().extract().response();
+    return response;
   }
 }
