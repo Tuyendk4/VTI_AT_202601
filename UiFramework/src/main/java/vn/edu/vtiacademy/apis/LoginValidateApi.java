@@ -11,7 +11,7 @@ public class LoginValidateApi extends BaseApi {
   @Step("Send login validate api with token '{0}")
   public static Response send(String token) {
     String body = "{\"token\":\"" + token + "\"}";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGIN_VALIDATE_END_POINT)
