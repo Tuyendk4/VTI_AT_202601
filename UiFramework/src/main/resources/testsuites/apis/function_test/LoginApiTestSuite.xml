@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+  <test name="Chrome Test" preserve-order="true"
+    verbose="2">
+    <parameter name="loginUrl" value="http://localhost:3004"/>
+    <classes>
+      <class name="vn.edu.vtiacademy.tests.apis.function_test.LoginApiTest" />
+    </classes>
+  </test>
+</suite>

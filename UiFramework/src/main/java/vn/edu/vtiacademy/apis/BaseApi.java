@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 public class BaseApi {
 
-  protected static final String AUTHEN_URL = "http://localhost:3004";
+  protected static String authenUrl;
   protected static final String BOOKING_URL = "http://localhost:3000";
 
   protected static Response response;
@@ -15,4 +15,11 @@ public class BaseApi {
     return response.getStatusCode() == expectedCode;
   }
 
+  public static String getAuthenUrl() {
+    return authenUrl;
+  }
+
+  public static void setAuthenUrl(String authenUrl) {
+    BaseApi.authenUrl = authenUrl;
+  }
 }

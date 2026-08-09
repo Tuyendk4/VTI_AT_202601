@@ -10,7 +10,7 @@ public class LogoutApi extends BaseApi {
   @Step("Send logout api with token '{0}")
   public static Response send(String token) {
     String body = "{\"token\":\"" + token + "\"}`";
-    response = RestAssured.given().baseUri(AUTHEN_URL)
+    response = RestAssured.given().baseUri(authenUrl)
         .header("Content-Type", "application/json")
         .body(body)
         .when().post(LOGOUT_END_POINT)
