@@ -1,0 +1,21 @@
+# Maven
+target/
+
+# Allure
+allure-results/
+allure-report/
+.allure/
+
+# Log
+testlog/
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# APK/IPA cua app mobile - tai ve theo may, khong commit vao git (file lon)
+apps/
