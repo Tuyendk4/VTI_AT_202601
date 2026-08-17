@@ -13,6 +13,13 @@
   <artifactId>core</artifactId>
   <name>Capstone Core - keywords, helpers, listeners</name>
 
+  <properties>
+    <!-- core la thu vien, khong chua test nao. Parent cau hinh Surefire chay TestNG
+         suite XML cho moi module, nen phai tat o day - neu khong build se do voi
+         "Suite file .../core/src/test/resources/testsuites/... is not a valid file". -->
+    <skipTests>true</skipTests>
+  </properties>
+
   <!-- Cac dependency o day de scope compile de web-tests / mobile-tests
        thua ke transitively, khong phai khai bao lai (DRY). -->
   <dependencies>
