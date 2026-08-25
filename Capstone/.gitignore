@@ -1,0 +1,12 @@
+# Ket qua build va bao cao - sinh lai duoc, khong dua vao git
+target/
+testlog/
+*.log
+
+# APK nang 118MB, tai lai duoc tu GitHub release cua webdriverio/native-demo-app
+mobile-tests/apps/*.apk
+
+# IDE
+.idea/
+*.iml
+.DS_Store

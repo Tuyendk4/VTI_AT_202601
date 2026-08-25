@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>vn.edu.vtiacademy</groupId>
+    <artifactId>capstone</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>api-tests</artifactId>
+  <name>Capstone API Tests - Restful Booker</name>
+
+  <properties>
+    <!-- Suite mac dinh khi chay `mvn -pl api-tests test` khong truyen -Dtestsuite=... -->
+    <testsuite>BookingApiSuite.xml</testsuite>
+  </properties>
+
+  <dependencies>
+    <!-- core cho: TestNG, Allure, listeners (retry + screenshot), TestDataPrefix, log4j -->
+    <dependency>
+      <groupId>vn.edu.vtiacademy</groupId>
+      <artifactId>core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+    </dependency>
+    <!-- Filter ghi nguyen request/response vao Allure - bang chung khi test do -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-rest-assured</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

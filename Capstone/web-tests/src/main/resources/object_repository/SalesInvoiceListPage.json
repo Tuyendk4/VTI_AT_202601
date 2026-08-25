@@ -1,0 +1,6 @@
+{
+  "LBL_TABLE_HEADER_INVOICE_NUMBER": "xpath://th[normalize-space(.)='Invoice Number']",
+  "TBL_ROWS": "xpath://tbody/tr",
+  "TBL_FIRST_ROW_INVOICE_NUMBER": "xpath://tbody/tr[1]/td[1]",
+  "_ghi_chu_tim_kiem": "Tim kiem duoc thuc hien bang deep-link ?search=<so hoa don> thay vi go vao o Search roi bam nut: URL cho ket qua on dinh hon va it thao tac hon. Danh doi la bo test khong bao ve o Search tren giao dien - da ghi trong muc gioi han cua bao cao."
+}

@@ -1,0 +1,5 @@
+# Goi nop sinh ra tu Capstone/package-for-submission.sh - khong dua vao git
+build-package/
+
+# Bao cao Allure sinh o goc repo (ban dung san da luu o docs/allure-report.html)
+allure-report/

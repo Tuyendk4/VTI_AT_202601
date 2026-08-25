@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Suite API - Restful Booker.
+
+  Khong khai bao <listeners> o day: TestListener va RetryTransformer duoc TestNG tu nap
+  qua ServiceLoader (core/src/main/resources/META-INF/services/org.testng.ITestNGListener).
+  Nho vay them suite moi khong phai nho khai bao lai.
+
+  Chay:  mvn -pl api-tests test
+  Tro sang moi truong khac:  mvn -pl api-tests test -Dapi.base.uri=https://...
+-->
+<suite name="Capstone API Suite" verbose="1">
+  <test name="Restful Booker - Booking CRUD + Auth">
+    <classes>
+      <class name="vn.edu.vtiacademy.tests.apis.BookingApiTest"/>
+    </classes>
+  </test>
+</suite>

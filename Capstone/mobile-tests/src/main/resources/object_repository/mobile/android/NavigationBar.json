@@ -1,0 +1,4 @@
+{
+  "_ghi_chu": "Chi khai bao tab dang duoc dung. App con cac tab Home / Webview / Forms / Swipe / Drag - can test toi thi them locator vao day, khong phai sua code Java.",
+  "TAB_LOGIN": "//android.widget.Button[@content-desc=\"Login\"]"
+}

@@ -1,0 +1,4 @@
+# TestNG tu nap cac listener nay qua ServiceLoader.
+# Nho vay khong file suite XML nao phai khai bao <listeners> - them suite moi la co san.
+vn.edu.vtiacademy.common.listeners.TestListener
+vn.edu.vtiacademy.common.listeners.RetryTransformer

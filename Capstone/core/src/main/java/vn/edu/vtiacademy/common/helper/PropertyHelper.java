@@ -1,0 +1,137 @@
+package vn.edu.vtiacademy.common.helper;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import vn.edu.vtiacademy.common.exceptions.UnableToLoadPropertiesException;
+
+public class PropertyHelper {
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(PropertyHelper.class.getSimpleName());
+  // Use a static final field initialized at class load time for a thread-safe singleton.
+  private static PropertyHelper INSTANCE = null;
+  private static final String PROPERTIES_EXTENSION = ".properties";
+  private static final ThreadLocal<Properties> props = new ThreadLocal<Properties>() {
+    @Override public Properties initialValue() {
+      return new Properties();
+    }
+  };
+  private static ThreadLocal<String> propertyName = new ThreadLocal<String>() {
+    @Override public String initialValue() {
+      return null;
+    }
+  };
+
+  private PropertyHelper() {
+    this.loadProperties("configuration.properties");
+    props.get().putAll(System.getProperties());
+  }
+
+  // This constructor allows creating separate instances, which might be useful for testing.
+  protected PropertyHelper(String propertyName) {
+    PropertyHelper.propertyName.set(propertyName);
+    this.loadProperties(propertyName + PROPERTIES_EXTENSION);
+    props.get().putAll(System.getProperties());
+  }
+
+  /** File cau hinh dung khi chua ai chi dinh file nao khac. */
+  private static final String DEFAULT_PROPERTY_NAME = "configuration";
+
+  /**
+   * Lay instance ung voi file properties dang duoc chon cho luong hien tai.
+   *
+   * <p><b>Vi sao can chan {@code null}:</b> {@link #propertyName} khoi tao bang {@code null} va
+   * chi duoc dat khi ai do tao {@link Configuration} hoac {@link Device}. {@code MobileUI} tao
+   * {@code Configuration} ngay trong constructor nen luon co gia tri, nhung {@code WebUI} doc
+   * {@code timeout} ngay trong static initializer - truoc do chua co gi dat ten file. Khi do
+   * {@code getInstance()} se di nap file {@code "null.properties"} va nem
+   * {@link vn.edu.vtiacademy.common.exceptions.UnableToLoadPropertiesException}, lam moi test
+   * web chet ngay tu {@code @BeforeTest} voi {@code ExceptionInInitializerError} - mot thong bao
+   * khong he chi ra nguyen nhan that.
+   *
+   * <p>Quay ve {@code configuration.properties} la mac dinh dung: do chinh la file ma
+   * constructor khong tham so vẫn nap.
+   */
+  private static PropertyHelper getInstance() {
+    String currentPropertyName = propertyName.get();
+    if (currentPropertyName == null || currentPropertyName.isBlank()) {
+      currentPropertyName = DEFAULT_PROPERTY_NAME;
+    }
+    INSTANCE = new PropertyHelper(currentPropertyName);
+    return PropertyHelper.INSTANCE;
+  }
+  /**
+   * This method can read Property value for any given key
+   *
+   * @param key
+   * @return
+   */
+  public static String getProperty(final String key) {
+    return
+        PropertyHelper.getInstance().props.get().getProperty(key);
+  }
+  /**
+   * This method will read any integer property value
+   *
+   * @param key
+   * @param defaultValue
+   * @return
+   */
+  public static int getIntegerProperty(final String key,
+      final int defaultValue) {
+    int integerValue = 0;
+    final String value = getProperty(key);
+    if (value == null || value.isEmpty()) {
+      return defaultValue;
+    }
+    try {
+      return Integer.parseInt(value);
+    } catch (NumberFormatException e) {
+      LOGGER.warn("Could not parse integer for key '{}', value was '{}'. Returning default value {}.", key, value, defaultValue, e);
+      return defaultValue;
+    }
+  }
+  /**
+   * If key couldn't be found then it will return default
+   value
+   *
+   * @param key
+   * @param defaultValue
+   * @return
+   */
+  public static String getProperty(final String key, final
+  String defaultValue) {
+    return
+        PropertyHelper.getInstance().props.get().getProperty(key,
+            defaultValue);
+  }
+  /**
+   * This method will load properties file in Properties
+   object
+   *
+   * @param path
+   */
+  public void loadProperties(final String path) {
+    LOGGER.info("Attempting to load properties file from classpath: {}", path);
+    // Use try-with-resources for automatic stream closing.
+    try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(path)) {
+      if (inputStream != null) {
+        this.props.get().load(inputStream);
+      } else {
+        // Throwing an exception here is better than just printing a stack trace.
+        throw new UnableToLoadPropertiesException("Property file '" + path + "' not found in the classpath.");
+      }
+    } catch (final IOException e) {
+      // Wrap the IOException in your custom runtime exception.
+      throw new UnableToLoadPropertiesException("Failed to load properties file '" + path + "'.", e);
+    }
+  }
+  /**
+   * @return Properties
+   */
+  public static Properties getProps() {
+    return PropertyHelper.getInstance().props.get();
+  }
+}

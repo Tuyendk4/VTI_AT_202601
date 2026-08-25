@@ -1,0 +1,67 @@
+// Pipeline CI cho bo test Capstone.
+//
+// Pham vi: CHI chay api-tests va web-tests.
+// Mobile khong nam trong pipeline nay - chay Appium can mot emulator that hoac may that gan
+// vao agent, la ha tang khac han va khong dung chung duoc voi agent build thong thuong.
+// Dua mobile vao day chi de duoc mot job do do quanh nam. Mobile chay tay, ket qua nop kem
+// bao cao Allure.
+//
+// Thu tu stage co chu dinh: API truoc, Web sau. API chay trong ~1 phut va khong phu thuoc
+// trinh duyet - neu ha tang hong thi biet ngay o phut dau, thay vi doi 15 phut cua web roi
+// moi phat hien.
+
+pipeline {
+  agent any
+
+  tools {
+    jdk 'jdk-21'        // Ten nay phai khop mot JDK 21 da khai bao trong Manage Jenkins > Tools
+    maven 'maven-3.9'
+  }
+
+  options {
+    timeout(time: 45, unit: 'MINUTES')
+    // Web test dung he thong demo cong cong, thinh thoang chap chon. Giu lai 20 lan chay
+    // gan nhat de so sanh khi nghi ngo mot test la flaky.
+    buildDiscarder(logRotator(numToKeepStr: '20'))
+  }
+
+  stages {
+    stage('Build') {
+      steps {
+        dir('Capstone') {
+          sh 'mvn -B clean install -DskipTests'
+        }
+      }
+    }
+
+    stage('API tests') {
+      steps {
+        dir('Capstone') {
+          sh 'mvn -B -pl api-tests test'
+        }
+      }
+    }
+
+    stage('Web tests') {
+      steps {
+        dir('Capstone') {
+          // Luon headless tren CI: agent khong co man hinh.
+          sh 'mvn -B -pl web-tests test -Dbrowser=CHROME_HEADLESS'
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      // Gop ket qua cua ca hai module vao mot bao cao Allure duy nhat.
+      sh '''
+        mkdir -p Capstone/target/allure-results
+        cp -r Capstone/*/target/allure-results/* Capstone/target/allure-results/ 2>/dev/null || true
+      '''
+      allure includeProperties: false, results: [[path: 'Capstone/target/allure-results']]
+      junit allowEmptyResults: true, testResults: 'Capstone/*/target/surefire-reports/*.xml'
+      archiveArtifacts artifacts: 'Capstone/*/target/surefire-reports/**', allowEmptyArchive: true
+    }
+  }
+}
