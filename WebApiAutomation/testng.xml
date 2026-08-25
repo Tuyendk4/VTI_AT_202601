@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Web API Automation Suite">
+
+    <test name="Web Automation Tests">
+        <classes>
+            <class name="web.LoginTest"/>
+            <class name="web.NavigationTest"/>
+            <class name="web.ElementValidationTest"/>
+            <class name="web.TransferWorkflowTest"/>
+        </classes>
+    </test>
+
+    <test name="API Automation Tests">
+        <classes>
+            <class name="api.BookingApiTest"/>
+            <class name="api.BookingNegativeApiTest"/>
+        </classes>
+    </test>
+
+</suite>
