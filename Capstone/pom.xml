@@ -12,6 +12,7 @@
 
   <modules>
     <module>core</module>
+    <module>api-tests</module>
     <module>web-tests</module>
     <module>mobile-tests</module>
   </modules>
@@ -37,6 +38,8 @@
     <java-faker.version>1.0.2</java-faker.version>
     <apache-poi.version>5.5.1</apache-poi.version>
     <snakeyaml.version>2.2</snakeyaml.version>
+    <rest-assured.version>5.5.1</rest-assured.version>
+    <jackson.version>2.18.2</jackson.version>
   </properties>
 
   <dependencyManagement>
@@ -116,6 +119,24 @@
         <groupId>org.yaml</groupId>
         <artifactId>snakeyaml</artifactId>
         <version>${snakeyaml.version}</version>
+      </dependency>
+
+      <!-- REST Assured cho api-tests. Chi khai bao o day, module tu keo ve. -->
+      <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>${rest-assured.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-rest-assured</artifactId>
+        <version>${allure-testng.version}</version>
+      </dependency>
+      <!-- REST Assured can Jackson tren classpath de serialize/deserialize POJO -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Suite mobile - Android.
+
+  deviceName tro toi src/main/resources/devices/<deviceName>.properties.
+  Muon chay tren may that hoac AVD khac: them mot file properties va mot the <test> moi,
+  KHONG phai sua code Java.
+
+  Chua bat parallel: chi co mot emulator tren may nay, va chay song song tren mot thiet bi
+  chi lam cac test tranh nhau man hinh.
+
+  Chay: mvn -pl mobile-tests test
+-->
+<suite name="Capstone Mobile Suite" verbose="1">
+  <test name="Login Screen - Android emulator" verbose="1">
+    <parameter name="deviceName" value="emulator-5554"/>
+    <classes>
+      <class name="vn.edu.vtiacademy.tests.mobile.LoginScreenTest"/>
+    </classes>
+  </test>
+</suite>

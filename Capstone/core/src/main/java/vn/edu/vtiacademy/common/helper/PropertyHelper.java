@@ -36,10 +36,30 @@ public class PropertyHelper {
     props.get().putAll(System.getProperties());
   }
 
+  /** File cau hinh dung khi chua ai chi dinh file nao khac. */
+  private static final String DEFAULT_PROPERTY_NAME = "configuration";
+
+  /**
+   * Lay instance ung voi file properties dang duoc chon cho luong hien tai.
+   *
+   * <p><b>Vi sao can chan {@code null}:</b> {@link #propertyName} khoi tao bang {@code null} va
+   * chi duoc dat khi ai do tao {@link Configuration} hoac {@link Device}. {@code MobileUI} tao
+   * {@code Configuration} ngay trong constructor nen luon co gia tri, nhung {@code WebUI} doc
+   * {@code timeout} ngay trong static initializer - truoc do chua co gi dat ten file. Khi do
+   * {@code getInstance()} se di nap file {@code "null.properties"} va nem
+   * {@link vn.edu.vtiacademy.common.exceptions.UnableToLoadPropertiesException}, lam moi test
+   * web chet ngay tu {@code @BeforeTest} voi {@code ExceptionInInitializerError} - mot thong bao
+   * khong he chi ra nguyen nhan that.
+   *
+   * <p>Quay ve {@code configuration.properties} la mac dinh dung: do chinh la file ma
+   * constructor khong tham so vẫn nap.
+   */
   private static PropertyHelper getInstance() {
-//    if (INSTANCE == null) {
-      INSTANCE = new PropertyHelper(propertyName.get());
-//    }
+    String currentPropertyName = propertyName.get();
+    if (currentPropertyName == null || currentPropertyName.isBlank()) {
+      currentPropertyName = DEFAULT_PROPERTY_NAME;
+    }
+    INSTANCE = new PropertyHelper(currentPropertyName);
     return PropertyHelper.INSTANCE;
   }
   /**

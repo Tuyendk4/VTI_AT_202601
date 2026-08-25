@@ -1,0 +1,12 @@
+{
+  "TXT_EMAIL": "//android.widget.EditText[@content-desc=\"input-email\"]",
+  "LBL_EMAIL_ERROR_MESSAGE": "//android.widget.EditText[@content-desc=\"input-email\"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]",
+  "TXT_PASSWORD": "//android.widget.EditText[@content-desc=\"input-password\"]",
+  "LBL_PASSWORD_ERROR_MESSAGE": "//android.widget.EditText[@content-desc=\"input-password\"]/parent::android.view.ViewGroup/following-sibling::android.widget.TextView[1]",
+  "BTN_LOGIN": "//android.view.ViewGroup[@content-desc=\"button-LOGIN\"]",
+
+  "_ghi_chu_alert": "Hop thoai thanh cong dung resource-id CUA APP cho tieu de (com.wdiodemoapp:id/alert_title) nhung dung id CUA HE DIEU HANH cho noi dung va nut (android:id/*). Doan la android:id/alertTitle se khong tim thay - da mat mot lan chay de phat hien.",
+  "LBL_ALERT_TITLE": "//android.widget.TextView[@resource-id=\"com.wdiodemoapp:id/alert_title\"]",
+  "LBL_ALERT_MESSAGE": "//android.widget.TextView[@resource-id=\"android:id/message\"]",
+  "BTN_ALERT_OK": "//android.widget.Button[@resource-id=\"android:id/button1\"]"
+}

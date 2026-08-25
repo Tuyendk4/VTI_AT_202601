@@ -1,0 +1,4 @@
+{
+  "_ghi_chu": "dash-demo.workdo.io la ban demo cong khai: KHONG co tai khoan/mat khau. Vao he thong bang nut 'Explore All Add-ons' tren trang login. Vi vay LoginPage khong co o email/password.",
+  "BTN_EXPLORE_DEMO": "xpath://button[contains(normalize-space(.),'Explore All Add-ons')] | //a[contains(normalize-space(.),'Explore All Add-ons')]"
+}

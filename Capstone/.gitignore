@@ -1,21 +1,12 @@
-# Maven
+# Ket qua build va bao cao - sinh lai duoc, khong dua vao git
 target/
-
-# Allure
-allure-results/
-allure-report/
-.allure/
-
-# Log
 testlog/
 *.log
+
+# APK nang 118MB, tai lai duoc tu GitHub release cua webdriverio/native-demo-app
+mobile-tests/apps/*.apk
 
 # IDE
 .idea/
 *.iml
-
-# macOS
 .DS_Store
-
-# APK/IPA cua app mobile - tai ve theo may, khong commit vao git (file lon)
-apps/

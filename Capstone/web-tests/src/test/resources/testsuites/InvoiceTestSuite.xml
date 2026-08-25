@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Suite web - WorkDo Dash SaaS / Sales Invoice.
+
+  browser: CHROME_HEADLESS (mac dinh, dung khi dong goi va tren CI)
+           doi thanh CHROME de xem tan mat khi go loi.
+  Khong khai bao <listeners>: TestNG tu nap qua ServiceLoader tu module core.
+
+  Chay: mvn -pl web-tests test
+-->
+<suite name="Capstone Web Suite" verbose="1">
+  <test name="Sales Invoice - Chrome headless" verbose="1">
+    <parameter name="browser" value="CHROME_HEADLESS"/>
+    <classes>
+      <class name="vn.edu.vtiacademy.tests.web.SalesInvoiceTest"/>
+    </classes>
+  </test>
+</suite>
