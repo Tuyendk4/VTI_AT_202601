@@ -32,7 +32,17 @@ echo "==> Gop ket qua va dung bao cao Allure"
 rm -rf target/allure-results target/allure-report
 mkdir -p target/allure-results
 cp -r ./*/target/allure-results/* target/allure-results/ 2>/dev/null
-allure generate target/allure-results -o target/allure-report --clean
+
+# --single-file la BAT BUOC, khong phai tuy chon cho gon.
+# Ban nhieu file nap du lieu test qua fetch() luc chay -> mo bang file:// thi Chrome chan CORS
+# va bao cao hien ra RONG: co giao dien, khong co test nao, khong co Epic nao. Da kiem chung
+# bang Chrome headless: ban nhieu file khong render duoc ten test nao, ban single-file render
+# du 3 Epic va 20 test. Nguoi cham chi double-click index.html chu khong dung `allure open`,
+# nen phai dung ban tu chua.
+allure generate target/allure-results -o target/allure-report --clean --single-file
+
+# Chep sang docs/ de bao cao duoc luu trong git cung ma nguon (bang chung ket qua chay).
+cp target/allure-report/index.html ../docs/allure-report.html
 
 echo
 echo "================ KET QUA ================"

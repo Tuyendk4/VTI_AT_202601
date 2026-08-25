@@ -153,12 +153,19 @@ tay theo ba buoc tren.
 mkdir -p target/allure-results
 cp -r */target/allure-results/* target/allure-results/ 2>/dev/null
 
-allure generate target/allure-results -o target/allure-report --clean
-allure open target/allure-report
+# --single-file la BAT BUOC - xem canh bao ben duoi
+allure generate target/allure-results -o target/allure-report --clean --single-file
 ```
 
-Ban HTML tinh da dung san nam trong `allure-report/` - **mo file `index.html` bang trinh
-duyet la xem duoc, khong can cai Allure va khong can chay lai test.**
+Ban dung san nam o `docs/allure-report.html` - **mo bang trinh duyet la xem duoc, khong can
+cai Allure va khong can chay lai test.**
+
+> ⚠️ **PHAI dung `--single-file`.** Ban nhieu file (mac dinh) nap du lieu test bang `fetch()`
+> luc chay, nen mo bang `file://` se bi Chrome chan CORS va bao cao hien ra **RONG**: co day du
+> giao dien nhung khong co test nao, khong co Epic nao. Da kiem chung bang Chrome headless -
+> ban nhieu file khong render duoc mot ten test nao, ban single-file render du 3 Epic va 20 test.
+> Suyt gui cho nguoi cham mot bao cao rong vi loi nay. `package-for-submission.sh` co chot kiem
+> tra kich thuoc de chan lai.
 
 Trong bao cao co: cac buoc (`@Step`) cua tung test, anh chup man hinh tai thoi diem fail,
 va voi lop API la nguyen van request/response cua moi loi goi.

@@ -32,11 +32,18 @@ echo "==> Chep tai lieu"
 mkdir -p "$STAGING/docs"
 cp "$PROJECT_ROOT/docs/"*.md "$STAGING/docs/" 2>/dev/null || true
 
-echo "==> Chep bao cao Allure (HTML tinh)"
-if [ -d target/allure-report ]; then
-  cp -R target/allure-report "$STAGING/allure-report"
+echo "==> Chep bao cao Allure (mot file HTML tu chua)"
+if [ -f target/allure-report/index.html ]; then
+  cp target/allure-report/index.html "$STAGING/allure-report.html"
+  # Kiem tra day dung la ban single-file: ban nhieu file chi ~1KB va se mo ra RONG.
+  SIZE=$(wc -c < "$STAGING/allure-report.html")
+  if [ "$SIZE" -lt 1000000 ]; then
+    echo "    LOI: bao cao chi $SIZE bytes -> day la ban NHIEU FILE, mo bang file:// se ra rong."
+    echo "         Chay lai: allure generate target/allure-results -o target/allure-report --clean --single-file"
+    exit 1
+  fi
 else
-  echo "    CANH BAO: chua co target/allure-report. Chay ./run-all-tests.sh truoc."
+  echo "    CANH BAO: chua co bao cao. Chay ./run-all-tests.sh truoc."
 fi
 
 echo "==> Ghi chu ve APK"
